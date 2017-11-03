@@ -1,0 +1,7 @@
+nav,
+.page-footer,
+.side-nav .collapsible-body>ul:not(.collapsible)>li.active,
+.side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active
+{
+	background-color: #30D5C8;
+}
