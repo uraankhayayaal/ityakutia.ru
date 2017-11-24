@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	              <p>Золотой наперсток</p>
 	            </div>
 	            <div class="card-action">
-	              <a href="http://n.yakutiaventure.ru" target="_blank">Сайт</a>
+	              <a href="http://zn.yakutiaventure.ru" target="_blank">Сайт</a>
 	            </div>
 	          </div>
 	        </div>
