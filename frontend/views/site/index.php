@@ -86,7 +86,7 @@ $this->title = 'Главня страница';
 
               <?= $form->field($model, 'subject') ?>
 
-              <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+              <?= $form->field($model, 'body')->textarea(['rows' => 6, 'class' => 'materialize-textarea']) ?>
 
               <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                   'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
@@ -94,7 +94,8 @@ $this->title = 'Главня страница';
 
             </div>
             <div class="modal-footer">
-              <?= Html::submitButton('Отправить', ['class' => 'modal-action modal-close waves-effect waves-green btn-flat', 'name' => 'contact-button']) ?>
+              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Отмена</a>
+              <?= Html::submitButton('Отправить', ['class' => 'modal-action modal-close waves-effect waves-green btn', 'name' => 'contact-button']) ?>
             </div>
 
           <?php ActiveForm::end(); ?>
