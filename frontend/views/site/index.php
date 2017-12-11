@@ -11,59 +11,76 @@ $this->title = 'Главня страница';
             <div class="row">
                 <div class="col s12">
 
-
-
                   <div class="section no-pad-bot" id="index-banner">
 
-                      <br><br>
+
                       <h1 class="header center orange-text"><?= Yii::$app->name ?></h1>
-                      <div class="row center">
-                        <h5 class="header col s12 light"><a href="tel:89142736836">89142736836</a></h5>
-                      </div>
 
-                      <br><br>
 
                   </div>
-
-
-                  <div class="section">
-                    <!--   Icon Section   -->
-                    <div class="row">
-                      <div class="col s12 m4">
-                        <div class="icon-block">
-                          <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                          <h5 class="center">В короткие сроки</h5>
-
-                          <p class="light center">Скороть разработки зависит только от вас. Не успеете как познакомиться с сайтом, он будет зпущен</p>
-                        </div>
-                      </div>
-
-                      <div class="col s12 m4">
-                        <div class="icon-block">
-                          <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                          <h5 class="center">Отвественнно</h5>
-
-                          <p class="light center">Работаю без предоплаты, гарантийное обслуживание два месяца после разработки</p>
-                        </div>
-                      </div>
-
-                      <div class="col s12 m4">
-                        <div class="icon-block">
-                          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                          <h5 class="center">Качественно</h5>
-
-                          <p class="light center">В разрботке используется Framework Yii 2, можете выбрать любой CSS-framework.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <br><br>
-                  </div>
-
-
 
                 </div>
             </div>
         </div>
+
+        <div class="section why_we">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="s12">
+                  <div class="row">
+                      <div class="col s12 m4">
+                        <div class="icon-block">
+                          <h2 class="center"><i class="material-icons">flash_on</i></h2>
+                          <h5 class="center">В короткие сроки</h5>
+
+                          <p class="light center description">Скороть разработки зависит только от вас. Не успеете как познакомиться с сайтом, он будет зпущен</p>
+                        </div>
+                      </div>
+
+                      <div class="col s12 m4">
+                        <div class="icon-block">
+                          <h2 class="center"><i class="material-icons">group</i></h2>
+                          <h5 class="center">Отвественнно</h5>
+
+                          <p class="light center description">Работаю без предоплаты, гарантийное обслуживание два месяца после разработки</p>
+                        </div>
+                      </div>
+
+                      <div class="col s12 m4">
+                        <div class="icon-block">
+                          <h2 class="center"><i class="material-icons">settings</i></h2>
+                          <h5 class="center">Качественно</h5>
+
+                          <p class="light center description">В разрботке используется Framework Yii 2, можете выбрать любой CSS-framework.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section contact">
+          <div class="container">
+          <div class="section center">
+            <h2>Контакты</h2>
+          </div>
+            <div class="row">
+                <div class="col l6 m6 s12">
+                  <h2 class="center"><a href="tel:89142736836"><i class="material-icons">phone</i></a></h2>
+                  <h5 class="header col s12 light center"><a href="tel:89142736836">89142736836</a></h5>
+                </div>
+                <div class="col l6 m6 s12">
+                  <h2 class="center"><a href="mailto:manager@admin14.ru"><i class="material-icons">email</i></a></h2>
+                  <h5 class="header col s12 light center"><a href="mailto:manager@admin14.ru">manager@admin14.ru</a></h5>
+                </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="fixed-action-btn">
           <a class="btn btn-floating btn-large cyan pulse waves-effect waves-light modal-trigger" href="#modal1"><i class="material-icons">edit</i></a>

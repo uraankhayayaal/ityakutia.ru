@@ -10,7 +10,7 @@ use yii\bootstrap\ActiveForm;
 $this->title = 'Резюме';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-        <div class="container">
+        <div class="container contact-page">
               <h1>Каплин Айаал Милентьевич</h1>
           <div class="row">
             <div class="col l3 m3 s12">

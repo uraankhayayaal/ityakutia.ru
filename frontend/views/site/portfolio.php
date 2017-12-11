@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
           <div class="row">
 	        <div class="col s12 m6">
-	          <div class="card">
+	          <div class="card horizontal">
 	            <div class="card-image">
 	              <?= Html::img("@web/images/tdr.png", ['alt' => 'Admin14 разработка сайтов и мобильных приложений - портфолио - Ресторан Тыгын Дархан']); ?>
 	              <!-- <span class="card-title">Ресторан Тыгын Дархан</span> -->
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	          </div>
 	        </div>
 	        <div class="col s12 m6">
-	          <div class="card">
+	          <div class="card horizontal">
 	            <div class="card-image">
 	              <?= Html::img("@web/images/zn.png", ['alt' => 'Admin14 разработка сайтов и мобильных приложений - портфолио - Золотой наперсток']); ?>
 	              <!-- <span class="card-title">Золотой наперсток</span> -->
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	      <div class="row">
 	        <div class="col s12 m6">
-	          <div class="card">
+	          <div class="card horizontal">
 	            <div class="card-image">
 	              <?= Html::img("@web/images/km.webp", ['alt' => 'Admin14 разработка сайтов и мобильных приложений - портфолио - Картмоне']); ?>
 	              <!-- <span class="card-title">Картмоне</span> -->
@@ -58,7 +58,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	          </div>
 	        </div>
 	        <div class="col s12 m6">
-	          <div class="card">
+	          <div class="card horizontal">
 	            <div class="card-image">
 	              <?= Html::img("@web/images/ss.png", ['alt' => 'Admin14 разработка сайтов и мобильных приложений - портфолио - Строительная компания "Север"']); ?>
 	              <!-- <span class="card-title">Строительная компания "Север"</span> -->
@@ -75,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	      <div class="row">
 	        <div class="col s12 m6">
-	          <div class="card">
+	          <div class="card horizontal">
 	            <div class="card-image">
 	              <?= Html::img("@web/images/aic.png", ['alt' => 'Admin14 разработка сайтов и мобильных приложений - портфолио - Арктический Инновационный Центр']); ?>
 	              <!-- <span class="card-title">Арктический Инновационный Центр</span> -->
@@ -89,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	          </div>
 	        </div>
 	        <div class="col s12 m6">
-	          <div class="card">
+	          <div class="card horizontal">
 	            <div class="card-image">
 	              <?= Html::img("@web/images/yg.png", ['alt' => 'Admin14 разработка сайтов и мобильных приложений - портфолио - Якутск геология']); ?>
 	              <!-- <span class="card-title">Якутск геология</span> -->

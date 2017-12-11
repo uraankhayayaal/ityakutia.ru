@@ -12,7 +12,8 @@ return [
     'controllerNamespace' => 'backend\controllers',
     'language' => 'ru',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-backend',

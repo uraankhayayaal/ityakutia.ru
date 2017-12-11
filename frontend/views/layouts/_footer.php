@@ -13,7 +13,7 @@ use yii\helpers\Url;
               <p class="grey-text text-lighten-4"><?= Yii::$app->params['supportEmail'] ?></p>
             </div>
             <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
+              <h5 class="white-text">Ссылки</h5>
               <ul>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://resume.admin14.ru">Резюме</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://pmp.admin14.ru">Система управления проектами</a></li>

@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+html,
+body{
+	font-family: 'Oswald', sans-serif;
+}
 .layout_profile header, .layout_profile main, .layout_profile footer {
 	padding-left: 300px;
 }
@@ -12,12 +17,89 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	background: url(/images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 main {
 	flex: 1 0 auto;
+
 }
 
 nav .brand-logo {
     padding: 0px 15px;
+    display: flex;
 }
+nav .brand-logo img{
+	margin-right: 10px;
+}
+
+nav ul li{
+	position: relative;
+}
+nav ul li:hover::after{
+	content: " ";
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    display: block;
+    top: 100%;
+}
+
+
+
+.why_we .material-icons{
+	font-size: 5rem;
+}
+.why_we p.description{
+	font-size: 1.2rem;
+}
+
+
+.contact .material-icons{
+	font-size: 5rem;
+}
+.contact h5 a{
+	font-size: 1.2rem;
+}
+
+
+
+
+
+
+.side-nav .side_bar_logo{
+	padding:15px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

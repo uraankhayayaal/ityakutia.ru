@@ -1,7 +1,114 @@
+
+h1, h2, h3, h4, h5, h6{
+	color: #ff8000;
+}
+
+
+
+
+
+
 nav,
 .page-footer,
 .side-nav .collapsible-body>ul:not(.collapsible)>li.active,
 .side-nav.fixed .collapsible-body>ul:not(.collapsible)>li.active
 {
-	background-color: #30D5C8;
+	background-color: rgba(254,128,0,.75);
 }
+nav
+{
+	background:none;
+	background-image: none;
+	background-color: transparent;
+	box-shadow: none;
+}
+nav .brand-logo,
+nav ul a{
+	color: #ff8000;
+}
+@keyframes menulianimate {
+	from{
+    background: rgba(255,128,0,0);
+	}
+	to{
+    background: rgba(255,128,0,1);
+	}
+}
+nav ul a:hover{
+    background-color: transparent;
+}
+nav ul li.active {
+    background-color: transparent;
+}
+nav ul li:hover::after{
+    background: rgba(255,128,0,1);
+    animation-name: menulianimate;
+    animation-duration: .5s;
+}
+
+
+
+.why_we .material-icons{
+	color: #ff8000;
+}
+.why_we p.description{
+	color: #ffffff;
+}
+
+.contact .material-icons{
+	color: #ff8000;
+}
+.contact h5 a{
+	color: #ffffff;
+}
+
+
+
+
+.side-nav li>a{
+
+}
+
+
+.contact-page a{
+	color: #ff8000;
+}
+.contact-page ul li,
+.contact-page p{
+	color: #ffffff;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

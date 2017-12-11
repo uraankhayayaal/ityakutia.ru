@@ -6,8 +6,10 @@ use yii\helpers\Url;
 ?>
 		<ul id="slide-out" class="side-nav">
           <li><div class="user-view">
-            <div class="background">
-              <?= Html::img('@web/images/logo.jpg', ['alt' => 'Admin14 - разработка сайтов и мобильных приложений - Главная', 'width' => '100%']); ?>
+            <div class="background center">
+
+              <?= Html::img('@web/images/logo.png', ['alt' => 'Admin14 - разработка сайтов и мобильных приложений - Главная', 'height' => '100%', 'calss' => 'side_bar_logo']); ?>
+
             </div>
             <br>
             <br>
