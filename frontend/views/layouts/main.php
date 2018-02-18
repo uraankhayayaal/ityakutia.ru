@@ -16,6 +16,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
     <title><?= Yii::$app->name ?> - <?= Html::encode($this->title) ?></title>
+    <link rel="icon" href="/images/favicon.png">
 
     <meta name="description" content="Разработка сайтов и мобильных приложений Admin14 - качесвтенно и в корокие сроки, ответсвено относимся нашим клиентам">
     <meta name="keywords" content="разработка сайтов, создание интернет страниц, якутск, Yii2, разработка мобильные приложения, принимаем заказы на разработку сайтов и мобильных приложений, android, ios, web, php, yii, сайт, приложение">

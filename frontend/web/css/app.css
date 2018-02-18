@@ -84,6 +84,178 @@ nav ul li:hover::after{
 
 
 
+@-webkit-keyframes slide_botoom_top {
+    0% {background-position: center 0;}
+    85% {background-position: center 100%;}
+    100% {background-position: center 0;}
+}
+@-moz-keyframes slide_botoom_top {
+    0% {background-position: center 0;}
+    85% {background-position: center 100%;}
+    100% {background-position: center 0;}
+}
+@-o-keyframes slide_botoom_top {
+    0% {background-position: center 0;}
+    85% {background-position: center 100%;}
+    100% {background-position: center 0;}
+}
+@keyframes slide_botoom_top {
+    0% {background-position: center 0;}
+    85% {background-position: center 100%;}
+    100% {background-position: center 0;}
+}
+#landing_img{
+	background-color: white;
+	background-image: url('../images/example/landing.png');
+	background-size: cover;
+	background-position: center 0;
+
+    -webkit-animation-name: slide_botoom_top;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: slide_botoom_top;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+
+    -o-animation-name: slide_botoom_top;
+    -o-animation-duration: 4s;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: slide_botoom_top;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes slide_click {
+    0% {background-image: url('../images/example/comp.jpg');}
+    25% {background-image: url('../images/example/comp2.jpg');}
+    50% {background-image: url('../images/example/comp3.jpg');}
+    100% {background-image: url('../images/example/comp.jpg');}
+}
+@-moz-keyframes slide_click {
+    0% {background-image: url('../images/example/comp.jpg');}
+    25% {background-image: url('../images/example/comp2.jpg');}
+    50% {background-image: url('../images/example/comp3.jpg');}
+    100% {background-image: url('../images/example/comp.jpg');}
+}
+@-o-keyframes slide_click {
+    0% {background-image: url('../images/example/comp.jpg');}
+    25% {background-image: url('../images/example/comp2.jpg');}
+    50% {background-image: url('../images/example/comp3.jpg');}
+    100% {background-image: url('../images/example/comp.jpg');}
+}
+@keyframes slide_click {
+    0% {background-image: url('../images/example/comp.jpg');}
+    25% {background-image: url('../images/example/comp2.jpg');}
+    50% {background-image: url('../images/example/comp3.jpg');}
+    100% {background-image: url('../images/example/comp.jpg');}
+}
+#business_img{
+	background-color: white;
+	background-image: url('../images/example/comp.jpg');
+	background-size: cover;
+	background-position: center center;
+
+    -webkit-animation-name: slide_click;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: slide_click;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+
+    -o-animation-name: slide_click;
+    -o-animation-duration: 4s;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: slide_click;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shop_click {
+    0% {background-image: url('../images/example/shop.jpg');}
+    50% {background-image: url('../images/example/shop2.jpg');}
+    100% {background-image: url('../images/example/shop.jpg');}
+}
+@-moz-keyframes shop_click {
+    0% {background-image: url('../images/example/shop.jpg');}
+    50% {background-image: url('../images/example/shop2.jpg');}
+    100% {background-image: url('../images/example/shop.jpg');}
+}
+@-o-keyframes shop_click {
+    0% {background-image: url('../images/example/shop.jpg');}
+    50% {background-image: url('../images/example/shop2.jpg');}
+    100% {background-image: url('../images/example/shop.jpg');}
+}
+@keyframes shop_click {
+    0% {background-image: url('../images/example/shop.jpg');}
+    50% {background-image: url('../images/example/shop2.jpg');}
+    100% {background-image: url('../images/example/shop.jpg');}
+}
+#shop_img{
+	background-color: white;
+	background-image: url('../images/example/shop.jpg');
+	background-size: cover;
+	background-position: center center;
+
+    -webkit-animation-name: shop_click;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: shop_click;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+
+    -o-animation-name: shop_click;
+    -o-animation-duration: 4s;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: shop_click;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes api_click {
+    from {background-image: url('../images/example/api.png');}
+    to {background-image: url('../images/example/api2.png');}
+}
+@-moz-keyframes api_click {
+    from {background-image: url('../images/example/api.png');}
+    to {background-image: url('../images/example/api2.png');}
+}
+@-o-keyframes api_click {
+    from {background-image: url('../images/example/api.png');}
+    to {background-image: url('../images/example/api2.png');}
+}
+@keyframes api_click {
+    from {background-image: url('../images/example/api.png');}
+    to {background-image: url('../images/example/api2.png');}
+}
+#api_img{
+	background-color: white;
+	background-image: url('../images/example/api.png');
+	background-size: cover;
+	background-position: center center;
+
+    -webkit-animation-name: api_click;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: api_click;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+
+    -o-animation-name: api_click;
+    -o-animation-duration: 2s;
+    -o-animation-iteration-count: infinite;
+
+    animation-name: api_click;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
 
 
 

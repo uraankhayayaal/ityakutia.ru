@@ -63,7 +63,59 @@ $this->title = 'Главня страница';
         </div>
 
 
-        <div class="section contact">
+        <div class="section why_we">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                    <div class="col s12 m6 l3">
+                      <div class="icon-block">
+                        <img src="/images/example/landing_empty.png" id="landing_img" class="responsive-img" alt="###">
+                        <h5 class="center">Одностраничный (Landing Page)</h5>
+
+                        <p class="light center description">Стоимость: от 12 000 руб.</p>
+                        <p class="light center description">Срок: до 5 рабочих дней.</p>
+                      </div>
+                    </div>
+
+                    <div class="col s12 m6 l3">
+                      <div class="icon-block">
+                        <img src="/images/example/landing_empty.png" id="business_img" class="responsive-img" alt="###">
+                        <h5 class="center">Корпоративный сайт для бизнеса</h5>
+
+                        <p class="light center description">Стоимость: от 36 000 руб.</p>
+                        <p class="light center description">Срок: до 15 рабочих дней.</p>
+                      </div>
+                    </div>
+
+                    <div class="col s12 m6 l3">
+                      <div class="icon-block">
+                        <img src="/images/example/landing_empty.png" id="shop_img" class="responsive-img" alt="###" style="background-color: white;">
+                        <h5 class="center">Интернет магазин, доска объявлений</h5>
+
+                        <p class="light center description">Стоимость: 115 200 руб.</p>
+                        <p class="light center description">Срок: от 48 рабочих дней.</p>
+                      </div>
+                    </div>
+
+                    <div class="col s12 m6 l3">
+                      <div class="icon-block">
+                        <img src="/images/example/api_empty.png" id="api_img" class="responsive-img" alt="###" style="background-color: white;">
+                        <h5 class="center">Интернет портал, серверы для мобильных приложений</h5>
+
+                        <p class="light center description">Стоимость и срок: индивидуально</p>
+                        <p class="light center description"><a href="#modal1" class="btn modal-trigger">Уточнить</a></p>
+                      </div>
+                    </div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section contact no-pad-bot">
           <div class="container">
           <div class="section center">
             <h2>Контакты</h2>
@@ -79,6 +131,7 @@ $this->title = 'Главня страница';
                 </div>
             </div>
           </div>
+          <a class="dg-widget-link" href="http://2gis.ru/yakutsk/firm/70000001029784446/center/129.70572658698077,62.030501123290136/zoom/15?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Якутска</a><div class="dg-widget-link"><a href="http://2gis.ru/yakutsk/firm/70000001029784446/photos/70000001029784446/center/129.70572658698077,62.030501123290136/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.ru/yakutsk/center/129.705126,62.029002/zoom/15/routeTab/rsType/bus/to/129.705126,62.029002╎Информационные технологии Якутии, ООО?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Информационные технологии Якутии, ООО</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":'100%',"height":600,"pos":{"lat":62.030501123290136,"lon":129.70572658698077,"zoom":15},"opt":{"city":"yakutsk"},"org":[{"id":"70000001029784446"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
         </div>
 
 
