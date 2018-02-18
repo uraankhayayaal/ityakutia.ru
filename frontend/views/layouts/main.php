@@ -18,8 +18,8 @@ AppAsset::register($this);
     <title><?= Yii::$app->name ?> - <?= Html::encode($this->title) ?></title>
     <link rel="icon" href="/images/favicon.png">
 
-    <meta name="description" content="Разработка сайтов и мобильных приложений Admin14 - качесвтенно и в корокие сроки, ответсвено относимся нашим клиентам">
-    <meta name="keywords" content="разработка сайтов, создание интернет страниц, якутск, Yii2, разработка мобильные приложения, принимаем заказы на разработку сайтов и мобильных приложений, android, ios, web, php, yii, сайт, приложение">
+    <meta name="description" content="Разработка сайтов и мобильных приложений Admin14 - качесвтенно и в корокие сроки, от одностраничных (landingpage) до сложных сайтов, порталов и интернет магазинов">
+    <meta name="keywords" content="разработка сайтов, создание интернет страниц, якутск, Yii2, разработка мобильных приложений, заказы на разработку сайтов и мобильных приложений, android, ios, web, landingpage, одностраничный сайт, интернет магазин, сервер, доска объявлений">
     <meta name="google-site-verification" content="S31x0lJg0CebKhPoOpLixsaUtap1PgQu7HoT4lIYF-A" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
