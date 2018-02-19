@@ -93,7 +93,7 @@ $this->title = 'Главня страница';
                         <img src="/images/example/landing_empty.png" id="shop_img" class="responsive-img" alt="###" style="background-color: white;">
                         <h5 class="center">Интернет магазин, доска объявлений</h5>
 
-                        <p class="light center description">Стоимость: 115 200 руб.</p>
+                        <p class="light center description">Стоимость: от 115 200 руб.</p>
                         <p class="light center description">Срок: от 48 рабочих дней.</p>
                       </div>
                     </div>
