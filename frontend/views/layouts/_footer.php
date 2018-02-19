@@ -15,8 +15,9 @@ use yii\helpers\Url;
             <div class="col l4 offset-l2 s12">
               <h5 class="white-text">Ссылки</h5>
               <ul>
-                <li><a target="_blank" class="grey-text text-lighten-3" href="http://resume.admin14.ru">Резюме</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://2children.ru">Детский образовательный портал Якутска</a></li>
+                <li><a target="_blank" class="grey-text text-lighten-3" href="http://tygyndarhanrest.ru/">Ресторан Тыгын Дархан</a></li>
+                <li><a target="_blank" class="grey-text text-lighten-3" href="http://tuymaadazaim.ru/">Туймада займ</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://pmp.admin14.ru">Система управления проектами</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://vote.admin14.ru">Система проведения опросов</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://admin14.business.site/">Сайт в Google - Разработка сайтов</a></li>
