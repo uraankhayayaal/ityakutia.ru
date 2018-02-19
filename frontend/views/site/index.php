@@ -74,7 +74,7 @@ $this->title = 'Главня страница';
                         <h5 class="center">Одностраничный (Landing Page)</h5>
 
                         <p class="light center description">Стоимость: от 12 000 руб.</p>
-                        <p class="light center description">Срок: до 5 рабочих дней.</p>
+                        <p class="light center description">Срок: от 5 рабочих дней.</p>
                       </div>
                     </div>
 
@@ -84,7 +84,7 @@ $this->title = 'Главня страница';
                         <h5 class="center">Корпоративный сайт для бизнеса</h5>
 
                         <p class="light center description">Стоимость: от 36 000 руб.</p>
-                        <p class="light center description">Срок: до 15 рабочих дней.</p>
+                        <p class="light center description">Срок: от 15 рабочих дней.</p>
                       </div>
                     </div>
 
