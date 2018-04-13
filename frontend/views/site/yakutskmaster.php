@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	        		</ul>
 					<p class="white-text"># вайфай, пк, офис, диагностика, выезд, консультация, вирус, вирусы, антивирус, антивирусы, установка, удаление, удалить, установить, оп, пк, оп, ворд, эксель, ексель, винодвс, виндовс, переустановка, установка, нужна, нежен, помощь, процессор, память, диск</p>
 	        		<h5 class="white-text">котактный телефон: <b>736836</b> <a href="tel:84112736836" class="btn">Позвонить</a></h5>
+					<p><a href="https://www.instagram.com/yakutskmaster/" class="white-text">Подписывайтесь на нашу страницу в инстаграм <span style="font-size: 2rem;">#yakutskmaster</span></a></p>
 	        	</div>
 	        </div>
 
