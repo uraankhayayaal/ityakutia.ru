@@ -159,6 +159,11 @@ class SiteController extends Controller
         return $this->render('portfolio');
     }
 
+    public function actionYakutskmaster()
+    {
+        return $this->render('yakutskmaster');
+    }
+
     /**
      * Signs user up.
      *

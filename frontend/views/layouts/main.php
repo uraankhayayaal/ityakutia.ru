@@ -15,7 +15,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Yii::$app->name ?> - <?= Html::encode($this->title) ?></title>
+    <title><?= Html::encode($this->title) ?> - <?= Yii::$app->name ?></title>
     <link rel="icon" href="/images/favicon.png">
 
     <meta name="description" content="Разработка сайтов и мобильных приложений Admin14 - качесвтенно и в корокие сроки, от одностраничных (landingpage) до сложных сайтов, порталов и интернет магазинов">

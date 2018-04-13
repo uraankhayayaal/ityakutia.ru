@@ -8,7 +8,7 @@ $this->title = 'Портфолио';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 		<div class="container contact-page">
-			<h1>About</h1>
+			<h1>О нас</h1>
 
 			<div class="row">
             <div class="col l8 offset-l2 m8 offset-m2 s12">
