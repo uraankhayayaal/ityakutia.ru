@@ -23,6 +23,7 @@ use yii\helpers\Url;
             <div class="col l4 s12">
               <h5 class="white-text">Ссылки</h5>
               <ul>
+                <li><a target="_blank" class="grey-text text-lighten-3" href="http://todilab.ru">Салон красоты ToDiLab</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://2children.ru">Детский образовательный портал Якутска</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://tygyndarhanrest.ru/">Ресторан Тыгын Дархан</a></li>
                 <li><a target="_blank" class="grey-text text-lighten-3" href="http://tuymaadazaim.ru/">Туймада займ</a></li>
