@@ -41,9 +41,9 @@ $this->title = 'Главня страница';
                       <div class="col s12 m4">
                         <div class="icon-block">
                           <h2 class="center"><i class="material-icons">group</i></h2>
-                          <h5 class="center">Отвественнно</h5>
+                          <h5 class="center">Ответственно</h5>
 
-                          <p class="light center description">Работаю без предоплаты, гарантийное обслуживание два месяца после разработки</p>
+                          <p class="light center description">Предоплата 50%, гарантийное обслуживание два месяца после разработки</p>
                         </div>
                       </div>
 
