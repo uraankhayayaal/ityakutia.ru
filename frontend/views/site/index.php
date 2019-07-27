@@ -34,7 +34,7 @@ $this->title = 'Главня страница';
                           <h2 class="center"><i class="material-icons">flash_on</i></h2>
                           <h5 class="center">В короткие сроки</h5>
 
-                          <p class="light center description">Скороть разработки зависит только от вас. Не успеете как познакомиться с сайтом, он будет зпущен</p>
+                          <p class="light center description">Скорость разработки зависит только от вас. Не успеете как познакомиться с сайтом, он будет зпущен</p>
                         </div>
                       </div>
 
