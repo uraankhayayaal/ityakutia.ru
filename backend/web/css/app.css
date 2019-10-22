@@ -1,0 +1,131 @@
+.mytona-primary-color{
+    background-color: #3399cc;
+  }
+  
+  body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+  }
+  
+  main {
+      flex: 1 0 auto;
+  }
+  
+  nav .brand-logo {
+      padding: 0 0 0 7px;
+      position: relative;
+      display: block;
+      font-size: 1.4rem;
+  }
+  
+  header, main, footer {
+    padding-left: 300px;
+  }
+  
+  nav{
+    height: 42px;
+      background-color: #3399cc;
+  }
+  nav,
+  nav .sidenav-trigger,
+  nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+      line-height: 42px;
+  }
+  
+  .page-footer{
+    background-color: #3399cc;
+  }
+  /*
+   * For Login Page!!!
+   */
+  .login header, .login main, .login footer {
+    padding-left: 0px;
+  }
+  
+  .sidenav.fixed {
+     padding-bottom: 250px;
+  }
+  .sidenav li.logo{}
+  .sidenav li.logo a{
+      padding-top: 20px;
+      padding-bottom: 10px;
+      height: 120px;
+      text-align: center;
+  }
+  .sidenav li.logo a img {
+    width: auto;
+    height: 100%;
+  }
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+    nav .brand-logo {
+      left: 0;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @media only screen and (min-width: 601px){
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+        height: 42px;
+        line-height: 42px;
+    }
+  }
+  
+  
+  
+  .change-img{
+    position: relative;
+    display: block;
+  }
+  .change-img:after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .change-img:hover:after{
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .my-responsive-table {
+      overflow: auto;
+      display: block;
+  }
+  
+  
+  
+  
+  
+  
+  .chip .action {
+      cursor: pointer;
+      float: left;
+      font-size: 16px;
+      line-height: 32px;
+      padding-right: 8px;
+  }
+
+b, strong {
+    font-weight: bolder;
+}
