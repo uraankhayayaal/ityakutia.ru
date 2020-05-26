@@ -3,7 +3,6 @@ version: "3.7"
 services:
   db:
     image: mysql
-    container_name: admin14.ru-db
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     volumes:
@@ -18,7 +17,6 @@ services:
 
   web:
     image: nginx
-    container_name: admin14.ru-nginx
     restart: always
     ports:
       - "80:80"
@@ -30,19 +28,13 @@ services:
       - php
     
   php:
-    build: ./php
-    image: uraankhayayaal/php:latest  # goes to youruser DockerHub registry
-    container_name: admin14.ru-php
+    image: uraankhayayaal/php:latest
     restart: always
-    working_dir: /app
-    volumes:
-      - ${SRC_ROOT}:/app
     links:
       - db
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: admin14.ru-pma
     restart: always
     ports:
       - 8080:80

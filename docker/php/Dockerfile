@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:7.3-fpm
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
@@ -9,8 +9,8 @@ RUN apt-get update && apt-get install -y \
         libonig-dev \
         libzip-dev \
         zip \
-        libonig-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+        libonig-dev
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/freetype --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install pdo pdo_mysql mbstring json intl opcache zip
