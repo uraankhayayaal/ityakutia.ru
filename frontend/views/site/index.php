@@ -23,6 +23,8 @@ $this->title = 'Главня страница';
             </div>
         </div>
 
+        <!-- <h2><?php \yii\helpers\Html::a('Оплатить заказ', ['/sberbank/default/create', 'id' => $invoice->id /* id инвойса */]) ?></h2> -->
+
         <div class="section why_we">
           <div class="container">
             <div class="row">

@@ -14,5 +14,15 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/freetype --with
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install -j$(nproc) gd \
     && docker-php-ext-install pdo pdo_mysql mbstring json intl opcache zip
+    
 # Install composer
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
+
+WORKDIR /app
+
+ENTRYPOINT ["docker-php-entrypoint"]
+
+CMD composer update && \
+    php init --env=Development --overwrite=All --interactive=0 && \
+    php yii migrate --interactive=0 && \
+    php-fpm
