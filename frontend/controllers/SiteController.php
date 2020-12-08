@@ -72,7 +72,6 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $invoice = \pantera\yii2\pay\sberbank\models\Invoice::addSberbank(1, 100);
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
@@ -85,7 +84,6 @@ class SiteController extends Controller
         } else {
             return $this->render('index', [
                 'model' => $model,
-                'invoice' => $invoice,
             ]);
         }
     }

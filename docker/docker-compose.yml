@@ -2,26 +2,26 @@ version: "3.7"
 
 services:
   db:
-    image: mysql
-    container_name: admin14.ru-db
+    image: mysql:5.7
+    user: 1000:1000
+    container_name: ${PROJECT_NAME}-db
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     volumes:
       - ./db/data:/var/lib/mysql
+      - ./db/dump:/docker-entrypoint-initdb.d/
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-    ports:
-      - "3306:3306"
+      MYSQL_ROOT_PASSWORD: ${PROJECT_NAME}
+      MYSQL_USER: ${PROJECT_NAME}
+      MYSQL_PASSWORD: ${PROJECT_NAME}
+      MYSQL_DATABASE: ${PROJECT_NAME}
 
   web:
     image: nginx
-    container_name: admin14.ru-nginx
+    container_name: ${PROJECT_NAME}-nginx
     restart: always
     ports:
-      - "80:80"
+      - ${NGINX_PORT}:80
     volumes:
       - ${SRC_ROOT}:/app
       - ./nginx/sites/${ENV}.conf:/etc/nginx/conf.d/default.conf
@@ -30,19 +30,31 @@ services:
       - php
     
   php:
-    build: ./php
+    build: ./../
     image: uraankhayayaal/php:latest  # goes to youruser DockerHub registry
-    container_name: admin14.ru-php
+    container_name: ${PROJECT_NAME}-php
     restart: always
     working_dir: /app
     volumes:
       - ${SRC_ROOT}:/app
+      - ${SSH_PATH}:/root/.ssh
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
     links:
       - db
+    environment: 
+      MYSQL_PORT: ${MYSQL_PORT}
+      GITHUB_API_TOKEN: ${GITHUB_API_TOKEN}
+      PHP_ENABLE_XDEBUG: ${PHP_ENABLE_XDEBUG}
+      TEST_RUNTIME_PATH: /tmp/runtime
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
-    container_name: admin14.ru-pma
+    container_name: ${PROJECT_NAME}-phpmyadmin
     restart: always
     ports:
       - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+    depends_on:
+      - db
