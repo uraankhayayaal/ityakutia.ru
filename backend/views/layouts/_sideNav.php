@@ -9,11 +9,11 @@ use yii\helpers\Url;
     <li class="logo"><a href="<?= Url::home() ?>"><?= Html::img('/images/header/sn_en.png');?></a></li>
 
     <li class="no-padding <?= (Yii::$app->controller->id=='profile' || Yii::$app->controller->id=='dish')?'active':''; ?>">
-        <ul class="collapsible collapsible-accordion mytona-primary-color white-text">
+        <ul class="collapsible collapsible-accordion it-yakutia-primary-color white-text">
             <li class="<?= (Yii::$app->controller->id=='profile')?'active':''; ?>">
             <a class="collapsible-header waves-effect waves-teal white-text tooltipped" data-position="right" data-tooltip="Нажмите чтобы открыть"><i class="material-icons white-text">account_circle</i><b style="font-size: 1.6rem;"><?= Yii::$app->user->isGuest ? 'Guest' : Yii::$app->user->identity->username ?></b><br/><i class="material-icons white-text">mail</i><?= Yii::$app->user->isGuest ? null : Yii::$app->user->identity->email ?></a>
                 <div class="collapsible-body">
-                    <ul class="mytona-primary-color">
+                    <ul class="it-yakutia-primary-color">
                         <li class="<?= (Yii::$app->controller->id=='profile' && Yii::$app->controller->action=='index')?'active':''; ?>"><a class="waves-effect waves-teal white-text" href="<?= Url::toRoute('/profile/index') ?>"><i class="material-icons white-text">person</i> Профиль</a></li>
                         <li class="<?= (Yii::$app->controller->id=='profile' && Yii::$app->controller->action=='change')?'active':''; ?>"><a class="waves-effect waves-teal white-text" href="<?= Url::toRoute('/profile/change') ?>"><i class="material-icons white-text">security</i> Изменить пароль</a></li>
                         <li><?= Html::a('Выйти <i class="material-icons white-text">exit_to_app</i>', ['/site/logout'], ['data' => ['method' => 'post'], 'class' => 'waves-effect waves-teal white-text']) ?></li>
