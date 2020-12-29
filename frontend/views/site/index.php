@@ -13,8 +13,20 @@ $this->title = 'Главня страница';
 
                   <div class="section no-pad-bot" id="index-banner">
 
-
-                      <h1 class="header center orange-text"><?= Yii::$app->name ?></h1>
+                      <?php
+                          // $instagram = \InstagramScraper\Instagram::withCredentials(new \GuzzleHttp\Client(), 'admin14.ru', '}{Uy2016', Yii::$app->cache);
+                          // $emailVecification = new \common\components\twoStepAutoVerification\EmailVerification(
+                          //     'manager@admin14.ru',
+                          //     'imap.yandex.ru',
+                          //     'golem130',
+                          //     true,
+                          //     null,
+                          //     Yii::getAlias('@app')
+                          // );
+                          // $instagram->login(false, $emailVecification);
+                          // $account = $instagram->getAccountById(5);
+                      ?>
+                      <h1 class="header center orange-text"><?php /* $account->getUsername(); */ ?></h1>
 
 
                   </div>

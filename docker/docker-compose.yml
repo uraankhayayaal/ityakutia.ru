@@ -41,6 +41,7 @@ services:
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
     links:
       - db
+      - redis
     environment: 
       MYSQL_PORT: ${MYSQL_PORT}
       GITHUB_API_TOKEN: ${GITHUB_API_TOKEN}
@@ -58,3 +59,10 @@ services:
       - PMA_HOST=mysql
     depends_on:
       - db
+
+  redis:
+    image: redis:alpine
+    container_name: ${PROJECT_NAME}-redis
+    command: redis-server #--requirepass sOmE_sEcUrE_pAsS
+#    ports:
+#      - 6379:6379

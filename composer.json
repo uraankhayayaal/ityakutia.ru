@@ -20,7 +20,10 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
         "uraankhayayaal/yii2-materializecomponents": "*",
         "uraankhayayaal/yii2-sortable": "*",
-        "pantera-digital/yii2-sberbank-pay": "@dev"
+        "pantera-digital/yii2-sberbank-pay": "@dev",
+        "raiym/instagram-php-scraper": "*",
+        "guzzlehttp/guzzle": "^7.2",
+        "yiisoft/yii2-redis": "~2.0.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

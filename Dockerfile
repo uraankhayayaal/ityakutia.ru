@@ -16,7 +16,10 @@ RUN apk --update --virtual build-deps add \
         imagemagick-dev \
         pcre-dev \
         postgresql-dev \
+        # imap-dev \
+        openssl-dev \
         libjpeg-turbo-dev \
+        c-client \
         libpng-dev \
         libxml2-dev \
         libzip-dev && \
@@ -35,6 +38,7 @@ RUN apk --update --virtual build-deps add \
         libltdl \
         libxml2 \
         libzip \
+        unzip \
         mysql-client \
         openssh \
         git \
@@ -45,6 +49,9 @@ RUN apk --update --virtual build-deps add \
         --with-png-dir=/usr/include/ \
         --with-jpeg-dir=/usr/include/ && \
     docker-php-ext-configure bcmath && \
+    # docker-php-ext-configure imap \
+    #     --with-imap \
+    #     --with-imap-ssl && \
     docker-php-ext-install \
         soap \
         curl \
@@ -55,17 +62,17 @@ RUN apk --update --virtual build-deps add \
         intl \
         mbstring \
         opcache \
+        # imap \
         pdo_mysql \
         pdo_pgsql && \
     pecl install \
-        imagick \
-        mongodb && \
+        imagick && \
     apk del \
         build-deps
 
-RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini && \
-    echo "extension=mongodb.so" > /usr/local/etc/php/conf.d/pecl-mongodb.ini
-
+RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini
+# RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini && \
+#     echo "extension=imap.so" > /usr/local/etc/php/conf.d/imap.ini
 
 # Configure version constraints
 ENV PHP_ENABLE_XDEBUG=0 \
@@ -79,6 +86,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
         --install-dir=/usr/local/bin && \
         echo "alias composer='composer'" >> /root/.bashrc && \
         composer
+
+# Install github personal token
+RUN git config --global url."https://{GITHUB_API_TOKEN}:@github.com/".insteadOf "https://github.com/"
 
 # Add configuration files
 COPY ./docker/php/dockerconf/ /

@@ -53,6 +53,15 @@ return [
                 'yakutskmaster' => 'site/yakutskmaster'
             ],
         ],
+        'view' => [
+            'theme' => [
+                'basePath' => '@frontend/web/themes/basic',
+                'baseUrl' => '@web/themes/basic',
+                'pathMap' => [
+                    '@frontend/views' => '@frontend/themes/basic/views',
+                ],
+            ],
+        ],
     ],
     'modules' => [
         'sberbank' => [
