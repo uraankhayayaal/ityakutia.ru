@@ -14,11 +14,11 @@ use yii\helpers\Url;
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo2_footer.svg" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do eiusmod tem.</p>
+                                        <p>Разработка и создание web-дизайна, сайтов, видеороликов</p>
                                 </div>
                                 </div>
                             </div>
@@ -27,12 +27,12 @@ use yii\helpers\Url;
                     <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Quick Links</h4>
+                                <h4>Ссылки</h4>
                                 <ul>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#"> Offers & Discounts</a></li>
-                                    <li><a href="#"> Get Coupon</a></li>
-                                    <li><a href="#">  Contact Us</a></li>
+                                    <li><a href="#">О нас</a></li>
+                                    <li><a href="#">Услуги</a></li>
+                                    <li><a href="#">Портфолио</a></li>
+                                    <li><a href="#">Контакты</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -40,12 +40,12 @@ use yii\helpers\Url;
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>New Products</h4>
+                                <h4>Акции</h4>
                                 <ul>
-                                    <li><a href="#">Woman Cloth</a></li>
-                                    <li><a href="#">Fashion Accessories</a></li>
-                                    <li><a href="#"> Man Accessories</a></li>
-                                    <li><a href="#"> Rubber made Toys</a></li>
+                                    <li><a href="#">Сайт + соцсеть = -5%</a></li>
+                                    <li><a href="#">3 баннера по цене 2х</a></li>
+                                    <li><a href="#">1 домен = ssl 1 год</a></li>
+                                    <li><a href="#">1 год гарантия</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -53,12 +53,12 @@ use yii\helpers\Url;
                     <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
-                                <h4>Support</h4>
+                                <h4>Поддержка</h4>
                                 <ul>
-                                    <li><a href="#">Frequently Asked Questions</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Report a Payment Issue</a></li>
+                                    <li><a href="/faq">Вопросы и ответы</a></li>
+                                    <li><a href="/terms-of-service">Условия пользования</a></li>
+                                    <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
+                                    <li><a href="/cookies">Политика обработки cookies</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ use yii\helpers\Url;
                     <div class="col-xl-7 col-lg-8 col-md-7">
                         <div class="footer-copy-right">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+&copy;2017-<script>document.write(new Date().getFullYear());</script> Все права защиищены | ООО Информационные технологии Якутии</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                  
                         </div>
                     </div>
@@ -77,10 +77,10 @@ use yii\helpers\Url;
                         <div class="footer-copy-right f-right">
                             <!-- social -->
                             <div class="footer-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="#"><i class="fab fa-tiktok"></i></a>
                             </div>
                         </div>
                     </div>
