@@ -16,7 +16,7 @@ use yii\helpers\Url;
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в комплексном продвижении вашего бизнеса в разных социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Заказать</a>
+                                        <a href="<?= Url::toRoute(['/site/contact'])?>" class="btn hero-btn">Заказать</a>
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@ use yii\helpers\Url;
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в продвижении вашего бизнеса в интернете и в социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Заказать</a>
+                                        <a href="<?= Url::toRoute(['/site/contact'])?>" class="btn hero-btn">Заказать</a>
                                     </div>
                                 </div>
                             </div>
