@@ -38,13 +38,15 @@ class AppAsset extends AssetBundle
         'js/jquery.scrollUp.min.js',
         'js/jquery.nice-select.min.js',
         'js/jquery.sticky.js',
-        'js/contact.js',
-        'js/jquery.form.js',
-        'js/jquery.validate.min.js',
-        'js/mail-script.js',
-        'js/jquery.ajaxchimp.min.js',
-        'js/plugins.js',
+        // 'js/contact.js', // ?
+        // 'js/jquery.form.js', // used only for contact.js
+        // 'js/jquery.validate.min.js', // contact, price_rangs, ajaxchimp
+        // 'js/mail-script.js', // ?
+        // 'js/jquery.ajaxchimp.min.js', // ?
+        // 'js/plugins.js',
         'js/main.js',
+
+        // downCount не используется
     ];
     public $depends = [
         'yii\web\YiiAsset',
