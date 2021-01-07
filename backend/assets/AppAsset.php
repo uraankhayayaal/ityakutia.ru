@@ -17,8 +17,10 @@ class AppAsset extends AssetBundle
         'css/app.css',
     ];
     public $js = [
+        // 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js',
         'js/materialize.js',
         'js/app.js',
+        'js/Sortable.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -8,7 +8,7 @@ use yii\helpers\Url;
 	<nav>
         <div class="nav-wrapper">
         	<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <a href="#" class="brand-logo truncate"><img src="/favicon.png" alt="admin icon" height="15"> <?= $this->title; ?></a>
+            <a href="#" class="brand-logo truncate"><img src="/admin/images/logo.png" alt="admin icon" height="15"> <?= $this->title; ?></a>
         </div>
     </nav>
 </header>

@@ -19,27 +19,27 @@ use yii\helpers\Url;
                                 <ul id="navigation">  
                                     <li><a href="<?= Url::home(); ?>">Главная</a></li>
                                     <li><a href="<?= Url::toRoute(['/site/about']); ?>">О нас</a></li>
-                                    <li><a href="#">Услуги</a></li>
+                                    <li class="hot"><a href="<?= Url::toRoute(['/site/goods']); ?>">Услуги</a></li>
                                     <!-- <li class="hot"><a href="#">Latest</a>
                                         <ul class="submenu">
                                             <li><a href="shop.html"> Product list</a></li>
                                             <li><a href="product_details.html"> Product Details</a></li>
                                         </ul>
                                     </li> -->
-                                    <li class="hot"><a href="#">Портфолио</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/portfolio']); ?>">Портфолио</a></li>
                                     <!-- <li><a href="blog.html">Портфолио</a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog-details.html">Blog Details</a></li>
                                         </ul>
                                     </li> -->
-                                    <li><a href="#">Акции</a>
-                                        <ul class="submenu">
+                                    <li><a href="<?= Url::toRoute(['/site/sale']); ?>">Акции</a>
+                                        <!-- <ul class="submenu">
                                             <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => 'site-social-5']); ?>">Сайт + соцсеть = -5%</a></li>
                                             <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => '3-2-baners']); ?>">3 баннера по цене 2х</a></li>
                                             <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => 'domain-ssl']); ?>">1 домен = ssl 1 год</a></li>
                                             <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => '1-year-guarantee']); ?>">1 год гарантия</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li><a href="<?= Url::toRoute(['/site/contact']); ?>">Контакты</a></li>
                                 </ul>

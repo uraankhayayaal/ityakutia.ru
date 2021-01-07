@@ -1,3 +1,9 @@
+<?php
+
+$this->title = 'О нас';
+
+?>
+
         <!-- Hero Area Start-->
         <div class="slider-area ">
             <div class="single-slider slider-height2 d-flex align-items-center">
@@ -5,7 +11,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2>About Us</h2>
+                                <h2><?= $this->title ?></h2>
                             </div>
                         </div>
                     </div>
@@ -19,17 +25,15 @@
                 <div class="row">
                     <div class="offset-xl-1 col-lg-8">
                         <div class="about-details-cap mb-50">
-                            <h4>Our Mission</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                            </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <h4>Наша миссия</h4>
+                            <p>Развивать цифровую экономику путем создания уникальных дизайнов, медия контента, автоматизации бизнеса и освещения в социальных сетях наших клиентов.</p>
+                            <p></p>
                         </div>
 
                         <div class="about-details-cap mb-50">
-                            <h4>Our Vision</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
-                            </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <h4>Наши видения</h4>
+                            <p>Все нашии сотрудники работают удаленно, и это только наше преимущество в век цифровой экономики.</p>
+                            <p>Наша деятельность направлена только на онлайн, в чем мы уверены на все 100%.</p>
                         </div>
                     </div>
                 </div>
@@ -49,15 +53,15 @@
                 <!-- Arrow -->
                 <div class="thumb-content-box">
                     <div class="thumb-content">
-                        <h3>Next Video</h3>
-                        <a href="#"> <i class="flaticon-arrow"></i></a>
+                        <h3>Галерея</h3>
+                        <a href="<?= Url::toRoute(['/gallery/front/index'])?>"> <i class="flaticon-arrow"></i></a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Video Area End -->
         <!--? Shop Method Start-->
-        <div class="shop-method-area">
+        <!-- <div class="shop-method-area">
             <div class="container">
                 <div class="method-wrapper">
                     <div class="row d-flex justify-content-between">
@@ -85,5 +89,5 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Shop Method End-->

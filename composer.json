@@ -23,7 +23,19 @@
         "pantera-digital/yii2-sberbank-pay": "@dev",
         "raiym/instagram-php-scraper": "*",
         "guzzlehttp/guzzle": "^7.2",
-        "yiisoft/yii2-redis": "~2.0.0"
+        "yiisoft/yii2-redis": "~2.0.0",
+        "it-yakutia/yii2-blog": "*",
+        "uraankhayayaal/yii2-fileuploader": "*",
+        "uraankhayayaal/yii2-redactor": "*",
+        "uraankhayayaal/yii2-page": "*",
+        "it-yakutia/yii2-gallery": "*",
+        "it-yakutia/yii2-rbac": "*",
+        "it-yakutia/yii2-navigation": "*",
+        "it-yakutia/yii2-setting": "*",
+        "it-yakutia/yii2-poll": "*",
+        "it-yakutia/yii2-partner": "*",
+        "it-yakutia/yii2-collective": "*",
+        "it-yakutia/yii2-banner": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

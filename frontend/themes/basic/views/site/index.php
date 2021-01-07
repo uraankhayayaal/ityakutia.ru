@@ -1,3 +1,7 @@
+<?php
+
+use yii\helpers\Url;
+?>
         <!--? slider Area Start -->
         <div class="slider-area ">
             <div class="slider-active">
@@ -7,17 +11,18 @@
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your New Perfect Style</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях</h1>
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/mobile.svg" class="d-md-none mw-100 pr-3 pb-3 heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в комплексном продвижении вашего бизнеса в разных социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                        <a href="industries.html" class="btn hero-btn">Заказать</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.png" alt="" class=" heartbeat">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.svg" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
                                 </div>
                             </div>
                         </div>
@@ -29,17 +34,17 @@
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your New Perfect Style</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat is aute irure.</p>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта</h1>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в продвижении вашего бизнеса в интернете и в социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                        <a href="industries.html" class="btn hero-btn">Shop Now</a>
+                                        <a href="industries.html" class="btn hero-btn">Заказать</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.png" alt="" class=" heartbeat">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch2.png" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
                                 </div>
                             </div>
                         </div>
@@ -71,7 +76,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
@@ -81,8 +86,8 @@
                                 <span>riacmut.ru</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    </div> -->
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
@@ -92,7 +97,7 @@
                                 <span>rcmtykt.ru</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
@@ -104,7 +109,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
@@ -114,7 +119,7 @@
                                 <span>2children.ru</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
@@ -125,6 +130,12 @@
                                 <span>tygyndarhanrest.ru</span>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="row justify-content-center">
+                    <div class="room-btn pt-70">
+                        <a href="<?= Url::toRoute(['/site/portfolio'])?>" class="btn view-btn1">Посмотреть еще</a>
                     </div>
                 </div>
             </div>
@@ -176,7 +187,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
@@ -192,7 +203,7 @@
                                 <span>от 12,000 ₽</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
@@ -205,12 +216,14 @@
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Корпоративный сайт для бизнеса</a></h3>
-                                <span>от 36,000 ₽</span>
+                                <h3><a href="product_details.html">Разработка и поддержка сайтов</a></h3>
+                                <!-- <h3><a href="product_details.html">Корпоративный сайт для бизнеса</a></h3> -->
+                                <!-- <span>от 36,000 ₽</span> -->
+                                <span>от 12,000 ₽</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
@@ -226,8 +239,8 @@
                                 <span>от 115,000 ₽</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    </div> -->
+                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
@@ -243,7 +256,7 @@
                                 <span>индивидуально</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
@@ -257,7 +270,7 @@
                             </div>
                             <div class="popular-caption">
                                 <h3><a href="product_details.html">Введение социальных сетей</a></h3>
-                                <span>от 9,999 ₽</span>
+                                <span>от 10,000 ₽</span>
                             </div>
                         </div>
                     </div>
@@ -274,7 +287,7 @@
                             </div>
                             <div class="popular-caption">
                                 <h3><a href="product_details.html">Изготовление видеороликов</a></h3>
-                                <span>от 4,999 ₽</span>
+                                <span>от 5,000 ₽</span>
                             </div>
                         </div>
                     </div>
@@ -282,7 +295,7 @@
                 <!-- Button -->
                 <div class="row justify-content-center">
                     <div class="room-btn pt-70">
-                        <a href="catagori.html" class="btn view-btn1">Посмотреть еще</a>
+                        <a href="<?= Url::toRoute(['/site/goods'])?>" class="btn view-btn1">Посмотреть еще</a>
                     </div>
                 </div>
             </div>
@@ -301,8 +314,8 @@
                 <!-- Arrow -->
                 <div class="thumb-content-box">
                     <div class="thumb-content">
-                        <h3>Next Video</h3>
-                        <a href="#"> <i class="flaticon-arrow"></i></a>
+                        <h3>Галерея</h3>
+                        <a href="<?= Url::toRoute(['/gallery/front/index'])?>"> <i class="flaticon-arrow"></i></a>
                     </div>
                 </div>
             </div>
@@ -311,23 +324,23 @@
         <!--? Watch Choice  Start-->
         <div class="watch-area section-padding30">
             <div class="container">
-                <div class="row align-items-center justify-content-between padding-130">
+                <div class="row align-items-center justify-content-between padding-130 flex-md-row-reverse">
+                    <div class="col-lg-6 col-md-6 col-sm-10">
+                        <div class="choice-watch-img mb-40 text-left text-md-center">
+                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch1.png" alt="">
+                        </div>
+                    </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="watch-details mb-40">
                             <h2>Гарантия 1 год</h2>
                             <p>Мы не только уверены в качестве наших работ, но и даем гарантию на все работы на один год</p>
-                            <a href="shop.html" class="btn">Заказать сайт</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40">
-                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch1.png" alt="">
+                            <a href="shop.html" class="btn d-none d-md-inline">Заказать сайт</a>
                         </div>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40">
+                        <div class="choice-watch-img mb-40 text-center">
                             <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch2.png" alt="">
                         </div>
                     </div>
@@ -373,3 +386,10 @@
             </div>
         </div> -->
         <!-- Shop Method End-->
+
+
+        <!-- Reviews Start-->
+        <!-- Reviews End-->
+
+        <!-- Partners Start-->
+        <!-- Partners End-->

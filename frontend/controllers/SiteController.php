@@ -130,7 +130,7 @@ class SiteController extends Controller
     {
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
+            if ($model->sendEmail(Yii::$app->params['managerEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
             } else {
                 Yii::$app->session->setFlash('error', 'There was an error sending your message.');
@@ -159,9 +159,14 @@ class SiteController extends Controller
         return $this->render('portfolio');
     }
 
-    public function actionYakutskmaster()
+    public function actionGoods()
     {
-        return $this->render('yakutskmaster');
+        return $this->render('goods');
+    }
+
+    public function actionSale()
+    {
+        return $this->render('sale');
     }
 
     /**

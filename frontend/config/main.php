@@ -46,11 +46,17 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '/' => 'site/index',
+
+                'blog' => 'blog/front/index',
+                'blog/<slug>' => 'blog/front/view',
+
+                '<slug>' => 'page/front/view',
+
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-                '/'                                 => 'site/index',
-                'yakutskmaster' => 'site/yakutskmaster'
+                '<module:\w+>/<controller:\w+>/<action:\w+>/' => '<module>/<controller>/<action>',
             ],
         ],
         'view' => [

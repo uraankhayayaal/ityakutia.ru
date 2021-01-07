@@ -18,7 +18,7 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Разработка и создание web-дизайна, сайтов, видеороликов</p>
+                                        <p>Разработка и поддержка сайтов. Создание web-дизайна и видеороликов. Продвижение в социальных сетях.</p>
                                 </div>
                                 </div>
                             </div>
@@ -29,10 +29,10 @@ use yii\helpers\Url;
                             <div class="footer-tittle">
                                 <h4>Ссылки</h4>
                                 <ul>
-                                    <li><a href="#">О нас</a></li>
-                                    <li><a href="#">Услуги</a></li>
-                                    <li><a href="#">Портфолио</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/about']); ?>">О нас</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/goods']); ?>">Услуги</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/portfolio']); ?>">Портфолио</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/contact']); ?>">Контакты</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -42,10 +42,10 @@ use yii\helpers\Url;
                             <div class="footer-tittle">
                                 <h4>Акции</h4>
                                 <ul>
-                                    <li><a href="#">Сайт + соцсеть = -5%</a></li>
-                                    <li><a href="#">3 баннера по цене 2х</a></li>
-                                    <li><a href="#">1 домен = ssl 1 год</a></li>
-                                    <li><a href="#">1 год гарантия</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/sale#banner']); ?>">Баннер в подарок</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/sale#turbo']); ?>">Производительность в подарок</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/sale#domain']); ?>">Домен на 1 год</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/sale#ssl']); ?>">SSL сертификат на 1 год</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,10 +55,10 @@ use yii\helpers\Url;
                             <div class="footer-tittle">
                                 <h4>Поддержка</h4>
                                 <ul>
-                                    <li><a href="/faq">Вопросы и ответы</a></li>
-                                    <li><a href="/terms-of-service">Условия пользования</a></li>
-                                    <li><a href="/privacy-policy">Политика конфиденциальности</a></li>
-                                    <li><a href="/cookies">Политика обработки cookies</a></li>
+                                    <li><a href="<?= Url::toRoute(['/faq']); ?>">Вопросы и ответы</a></li>
+                                    <li><a href="<?= Url::toRoute(['/terms-of-service']); ?>">Условия пользования</a></li>
+                                    <li><a href="<?= Url::toRoute(['/privacy-policy']); ?>">Политика конфиденциальности</a></li>
+                                    <li><a href="<?= Url::toRoute(['/cookies']); ?>">Политика обработки cookies</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -68,9 +68,7 @@ use yii\helpers\Url;
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-8 col-md-7">
                         <div class="footer-copy-right">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-&copy;2017-<script>document.write(new Date().getFullYear());</script> Все права защиищены | ООО Информационные технологии Якутии</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                  
+                            <p>&copy;2017-<script>document.write(new Date().getFullYear());</script> Все права защищены | ООО Информационные технологии Якутии</a></p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4 col-md-5">

@@ -1,4 +1,7 @@
 <?php
+
+use yii\rbac\DbManager;
+
 return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -24,6 +27,9 @@ return [
            'hostname' => 'redis',
            'port' => 6379,
            'database' => 0,
+       ],
+       'authManager' => [
+           'class' => DbManager::class,
        ],
     ],
 ];
