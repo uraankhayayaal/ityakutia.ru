@@ -7,7 +7,7 @@ $this->title = "Акции";
         <div class="about-details section-padding30">
             <div class="container">
                 <div class="section-top-border">
-					<h3 class="mb-30">Дизайн</h3>
+					<h3 class="mb-30 text-center">Дизайн</h3>
 					<div class="row">
 						<div class="col-md-4">
 							<div id="banner" class="single-defination">
@@ -33,7 +33,7 @@ $this->title = "Акции";
 					</div>
                 </div>
                 <div class="section-top-border">
-					<h3 class="mb-30">Разработка сайта</h3>
+					<h3 class="mb-30 text-center">Разработка сайта</h3>
 					<div class="row">
 						<div class="col-md-4">
 							<div id="domain" class="single-defination">
