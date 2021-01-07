@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 $this->title = "Услуги";
 
 ?>
@@ -113,7 +115,7 @@ $this->title = "Услуги";
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn mt-3">Заказать</a>
+                        <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a>
 
                         <h3 class="mb-30 mt-60">СММ (введение социальных сетей)</h3>
                         <div class="progress-table-wrap">
@@ -214,7 +216,7 @@ $this->title = "Услуги";
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn mt-3">Заказать</a>
+                        <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a>
 
                         <h3 class="mb-30 mt-60">Разработка</h3>
                         <div class="progress-table-wrap">
@@ -282,7 +284,7 @@ $this->title = "Услуги";
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn mt-3">Заказать</a>
+                        <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a>
 
                         <h3 class="mb-30 mt-60">Поддержка</h3>
                         <div class="progress-table-wrap">
@@ -291,99 +293,50 @@ $this->title = "Услуги";
                                     <div class="serial">#</div>
                                     <div class="country">Наименование</div>
                                     <div class="visit">Стоимость</div>
-                                    <div class="percentage">Сроки</div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">01</div>
                                     <div class="country">Установка сайта на хостинг</div>
                                     <div class="visit">1,500 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-1" role="progressbar" style="width: 15%"
-                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">02</div>
                                     <div class="country">Настройка домена</div>
                                     <div class="visit">500 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-1" role="progressbar" style="width: 50%"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">03</div>
                                     <div class="country">Установка ssl сертификата</div>
                                     <div class="visit">500 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-3" role="progressbar" style="width: 80%"
-                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">04</div>
                                     <div class="country">Подключение сайта в поисковые системы</div>
                                     <div class="visit">500 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-2" role="progressbar" style="width: 90%"
-                                                aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">05</div>
                                     <div class="country">Установка аналитики посещения</div>
                                     <div class="visit">1,000 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-2" role="progressbar" style="width: 100%"
-                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">06</div>
                                     <div class="country">Создание карты сайта</div>
                                     <div class="visit">3,000 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-2" role="progressbar" style="width: 100%"
-                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">07</div>
                                     <div class="country">Наполнение контентом</div>
                                     <div class="visit">от 5,000 ₽</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-2" role="progressbar" style="width: 100%"
-                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">08</div>
                                     <div class="country">Хостинг</div>
                                     <div class="visit">5,000 ₽/год</div>
-                                    <div class="percentage">
-                                        <div class="progress">
-                                            <div class="progress-bar color-2" role="progressbar" style="width: 100%"
-                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="btn mt-3">Заказать</a>
+                        <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a>
 
                     </div>
                 </div>

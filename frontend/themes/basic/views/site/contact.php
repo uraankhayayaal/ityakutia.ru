@@ -27,13 +27,13 @@ $this->title = 'Контакты';
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Есть вопрос или предложение?</h2>
+                        <h2 class="contact-title">Напишите нам, что вы хотите заказать?</h2>
                     </div>
                     <div class="col-lg-8">
                         <?php $form = ActiveForm::begin(['id' => 'contactForm', 'options' => ['class' => "form-contact contact_form"]]); ?>
                             <div class="row">
                                 <div class="col-12">
-                                    <?= $form->field($model, 'body')->textarea(['class' => "form-control w-100", 'cols' => "30", 'rows' => "9", 'onfocus' => "this.placeholder = ''", 'onblur' => "this.placeholder = '".$model->getAttributeLabel('body')."'", 'placeholder' => $model->getAttributeLabel('body'), 'autofocus' => true])->label(false) ?>
+                                    <?= $form->field($model, 'subject')->textInput(['class' => "form-control", 'onfocus' => "this.placeholder = ''", 'onblur' => "this.placeholder = '".$model->getAttributeLabel('subject')."'", 'placeholder' => $model->getAttributeLabel('subject')])->label(false) ?>
                                 </div>
                                 <div class="col-sm-6">
                                     <?= $form->field($model, 'name')->textInput(['class' => "form-control", 'onfocus' => "this.placeholder = ''", 'onblur' => "this.placeholder = '".$model->getAttributeLabel('name')."'", 'placeholder' => $model->getAttributeLabel('name')])->label(false) ?>
@@ -42,7 +42,7 @@ $this->title = 'Контакты';
                                     <?= $form->field($model, 'email')->textInput(['class' => "form-control", 'onfocus' => "this.placeholder = ''", 'onblur' => "this.placeholder = '".$model->getAttributeLabel('email')."'", 'placeholder' => $model->getAttributeLabel('email')])->label(false) ?>
                                 </div>
                                 <div class="col-12">
-                                    <?= $form->field($model, 'subject')->textInput(['class' => "form-control", 'onfocus' => "this.placeholder = ''", 'onblur' => "this.placeholder = '".$model->getAttributeLabel('subject')."'", 'placeholder' => $model->getAttributeLabel('subject')])->label(false) ?>
+                                    <?= $form->field($model, 'body')->textarea(['class' => "form-control w-100", 'cols' => "30", 'rows' => "9", 'onfocus' => "this.placeholder = ''", 'onblur' => "this.placeholder = '".$model->getAttributeLabel('body')."'", 'placeholder' => $model->getAttributeLabel('body'), 'autofocus' => true])->label(false) ?>
                                 </div>
                                 <div class="col-12">
                                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
