@@ -7,25 +7,41 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Request password reset';
+$this->title = 'Забыли пароль?';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-request-password-reset">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>Please fill out your email. A link to reset password will be sent there.</p>
-
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
-
-                <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Send', ['class' => 'btn btn-primary']) ?>
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2><?= Html::encode($this->title) ?></h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-            <?php ActiveForm::end(); ?>
+            </div>
         </div>
-    </div>
-</div>
+        <!-- Hero Area End-->
+        <!--================ password_reset_part Area start =================-->
+        <section class="password_reset_part section_padding ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p>Запрос на изменение пароля, введите вашу электронную почту:</p>
+                        <?php $form = ActiveForm::begin(['id' => 'request-password-reset-form']); ?>
+
+                            <?= $form->field($model, 'email')->textInput(['autofocus' => true, 'placeholder' => $model->getAttributeLabel('email')])->label(false) ?>
+
+                            <div class="form-group">
+                                <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
+                            </div>
+
+                        <?php ActiveForm::end(); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================ password_reset_part Area end =================-->

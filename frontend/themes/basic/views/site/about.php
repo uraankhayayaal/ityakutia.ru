@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 $this->title = 'О нас';
 
 ?>
