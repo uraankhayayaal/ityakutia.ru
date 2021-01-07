@@ -44,7 +44,7 @@ class AppAsset extends AssetBundle
         // 'js/mail-script.js', // ?
         // 'js/jquery.ajaxchimp.min.js', // ?
         // 'js/plugins.js',
-        'js/main.js',
+        //'js/main.js',
 
         // downCount не используется
     ];
