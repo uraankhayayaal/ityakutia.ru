@@ -11,7 +11,7 @@ use yii\helpers\Url;
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="<?= Url::home(); ?>"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo.svg" alt=""></a>
+                            <a href="<?= Url::home(); ?>"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo.svg" alt="<?= Yii::$app->name ?>"></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">

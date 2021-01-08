@@ -74,7 +74,7 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product6.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Ассоциация Ветеран РС(Я)</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ассоциация Ветеран РС(Я)</a></h3>
                                 <span>veteransakha.ru</span>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">ГБУ РС(Я) РИАЦМУТ</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">ГБУ РС(Я) РИАЦМУТ</a></h3>
                                 <span>riacmut.ru</span>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Ресурсный центр Победа</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ресурсный центр Победа</a></h3>
                                 <span>rcmtykt.ru</span>
                             </div>
                         </div>
@@ -107,7 +107,7 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Корея лайф центр</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Корея лайф центр</a></h3>
                                 <span>daegulife.ru</span>
                             </div>
                         </div>
@@ -118,7 +118,7 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Родительский портал Якутии</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Родительский портал Якутии</a></h3>
                                 <span>2children.ru</span>
                             </div>
                         </div>
@@ -129,7 +129,7 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Ресторан Тыгын Дархан</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ресторан Тыгын Дархан</a></h3>
                                 <span>tygyndarhanrest.ru</span>
                             </div>
                         </div>
@@ -202,7 +202,7 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Одностраничный (Landing Page)</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Одностраничный (Landing Page)</a></h3>
                                 <span>от 12,000 ₽</span>
                             </div>
                         </div>
@@ -219,8 +219,8 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Разработка и поддержка сайтов</a></h3>
-                                <!-- <h3><a href="product_details.html">Корпоративный сайт для бизнеса</a></h3> -->
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Разработка и поддержка сайтов</a></h3>
+                                <!-- <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Корпоративный сайт для бизнеса</a></h3> -->
                                 <!-- <span>от 36,000 ₽</span> -->
                                 <span>от 12,000 ₽</span>
                             </div>
@@ -238,7 +238,7 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Интернет магазин, доска объявлений</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Интернет магазин, доска объявлений</a></h3>
                                 <span>от 115,000 ₽</span>
                             </div>
                         </div>
@@ -255,7 +255,7 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Интернет портал, серверы для мобильных приложений</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Интернет портал, серверы для мобильных приложений</a></h3>
                                 <span>индивидуально</span>
                             </div>
                         </div>
@@ -272,7 +272,7 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Введение социальных сетей</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Введение социальных сетей</a></h3>
                                 <span>от 10,000 ₽</span>
                             </div>
                         </div>
@@ -289,7 +289,7 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="product_details.html">Изготовление видеороликов</a></h3>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Изготовление видеороликов</a></h3>
                                 <span>от 5,000 ₽</span>
                             </div>
                         </div>
@@ -330,28 +330,28 @@ $this->title = null;
                 <div class="row align-items-center justify-content-between padding-130 flex-md-row-reverse">
                     <div class="col-lg-6 col-md-6 col-sm-10">
                         <div class="choice-watch-img mb-40 text-left text-md-center">
-                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch1.png" alt="">
+                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch1.png" alt="<?= Yii::$app->name ?>">
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="watch-details mb-40">
                             <h2>Гарантия 1 год</h2>
                             <p>Мы не только уверены в качестве наших работ, но и даем гарантию на все работы на один год</p>
-                            <a href="shop.html" class="btn d-none d-md-inline">Заказать сайт</a>
+                            <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn d-none d-md-inline">Заказать сайт</a>
                         </div>
                     </div>
                 </div>
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6 col-md-6 col-sm-10">
                         <div class="choice-watch-img mb-40 text-center">
-                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch2.png" alt="">
+                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch2.png" alt="<?= Yii::$app->name ?>">
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="watch-details mb-40">
                             <h2>Бесплатный ssl сертификат</h2>
                             <p>При покупке домена дается бесплатный ssl сертификат, он обеспечивает защиту сайта и поднимается поисковыми сервисами в рейтинге</p>
-                            <a href="shop.html" class="btn">Заказать сайт</a>
+                            <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn">Заказать сайт</a>
                         </div>
                     </div>
                 </div>

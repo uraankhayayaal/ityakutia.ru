@@ -14,7 +14,7 @@ use yii\helpers\Url;
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo2_footer.svg" alt=""></a>
+                                    <a href="index.html"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo2_footer.svg" alt="<?= Yii::$app->name ?>"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
