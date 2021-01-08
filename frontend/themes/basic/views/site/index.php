@@ -1,6 +1,9 @@
 <?php
 
 use yii\helpers\Url;
+
+$this->title = null;
+
 ?>
         <!--? slider Area Start -->
         <div class="slider-area ">
@@ -11,7 +14,7 @@ use yii\helpers\Url;
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях</h1>
+                                    <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях</h2>
                                     <img src="<?= $this->theme->baseUrl; ?>/img/hero/mobile.svg" class="d-md-none mw-100 pr-3 pb-3 heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в комплексном продвижении вашего бизнеса в разных социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
@@ -34,7 +37,7 @@ use yii\helpers\Url;
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта</h1>
+                                    <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта</h2>
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в продвижении вашего бизнеса в интернете и в социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
@@ -182,7 +185,7 @@ use yii\helpers\Url;
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
                             <h2>Наши услуги</h2>
-                            <p>Компания IT Yakutia предоставляет широкий спектр услуг в г. Якутск и в других регионах России</p>
+                            <p>Компания IT Yakutia предоставляет широкий спектр услуг, от разработки и поддержки сайтов до введение социальных сетей в г. Якутск и в других регионах России</p>
                         </div>
                     </div>
                 </div>

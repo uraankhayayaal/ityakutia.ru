@@ -35,7 +35,8 @@
         "it-yakutia/yii2-poll": "*",
         "it-yakutia/yii2-partner": "*",
         "it-yakutia/yii2-collective": "*",
-        "it-yakutia/yii2-banner": "*"
+        "it-yakutia/yii2-banner": "*",
+        "skeeks/yii2-assets-auto-compress": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

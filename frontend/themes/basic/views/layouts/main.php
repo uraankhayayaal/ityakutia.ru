@@ -5,6 +5,7 @@
 
 use yii\helpers\Html;
 use frontend\themes\basic\assets\AppAsset;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 
@@ -16,16 +17,66 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?> - <?= Yii::$app->name ?></title>
+    <title><?= ($this->title != null ? (Html::encode($this->title).' | ') : '') ?><?= Yii::$app->name ?></title>
     <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?>/img/favicon.svg">
 
-    <meta name="description" content="Разработка сайтов и мобильных приложений Admin14 - качесвтенно и в корокие сроки, от одностраничных (landingpage) до сложных сайтов, порталов и интернет магазинов">
-    <meta name="keywords" content="разработка сайтов, создание интернет страниц, якутск, Yii2, разработка мобильных приложений, заказы на разработку сайтов и мобильных приложений, android, ios, web, landingpage, одностраничный сайт, интернет магазин, сервер, доска объявлений">
     <meta name="google-site-verification" content="S31x0lJg0CebKhPoOpLixsaUtap1PgQu7HoT4lIYF-A" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <?php $this->head() ?>
+
+    <?php
+        Yii::$app->params['meta_description']['content'] = Yii::$app->params['meta_description']['content'];
+        Yii::$app->params['meta_keywords']['content'] = ($this->title != null ? (Html::encode($this->title).', ') : '').Yii::$app->params['meta_keywords']['content'];
+
+        $this->registerMetaTag([
+            'name' => 'keywords',
+            'content' => Yii::$app->params['meta_keywords']['content'],
+        ]);
+        $this->registerMetaTag([
+            'name' => 'description',
+            'content' => Yii::$app->params['meta_description']['content'],
+        ]);
+
+        $this->registerMetaTag([
+            'property' => 'og:title',
+            'content' => ($this->title != null ? (Html::encode($this->title).' | ') : '').\Yii::$app->name,
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:type',
+            'content' => Yii::$app->params['meta_type']['content'],
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:description',
+            'content' => Yii::$app->params['meta_description']['content'],
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:image',
+            'content' => Yii::$app->params['meta_image']['content'],
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:image:type',
+            'content' => 'image/jpeg',
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:image:width',
+            'content' => '300',
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:image:height',
+            'content' => '300',
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:image:alt',
+            'content' => Yii::$app->params['meta_description']['content'],
+        ]);
+        $this->registerMetaTag([
+            'property' => 'og:url',
+            'content' => empty(Yii::$app->params['meta_url']['content']) ? Url::current([], true) : Yii::$app->params['meta_url']['content'],
+        ]);
+
+    ?>
 </head>
 <body>
 <?php $this->beginBody() ?>

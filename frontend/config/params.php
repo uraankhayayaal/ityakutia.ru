@@ -27,9 +27,9 @@ return [
 	],
     'meta_description' => [
 	    'name' => 'description',
-	    'content' => 'IT Yakutia - Разработка, поддержка и продвижение сайтов и социальных сетей',
+	    'content' => 'Мы занимаемся продвижением вашего бизнеса в интернете, оказываем услуги по маркетингу, введем соцсети, оказываем услуги дизайна и разработку сайта',
 	],
-    'meta_image' => ['name' => 'image', 'content' => '/themes/basic/img/logo.svg'],
+    'meta_image' => ['name' => 'image', 'content' => '/themes/basic/img/logo/og_image.jpg'],
     'meta_type' => ['name' => 'type', 'content' => 'website'],
     'meta_url' => ['name' => 'url', 'content' => null],
 ];
