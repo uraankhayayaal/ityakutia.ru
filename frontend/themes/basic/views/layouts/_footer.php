@@ -68,7 +68,7 @@ use yii\helpers\Url;
                 <div class="row align-items-center">
                     <div class="col-xl-7 col-lg-8 col-md-7">
                         <div class="footer-copy-right">
-                            <p>&copy;2017-<script>document.write(new Date().getFullYear());</script> Все права защищены | ООО Информационные технологии Якутии</a></p>
+                            <p>&copy;2017-2021 Все права защищены | ООО Информационные технологии Якутии</a></p>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-4 col-md-5">

@@ -17,7 +17,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?> - <?= Yii::$app->name ?></title>
-    <link rel="shortcut icon" href="<?= $this->theme->baseUrl; ?>/img/favicon.ico">
+    <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?>/img/favicon.svg">
 
     <meta name="description" content="Разработка сайтов и мобильных приложений Admin14 - качесвтенно и в корокие сроки, от одностраничных (landingpage) до сложных сайтов, порталов и интернет магазинов">
     <meta name="keywords" content="разработка сайтов, создание интернет страниц, якутск, Yii2, разработка мобильных приложений, заказы на разработку сайтов и мобильных приложений, android, ios, web, landingpage, одностраничный сайт, интернет магазин, сервер, доска объявлений">
