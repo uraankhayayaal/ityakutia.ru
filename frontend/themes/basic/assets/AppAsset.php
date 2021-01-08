@@ -40,7 +40,7 @@ class AppAsset extends AssetBundle
         ['src' => "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js", 'integrity' => "sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==", 'crossorigin' => "anonymous"],
         // 'js/wow.min.js',
         ['src' => "https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js", 'integrity' => "sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==", 'crossorigin' => "anonymous"],
-        'js/animated.headline.js',
+        // 'js/animated.headline.js',
         // 'js/jquery.magnific-popup.js',
         ['src' => "https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js", 'integrity' => "sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==", 'crossorigin' => "anonymous"],
         // 'js/jquery.scrollUp.min.js',
