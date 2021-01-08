@@ -37,7 +37,7 @@ $this->title = null;
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта</h2>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта</h1>
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в продвижении вашего бизнеса в интернете и в социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
