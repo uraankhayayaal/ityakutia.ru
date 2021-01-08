@@ -8,7 +8,7 @@ $this->title = 'О нас';
 
         <!-- Hero Area Start-->
         <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
+            <div class="single-slider slider-height2 contact-hero d-flex align-items-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">

@@ -3095,6 +3095,34 @@ input:focus {
     min-height: 260px;
   }
 }
+.slider-height2.contact-hero {
+  background-image: url(../img/hero/contact_hero.jpg);
+  min-height: 300px;
+}
+.slider-height2.contact-hero h2 {
+  color: white;
+}
+.slider-height2.gallery-hero {
+  background-image: url(../img/hero/gallery_hero.jpg);
+  min-height: 300px;
+}
+.slider-height2.gallery-hero h2 {
+  color: white;
+}
+.slider-height2.Industries-hero {
+  background-image: url(../img/hero/Industries_hero.jpg);
+  min-height: 300px;
+}
+.slider-height2.Industries-hero h2 {
+  color: white;
+}
+.slider-height2.services-hero {
+  background-image: url(../img/hero/services_hero.jpg);
+  min-height: 300px;
+}
+.slider-height2.services-hero h2 {
+  color: white;
+}
 
 .slider-area {
   overflow: hidden;

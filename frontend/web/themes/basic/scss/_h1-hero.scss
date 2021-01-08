@@ -30,6 +30,34 @@
     @media #{$xs}{
         min-height: 260px;
     }
+    &.contact-hero{
+        background-image: url(../img/hero/contact_hero.jpg);
+        min-height: 300px;
+        h2{
+            color: white;
+        }
+    }
+    &.gallery-hero{
+        background-image: url(../img/hero/gallery_hero.jpg);
+        min-height: 300px;
+        h2{
+            color: white;
+        }
+    }
+    &.Industries-hero{
+        background-image: url(../img/hero/Industries_hero.jpg);
+        min-height: 300px;
+        h2{
+            color: white;
+        }
+    }
+    &.services-hero{
+        background-image: url(../img/hero/services_hero.jpg);
+        min-height: 300px;
+        h2{
+            color: white;
+        }
+    }
 }
 
 // Main Slider
