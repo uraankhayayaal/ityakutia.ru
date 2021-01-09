@@ -64,11 +64,6 @@ use yii\helpers\Url;
     <?php if(Yii::$app->user->can("collective")) { ?>
     <li class="<?= (Yii::$app->controller->module->id=='collective' && Yii::$app->controller->id=='back')?'active':''; ?>"><a class="waves-effect waves-teal" href="<?= Url::toRoute('/collective/back/index') ?>"><i class="material-icons">people</i> <?= Yii::t('app', 'Коллектив') ?></a></li>
     <?php } ?>
-
-    <?php if(Yii::$app->user->can("application")) { ?>
-    <li class="<?= (Yii::$app->controller->module->id=='application' && Yii::$app->controller->id=='back')?'active':''; ?>"><a class="waves-effect waves-teal" href="<?= Url::toRoute('/application/back/index') ?>"><i class="material-icons">chat_bubble_outline</i> <?= Yii::t('app', 'Заявки') ?></a></li>
-    <li class="<?= (Yii::$app->controller->module->id=='application' && Yii::$app->controller->id=='back-category')?'active':''; ?>"><a class="waves-effect waves-teal" href="<?= Url::toRoute('/application/back-category/index') ?>"><i class="material-icons">chat</i> <?= Yii::t('app', 'Категории Заявок') ?></a></li>
-    <?php } ?>
     
     <?php if(Yii::$app->user->can("rbac_permissions") || Yii::$app->user->can("rbac_roles") || Yii::$app->user->can("rbac_users") || Yii::$app->user->can("settings")) { ?>
         <li><a class="subheader grey-text"><i class="material-icons grey-text tiny">public</i> <?= Yii::t('app', 'Основное') ?></a></li>
