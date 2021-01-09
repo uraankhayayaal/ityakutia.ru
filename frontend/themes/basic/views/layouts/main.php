@@ -24,7 +24,8 @@ AppAsset::register($this);
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="yandex-verification" content="837e75889d0f2540" />
-    
+    <?= $this->render('_tagmanager_head') ?>
+
     <?php $this->head() ?>
 
     <?php
@@ -80,6 +81,7 @@ AppAsset::register($this);
     ?>
 </head>
 <body>
+<?= $this->render('_tagmanager_body') ?>
 <?php $this->beginBody() ?>
 
     <!--? Preloader Start -->
