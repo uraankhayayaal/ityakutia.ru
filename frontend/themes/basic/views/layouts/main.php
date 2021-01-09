@@ -23,7 +23,8 @@ AppAsset::register($this);
     <meta name="google-site-verification" content="S31x0lJg0CebKhPoOpLixsaUtap1PgQu7HoT4lIYF-A" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+    <meta name="yandex-verification" content="837e75889d0f2540" />
+    
     <?php $this->head() ?>
 
     <?php
