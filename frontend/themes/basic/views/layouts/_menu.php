@@ -27,6 +27,7 @@ use yii\helpers\Url;
                                         </ul>
                                     </li> -->
                                     <li><a href="<?= Url::toRoute(['/site/portfolio']); ?>">Портфолио</a></li>
+                                    <li><a href="<?= Url::toRoute(['/blog/front/index']); ?>">Новости</a></li>
                                     <!-- <li><a href="blog.html">Портфолио</a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>

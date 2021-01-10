@@ -1,9 +1,28 @@
 <?php
 
+use ityakutia\blog\models\Article;
+use ityakutia\blog\models\ArticleCategory;
+use yii\helpers\Url;
+
 $this->title = 'Новость';
 
 ?>
 
+   <!-- Hero Area Start-->
+   <div class="slider-area ">
+      <div class="single-slider slider-height2 gallery-hero d-flex align-items-center">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                           <h2><?= $this->title ?></h2>
+                        </div>
+                  </div>
+               </div>
+            </div>
+      </div>
+   </div>
+   <!-- Hero Area End-->
     <!--================Blog Area =================-->
     <section class="blog_area single-post-area section-padding">
          <div class="container">
@@ -11,54 +30,24 @@ $this->title = 'Новость';
                <div class="col-lg-8 posts-list">
                   <div class="single-post">
                      <div class="feature-img">
-                        <img class="img-fluid" src="assets/img/blog/single_blog_1.png" alt="">
+                        <img class="img-fluid" src="<?= $model->photo ?>" alt="<?= $model->title ?>">
                      </div>
                      <div class="blog_details">
-                        <h2>Second divided from form fish beast made every of seas
-                           all gathered us saying he our
-                        </h2>
+                        <h2><?= $model->title ?></h2>
                         <ul class="blog-info-link mt-3 mb-4">
-                           <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                           <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                           <?php foreach ($model->articleCategorySets as $key => $articleSet) { ?>
+                              <li><a href="<?= Url::to(['index', 'filter_category_id' => $articleSet->article_category_id]); ?>"><i class="fa fa-hashtag"></i> <?= $articleSet->articleCategory->title ?></a></li>
+                           <?php } ?>
                         </ul>
-                        <p class="excert">
-                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                           fraction of the camp price. However, who has the willpower
-                        </p>
-                        <p>
-                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                           fraction of the camp price. However, who has the willpower to actually sit through a
-                           self-imposed MCSE training. who has the willpower to actually
-                        </p>
-                        <div class="quote-wrapper">
-                           <div class="quotes">
-                              MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                              should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                              a fraction of the camp price. However, who has the willpower to actually sit through a
-                              self-imposed MCSE training.
-                           </div>
-                        </div>
-                        <p>
-                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                           fraction of the camp price. However, who has the willpower
-                        </p>
-                        <p>
-                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                           fraction of the camp price. However, who has the willpower to actually sit through a
-                           self-imposed MCSE training. who has the willpower to actually
-                        </p>
+                        <?= $model->content ?>
                      </div>
                   </div>
-                  <div class="navigation-top">
+                  <!-- <div class="navigation-top">
                      <div class="d-sm-flex justify-content-between text-center">
                         <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
                            people like this</p>
                         <div class="col-sm-4 text-center my-2 my-sm-0">
-                           <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
+                           <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p>
                         </div>
                         <ul class="social-icons">
                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -233,180 +222,140 @@ $this->title = 'Новость';
                            <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
                         </div>
                      </form>
-                  </div>
+                  </div> -->
                </div>
                <div class="col-lg-4">
                   <div class="blog_right_sidebar">
-                     <aside class="single_sidebar_widget search_widget">
+                     <!-- <aside class="single_sidebar_widget search_widget">
                         <form action="#">
                            <div class="form-group">
-                              <div class="input-group mb-3">
-                                 <input type="text" class="form-control" placeholder='Search Keyword'
-                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                                 <div class="input-group-append">
-                                    <button class="btns" type="button"><i class="ti-search"></i></button>
+                                 <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder='Search Keyword'
+                                       onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Search Keyword'">
+                                    <div class="input-group-append">
+                                       <button class="btns" type="button"><i class="ti-search"></i></button>
+                                    </div>
                                  </div>
-                              </div>
                            </div>
                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                              type="submit">Search</button>
+                                 type="submit">Search</button>
                         </form>
-                     </aside>
+                     </aside> -->
+
                      <aside class="single_sidebar_widget post_category_widget">
-                        <h4 class="widget_title">Category</h4>
+                        <h4 class="widget_title">Категории</h4>
                         <ul class="list cat-list">
+                           <?php $categories = ArticleCategory::find()->where(['is_publish' => 1])->all(); ?>
+                           <?php foreach ($categories as $key => $category) { ?>
+                                 <li>
+                                    <a href="<?= Url::to(['index', 'filter_category_id' => $category->id]); ?>" class="d-flex">
+                                       <p class="<?= Yii::$app->request->get('filter_category_id') == $category->id ? 'font-weight-bold' : ''; ?>"><?= $category->title ?> (<?= $category->getArticleCategorySets()->count(); ?>)</p>
+                                    </a>
+                                 </li>
+                           <?php } ?>
                            <li>
-                              <a href="#" class="d-flex">
-                                 <p>Resaurant food</p>
-                                 <p>(37)</p>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#" class="d-flex">
-                                 <p>Travel news</p>
-                                 <p>(10)</p>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#" class="d-flex">
-                                 <p>Modern technology</p>
-                                 <p>(03)</p>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#" class="d-flex">
-                                 <p>Product</p>
-                                 <p>(11)</p>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#" class="d-flex">
-                                 <p>Inspiration</p>
-                                 <p>(21)</p>
-                              </a>
-                           </li>
-                           <li>
-                              <a href="#" class="d-flex">
-                                 <p>Health Care</p>
-                                 <p>(21)</p>
-                              </a>
+                                 <a href="<?= Url::to(['index']); ?>" class="d-flex">
+                                    <p class="<?= Yii::$app->request->get('filter_category_id') == null ? 'font-weight-bold' : ''; ?>">Все</p>
+                                 </a>
                            </li>
                         </ul>
                      </aside>
+
                      <aside class="single_sidebar_widget popular_post_widget">
-                        <h3 class="widget_title">Recent Post</h3>
+                        <h3 class="widget_title">Свежие новости</h3>
+                        <?php foreach ($model->getMore(4) as $key => $article) { ?>
                         <div class="media post_item">
-                           <img src="assets/img/post/post_1.png" alt="post">
+                           <img class="w-50" src="<?= $article->photo ?>" alt="<?= $article->title ?>">
                            <div class="media-body">
-                              <a href="single-blog.html">
-                                 <h3>From life was you fish...</h3>
-                              </a>
-                              <p>January 12, 2019</p>
+                                 <a href="single-blog.html">
+                                    <h3><?= $article->title ?></h3>
+                                 </a>
+                                 <p><?= Yii::$app->formatter->asDAtetime($article->created_at, 'medium')?></p>
                            </div>
                         </div>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_2.png" alt="post">
-                           <div class="media-body">
-                              <a href="single-blog.html">
-                                 <h3>The Amazing Hubble</h3>
-                              </a>
-                              <p>02 Hours ago</p>
-                           </div>
-                        </div>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_3.png" alt="post">
-                           <div class="media-body">
-                              <a href="single-blog.html">
-                                 <h3>Astronomy Or Astrology</h3>
-                              </a>
-                              <p>03 Hours ago</p>
-                           </div>
-                        </div>
-                        <div class="media post_item">
-                           <img src="assets/img/post/post_4.png" alt="post">
-                           <div class="media-body">
-                              <a href="single-blog.html">
-                                 <h3>Asteroids telescope</h3>
-                              </a>
-                              <p>01 Hours ago</p>
-                           </div>
-                        </div>
+                        <?php } ?>
                      </aside>
-                     <aside class="single_sidebar_widget tag_cloud_widget">
+                     <!-- <aside class="single_sidebar_widget tag_cloud_widget">
                         <h4 class="widget_title">Tag Clouds</h4>
                         <ul class="list">
                            <li>
-                              <a href="#">project</a>
+                                 <a href="#">project</a>
                            </li>
                            <li>
-                              <a href="#">love</a>
+                                 <a href="#">love</a>
                            </li>
                            <li>
-                              <a href="#">technology</a>
+                                 <a href="#">technology</a>
                            </li>
                            <li>
-                              <a href="#">travel</a>
+                                 <a href="#">travel</a>
                            </li>
                            <li>
-                              <a href="#">restaurant</a>
+                                 <a href="#">restaurant</a>
                            </li>
                            <li>
-                              <a href="#">life style</a>
+                                 <a href="#">life style</a>
                            </li>
                            <li>
-                              <a href="#">design</a>
+                                 <a href="#">design</a>
                            </li>
                            <li>
-                              <a href="#">illustration</a>
+                                 <a href="#">illustration</a>
                            </li>
                         </ul>
-                     </aside>
-                     <aside class="single_sidebar_widget instagram_feeds">
+                     </aside> -->
+
+
+                     <!-- <aside class="single_sidebar_widget instagram_feeds">
                         <h4 class="widget_title">Instagram Feeds</h4>
                         <ul class="instagram_row flex-wrap">
                            <li>
-                              <a href="#">
-                                 <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
-                              </a>
+                                 <a href="#">
+                                    <img class="img-fluid" src="/themes/basic/img/post/post_5.png" alt="">
+                                 </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
-                              </a>
+                                 <a href="#">
+                                    <img class="img-fluid" src="/themes/basic/img/post/post_6.png" alt="">
+                                 </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                              </a>
+                                 <a href="#">
+                                    <img class="img-fluid" src="/themes/basic/img/post/post_7.png" alt="">
+                                 </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                              </a>
+                                 <a href="#">
+                                    <img class="img-fluid" src="/themes/basic/img/post/post_8.png" alt="">
+                                 </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                              </a>
+                                 <a href="#">
+                                    <img class="img-fluid" src="/themes/basic/img/post/post_9.png" alt="">
+                                 </a>
                            </li>
                            <li>
-                              <a href="#">
-                                 <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                              </a>
+                                 <a href="#">
+                                    <img class="img-fluid" src="/themes/basic/img/post/post_10.png" alt="">
+                                 </a>
                            </li>
                         </ul>
-                     </aside>
-                     <aside class="single_sidebar_widget newsletter_widget">
+                     </aside> -->
+
+
+                     <!-- <aside class="single_sidebar_widget newsletter_widget">
                         <h4 class="widget_title">Newsletter</h4>
+
                         <form action="#">
                            <div class="form-group">
-                              <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                 onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                                 <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
                            </div>
                            <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                              type="submit">Subscribe</button>
+                                 type="submit">Subscribe</button>
                         </form>
-                     </aside>
+                     </aside> -->
                   </div>
                </div>
             </div>
