@@ -1,6 +1,36 @@
 <?php
 
+use ityakutia\navigation\models\Navigation;
+use frontend\themes\basic\widgets\bootstrap\Nav;
 use yii\helpers\Url;
+
+function getChildren($item){
+    $subnav = [];
+    foreach ($item->children(1)->all() as $key => $subitem) {
+        $subnav[] = [
+            'label' => $subitem->name,
+            'url' => $subitem->link,
+            'items' => getChildren($subitem),
+            'active' => Url::current() == $subitem->link,
+            'options' => ['class' => ($item->color_switcher ? 'hot' : '')],
+        ];
+    }
+    return $subnav;
+}
+$navigation = [];
+$roots = Navigation::find()->roots()->orderBy(['sort' => SORT_ASC])->all();
+$leaves = Navigation::find()->leaves()->all();
+
+foreach ($roots as $key => $item) {
+    $navigation[] = [
+        'label' => $item->name,
+        'url' => $item->link,
+        'items' => getChildren($item),
+        'active' => Url::current() == $item->link,
+        'options' => ['class' => ($item->color_switcher ? 'hot' : '')],
+        'dropdownOptions' => ['class' => 'submenu'],
+    ];
+}
 
 ?>
     <header>
@@ -15,35 +45,15 @@ use yii\helpers\Url;
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
-                            <nav>                                                
-                                <ul id="navigation">  
-                                    <li><a href="<?= Url::home(); ?>">Главная</a></li>
-                                    <li><a href="<?= Url::toRoute(['/site/about']); ?>">О нас</a></li>
-                                    <li class="hot"><a href="<?= Url::toRoute(['/site/goods']); ?>">Услуги</a></li>
-                                    <!-- <li class="hot"><a href="#">Latest</a>
-                                        <ul class="submenu">
-                                            <li><a href="shop.html"> Product list</a></li>
-                                            <li><a href="product_details.html"> Product Details</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li><a href="<?= Url::toRoute(['/site/portfolio']); ?>">Портфолио</a></li>
-                                    <li><a href="<?= Url::toRoute(['/blog/front/index']); ?>">Новости</a></li>
-                                    <!-- <li><a href="blog.html">Портфолио</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
-                                        </ul>
-                                    </li> -->
-                                    <li><a href="<?= Url::toRoute(['/site/sale']); ?>">Акции</a>
-                                        <!-- <ul class="submenu">
-                                            <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => 'site-social-5']); ?>">Сайт + соцсеть = -5%</a></li>
-                                            <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => '3-2-baners']); ?>">3 баннера по цене 2х</a></li>
-                                            <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => 'domain-ssl']); ?>">1 домен = ssl 1 год</a></li>
-                                            <li><a href="<?= Url::toRoute(['/page/front/view', 'slug' => '1-year-guarantee']); ?>">1 год гарантия</a></li>
-                                        </ul> -->
-                                    </li>
-                                    <li><a href="<?= Url::toRoute(['/site/contact']); ?>">Контакты</a></li>
-                                </ul>
+                            <nav>
+                                <?php
+                                    if (!empty($navigation)) {
+                                        echo Nav::widget([
+                                            'options' => ['id' => 'navigation'],
+                                            'items' => $navigation,
+                                        ]);
+                                    }
+                                ?>
                             </nav>
                         </div>
                         <!-- Header Right -->
