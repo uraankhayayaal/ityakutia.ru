@@ -36,7 +36,8 @@
         "it-yakutia/yii2-partner": "*",
         "it-yakutia/yii2-collective": "*",
         "it-yakutia/yii2-banner": "*",
-        "skeeks/yii2-assets-auto-compress": "*"
+        "skeeks/yii2-assets-auto-compress": "*",
+        "demi/sitemap-generator": "~1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

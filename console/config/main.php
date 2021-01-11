@@ -8,6 +8,9 @@ $params = array_merge(
     require __DIR__ . '/params.php',
     require __DIR__ . '/params-local.php'
 );
+$frontend = require(__DIR__ . '/../../frontend/config/main.php');
+$common = require(__DIR__ . '/../../common/config/params.php');
+$frontend['components']['urlManager']['baseUrl'] = $common['domain'];
 
 return [
     'id' => 'app-console',
@@ -40,6 +43,13 @@ return [
                 '@vendor/it-yakutia/yii2-banner/src/migrations',
             ],
         ],
+        'sitemap' => [
+            'class' => 'demi\sitemap\SitemapController',
+            'modelsPath' => '@console/models/sitemap', // Sitemap-data models directory
+            'modelsNamespace' => 'console\models\sitemap', // Namespace in [[modelsPath]] files
+            'savePathAlias' => '@frontend/web', // Where would be placed the generated sitemap-files
+            'sitemapFileName' => 'sitemap.xml', // Name of main sitemap-file in [[savePathAlias]] directory
+        ],
     ],
     'components' => [
         'log' => [
@@ -50,6 +60,7 @@ return [
                 ],
             ],
         ],
+        'urlManager' => $frontend['components']['urlManager'],
     ],
     'params' => $params,
 ];
