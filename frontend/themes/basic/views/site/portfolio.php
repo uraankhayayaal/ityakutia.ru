@@ -37,7 +37,7 @@ $this->title = "Портфолио";
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product6.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Ассоциация Ветеран РС(Я)</a></h3>
+                                <h3><a href="https://veteransakha.ru">Ассоциация Ветеран РС(Я)</a></h3>
                                 <span>veteransakha.ru</span>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ $this->title = "Портфолио";
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">ГБУ РС(Я) РИАЦМУТ</a></h3>
+                                <h3><a href="https://riacmut.ru">ГБУ РС(Я) РИАЦМУТ</a></h3>
                                 <span>riacmut.ru</span>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ $this->title = "Портфолио";
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Ресурсный центр Победа</a></h3>
+                                <h3><a href="https://rcmtykt.ru">Ресурсный центр Победа</a></h3>
                                 <span>rcmtykt.ru</span>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ $this->title = "Портфолио";
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Корея лайф центр</a></h3>
+                                <h3><a href="http://daegulife.ru">Корея лайф центр</a></h3>
                                 <span>daegulife.ru</span>
                             </div>
                         </div>
@@ -81,7 +81,7 @@ $this->title = "Портфолио";
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Родительский портал Якутии</a></h3>
+                                <h3><a href="https://2children.ru">Родительский портал Якутии</a></h3>
                                 <span>2children.ru</span>
                             </div>
                         </div>
@@ -92,7 +92,7 @@ $this->title = "Портфолио";
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="product_details.html">Ресторан Тыгын Дархан</a></h3>
+                                <h3><a href="https://tygyndarhanrest.ru">Ресторан Тыгын Дархан</a></h3>
                                 <span>tygyndarhanrest.ru</span>
                             </div>
                         </div>
