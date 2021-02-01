@@ -79,28 +79,6 @@ $this->title = null;
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">ГБУ РС(Я) РИАЦМУТ</a></h3>
-                                <span>riacmut.ru</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ресурсный центр Победа</a></h3>
-                                <span>rcmtykt.ru</span>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
@@ -112,17 +90,6 @@ $this->title = null;
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Родительский портал Якутии</a></h3>
-                                <span>2children.ru</span>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
@@ -190,23 +157,6 @@ $this->title = null;
                     </div>
                 </div>
                 <div class="row">
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                                <div class="img-cap">
-                                    <span>Заказать</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Одностраничный (Landing Page)</a></h3>
-                                <span>от 12,000 ₽</span>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
@@ -226,40 +176,6 @@ $this->title = null;
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                                <div class="img-cap">
-                                    <span>Заказать</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Интернет магазин, доска объявлений</a></h3>
-                                <span>от 115,000 ₽</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-popular-items mb-50 text-center">
-                            <div class="popular-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                                <div class="img-cap">
-                                    <span>Заказать</span>
-                                </div>
-                                <div class="favorit-items">
-                                    <span class="flaticon-heart"></span>
-                                </div>
-                            </div>
-                            <div class="popular-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Интернет портал, серверы для мобильных приложений</a></h3>
-                                <span>индивидуально</span>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
@@ -365,21 +281,44 @@ $this->title = null;
                     <div class="row d-flex justify-content-between">
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
-                                <i class="ti-package"></i>
-                                <h6>Free Shipping Method</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                                <p>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                </p>
+                                <p>ООО «МЕДИСИТИ»</p>
+                                <h6>Гаврил Сивцев</h6>
+                                <p>Заказывали сайт в 2018 году для нашей деятельности по медтуризму в Южную Корею. Сайт был готов за месяц, обошлось недорого, в любом случае лучше чем сайты визитки, можно после запуска уже самому все редактировать и обновлять. Всем довольны, спасибо</p>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-unlock"></i>
-                                <h6>Secure Payment System</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                            <div class="single-method mb-40">   
+                                <p>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                </p>
+                                <p>ГБУ РС (Я) "ПОБЕДА"</p>
+                                <h6>Лебедева Галина</h6>
+                                <p>Ресурсный центр социальной защиты «Победа» выражает благодарность ООО «Информационные технологии Якутии» за качественную и своевременную разработку сайта нашей организации.</p>
+                                <p>Разработанный Вами веб-сайт «http://rcmtykt.ru/» имеет социальную направленность, целевой аудиторией которого являются организации социальной защиты и социального обслуживания Республики Саха (Якутия), а также граждане, нуждающиеся в социальной поддержке.</p>
+                                <p>Считаем, что сайт четко структурирован, понятен для использования в работе, имеет современный дизайн и возможности проведения опросов для населения. Работа, выполненная разработчиками, сделана с учетом всех наших требований, пожеланий и в установленные сроки.</p>
+                                <p>Желаем Вам успехов в продвижении новых масштабных проектов и выражаем готовность к дальнейшему сотрудничеству.</p>
                             </div>
                         </div> 
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
-                                <i class="ti-reload"></i>
+                                <p>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                </p>
                                 <h6>Secure Payment System</h6>
                                 <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
                             </div>
