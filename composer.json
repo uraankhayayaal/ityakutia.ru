@@ -37,7 +37,8 @@
         "it-yakutia/yii2-collective": "*",
         "it-yakutia/yii2-banner": "*",
         "skeeks/yii2-assets-auto-compress": "*",
-        "demi/sitemap-generator": "~1.0"
+        "demi/sitemap-generator": "~1.0",
+        "alexandernst/yii2-device-detect": "0.0.12"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

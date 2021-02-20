@@ -13,6 +13,9 @@ return [
     'language' => 'ru',
     'bootstrap' => ['log'],
     'modules' => [
+        'smartlink' => [
+            'class' => 'common\modules\smartlink\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -62,6 +65,8 @@ return [
                 'blog/<slug>' => 'blog/front/view',
 
                 '<slug>' => 'page/front/view',
+
+                'sl/<id>' => 'smartlink/front/index',
 
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',

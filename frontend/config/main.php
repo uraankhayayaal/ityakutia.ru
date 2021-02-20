@@ -14,7 +14,7 @@ return [
     'basePath' => dirname(__DIR__),
     'name' => 'IT Yakutia - Разработка cайтов, мобильных приложений и введение социальных сетей',
     'language' => 'ru',
-    'bootstrap' => ['log', 'assetsAutoCompress'],
+    'bootstrap' => ['log', 'assetsAutoCompress', 'devicedetect'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
@@ -52,6 +52,8 @@ return [
                 'blog/<slug>' => 'blog/front/view',
 
                 '<slug>' => 'page/front/view',
+
+                'sl/<id>' => 'smartlink/front/index',
 
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
@@ -97,6 +99,9 @@ return [
                 'extra' => false,        //use more compact algorithm
                 'no-comments' => true   //cut all the html comments
             ],
+        ],
+        'devicedetect' => [
+            'class' => 'alexandernst\devicedetect\DeviceDetect'
         ],
     ],
     'modules' => [
@@ -154,6 +159,9 @@ return [
                 // вместо него используем собственный алгоритм, например такой
                 return '000-AAA-' . $invoice->id;
             },
+        ],
+        'smartlink' => [
+            'class' => 'common\modules\smartlink\Module',
         ],
     ],
     'params' => $params,

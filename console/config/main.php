@@ -41,6 +41,7 @@ return [
                 '@vendor/it-yakutia/yii2-partner/src/migrations',
                 '@vendor/it-yakutia/yii2-collective/src/migrations',
                 '@vendor/it-yakutia/yii2-banner/src/migrations',
+                '@common/modules/smartlink/migrations',
             ],
         ],
         'sitemap' => [

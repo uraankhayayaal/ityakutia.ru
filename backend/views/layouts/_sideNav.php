@@ -24,6 +24,11 @@ use yii\helpers\Url;
     </li>
     
 
+    <?php if(Yii::$app->user->can("smartlink")) { ?>
+        <li><a class="subheader grey-text"><i class="material-icons grey-text tiny">branding_watermark</i> <?= Yii::t('app', 'Маркетинг')?></a></li>
+        <li class="<?= (Yii::$app->controller->module->id=='smartlink' && Yii::$app->controller->id=='back')?'active':''; ?>"><a class="waves-effect waves-teal" href="<?= Url::toRoute('/smartlink/back/index') ?>"><i class="material-icons">link</i> <?= Yii::t('app', 'Умные ссылки') ?></a></li>
+    <?php } ?>
+
     <?php if(Yii::$app->user->can("page") || Yii::$app->user->can("news_category") || Yii::$app->user->can("news")) { ?>
         <li><a class="subheader grey-text"><i class="material-icons grey-text tiny">public</i> <?= Yii::t('app', 'Публикации')?></a></li>
     <?php } ?>
