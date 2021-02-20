@@ -14,6 +14,7 @@ class m210220_162135_fixPlatformType extends Migration
     {
         $this->dropColumn('smartlink_movement', 'platform');
         $this->addColumn('smartlink_movement', 'platform', $this->string()->notNull());
+        $this->addColumn('smartlink', 'link_web', $this->string());
     }
 
     /**
@@ -21,6 +22,7 @@ class m210220_162135_fixPlatformType extends Migration
      */
     public function safeDown()
     {
+        $this->dropColumn('smartlink', 'link_web');
         $this->dropColumn('smartlink_movement', 'platform');
         $this->addColumn('smartlink_movement', 'platform', $this->string()->notNull());
     }
