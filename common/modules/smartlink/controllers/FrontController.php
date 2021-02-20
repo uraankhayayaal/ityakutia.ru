@@ -18,7 +18,7 @@ class FrontController extends Controller
         $this->layout = 'empty';
         $model = $this->findModel($id);
 
-        if(\Yii::$app->devicedetect->isAndroidOS())
+        if(\Yii::$app->devicedetect->isDesktop())
             return $this->render('index', [
                 'model' => $model,
             ]);

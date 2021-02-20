@@ -34,5 +34,11 @@
 
 ?>
     
-<h1>Error</h1>
-<p><?= $error ?></p>
+<h1><?= $model->title ?></h1>
+<p><?= $model->description ?></p>
+
+<script>
+    window.onload = (event) => {
+        location.href = <?= $model->link_web; ?>;
+    };
+</script>
