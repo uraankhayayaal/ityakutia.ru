@@ -1,14 +1,14 @@
 <?php
-    Yii::$app->params['meta_description']['content'] = $model->desctipition;
-    Yii::$app->params['meta_keywords']['content'] = $model->desctipition;
+    Yii::$app->params['meta_description']['content'] = $model->description;
+    Yii::$app->params['meta_keywords']['content'] = $model->description;
 
     $this->registerMetaTag([
         'name' => 'keywords',
-        'content' => $model->desctipition,
+        'content' => $model->description,
     ]);
     $this->registerMetaTag([
         'name' => 'description',
-        'content' => $model->desctipition,
+        'content' => $model->description,
     ]);
 
     $this->registerMetaTag([
@@ -17,7 +17,7 @@
     ]);
     $this->registerMetaTag([
         'property' => 'og:description',
-        'content' => $model->desctipition,
+        'content' => $model->description,
     ]);
     $this->registerMetaTag([
         'property' => 'og:image',
@@ -33,12 +33,15 @@
     ]);
 
 ?>
-    
-<h1><?= $model->title ?></h1>
-<p><?= $model->description ?></p>
+
+<div class="container">
+    <p><img src="<?= $model->photo ?>" alt="<?= $model->title ?>" style="max-width:300px;"></p>
+    <h1><?= $model->title ?></h1>
+    <p><?= $model->description ?></p>
+</div>
 
 <script>
-    window.onload = (event) => {
-        location.href = <?= $model->link_web; ?>;
-    };
+    window.setTimeout(() => {
+        location.href = "<?= $model->link_web; ?>";
+    }, 200);
 </script>

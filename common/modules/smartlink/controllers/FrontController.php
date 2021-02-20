@@ -15,10 +15,10 @@ class FrontController extends Controller
 {
     public function actionIndex(String $id)
     {
-        $this->layout = 'empty';
+        $this->layout = '@frontend/themes/basic/views/layouts/empty';
         $model = $this->findModel($id);
 
-        if(\Yii::$app->devicedetect->isDesktop())
+        if(\Yii::getAlias('@device') == 'desktop')
             return $this->render('index', [
                 'model' => $model,
             ]);
