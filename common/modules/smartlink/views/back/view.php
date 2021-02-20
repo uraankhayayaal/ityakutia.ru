@@ -27,7 +27,6 @@ $this->title = $model->company . '/' . $model->app_name;
                     'port',
                     'host',
                     'url',
-                    'smartlink_id',
                     'created_at',
                 ],
                 'pager' => [

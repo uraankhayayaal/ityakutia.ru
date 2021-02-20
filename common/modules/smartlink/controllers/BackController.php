@@ -6,6 +6,7 @@ use common\modules\smartlink\models\Movement;
 use common\modules\smartlink\models\MovementSearch;
 use common\modules\smartlink\models\Smartlink;
 use common\modules\smartlink\models\SmartlinkSearch;
+use uraankhayayaal\materializecomponents\imgcropper\actions\UploadAction;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -33,6 +34,18 @@ class BackController extends Controller
                     'delete' => ['POST']
                 ]
             ]
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'uploadImg' => [
+                'class' => UploadAction::class,
+                'url' => '/images/uploads/smartlink',
+                'path' => '@frontend/web/images/uploads/smartlink/',
+                'maxSize' => 10485760
+            ],
         ];
     }
 

@@ -28,11 +28,14 @@ use yii\helpers\ArrayHelper;
     </div>
 
     <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m12 l4">
             <?= $form->field($model, 'link_ios')->textInput(['maxlength' => true]) ?>
         </div>
-        <div class="col s12 m6 l6">
+        <div class="col s12 m12 l4">
             <?= $form->field($model, 'link_android')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col s12 m12 l4">
+            <?= $form->field($model, 'link_web')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
 
@@ -54,6 +57,25 @@ use yii\helpers\ArrayHelper;
         </div>
         <div class="col s12 m4 l4">
             <?= $form->field($model, 'end_at')->textInput(['maxlength' => true]) ?>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col s12 m12 l12">
+            <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col s12 m12 l12">
+            <?= $form->field($model, 'photo')->widget(Cropper::class, [
+                'aspectRatio' => 1080/1080,
+                'maxSize' => [1080, 1080, 'px'],
+                'minSize' => [256, 256, 'px'],
+                'startSize' => [100, 100, '%'],
+                'uploadUrl' => Url::to(['/smartlink/back/uploadImg']),
+            ]); ?>
+            <small>Your upload img have to has size: 1080x1080 px</small>
         </div>
     </div>
 

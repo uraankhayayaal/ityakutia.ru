@@ -10,8 +10,8 @@ class SmartlinkSearch extends Smartlink
     public function rules()
     {
         return [
-            [['user_id', 'link_ios', 'link_android', 'link_hash', 'company', 'start_at', 'end_at', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['company', 'app_name', 'region'], 'safe']
+            [['user_id',  'start_at', 'end_at', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['link_ios', 'link_android', 'link_hash', 'link_web', 'company', 'app_name', 'region', 'title', 'photo', 'description'], 'safe']
         ];
     }
 
@@ -38,10 +38,6 @@ class SmartlinkSearch extends Smartlink
         $query->andFilterWhere([
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'link_ios' => $this->link_ios,
-            'link_android' => $this->link_android,
-            'link_hash' => $this->link_hash,
-            'company' => $this->company,
             'start_at' => $this->start_at,
             'end_at' => $this->end_at,
             'status' => $this->status,
@@ -51,6 +47,13 @@ class SmartlinkSearch extends Smartlink
 
         $query->andFilterWhere(['like', 'company', $this->company])
             ->andFilterWhere(['like', 'app_name', $this->app_name])
+            ->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'photo', $this->photo])
+            ->andFilterWhere(['like', 'link_ios', $this->link_ios])
+            ->andFilterWhere(['like', 'link_android', $this->link_android])
+            ->andFilterWhere(['like', 'link_hash', $this->link_hash])
+            ->andFilterWhere(['like', 'link_web', $this->link_web])
             ->andFilterWhere(['like', 'region', $this->region]);
 
         return $dataProvider;

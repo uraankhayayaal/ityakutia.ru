@@ -36,6 +36,13 @@ $this->title = 'Умные ссылки';
                     ['class' => MaterialActionColumn::class, 'template' => '{update}'],
 
                     [
+                        'header' => 'Фото',
+                        'format' => 'raw',
+                        'value' => function($model) {
+                            return $model->photo ? '<img class="materialboxed" src="'.$model->photo.'" width="70">':'';
+                        }
+                    ],
+                    [
                         'attribute' => 'link_hash',
                         'format' => 'raw',
                         'value' => function($model){

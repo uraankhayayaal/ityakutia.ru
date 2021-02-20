@@ -65,9 +65,9 @@ class Smartlink extends ActiveRecord
         return [
             [['company', 'app_name', 'link_ios', 'link_android'], 'required'],
             [['user_id', 'start_at', 'end_at', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['company', 'app_name', 'region'], 'string', 'max' => 255],
+            [['company', 'app_name', 'region', 'title', 'photo', 'description'], 'string', 'max' => 255],
             ['link_hash', 'string', 'max' => 16],
-            [['link_ios', 'link_android'], 'url'],
+            [['link_ios', 'link_android', 'link_web'], 'url'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
@@ -79,13 +79,16 @@ class Smartlink extends ActiveRecord
             'user_id' => 'User ID',
             'link_ios' => 'iOS link',
             'link_android' => 'Android link',
+            'link_web' => 'Web link',
             'link_hash' => 'Smart link Hash',
             'company' => 'Company name',
             'app_name' => 'App name',
             'region' => 'Region',
             'start_at' => 'Start Ad At',
             'end_at' => 'End Ad At',
-
+            'title' => 'Title',
+            'photo' => 'Photo',
+            'descriiption' => 'Description',
             'status' => 'Status',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
@@ -138,7 +141,7 @@ class Smartlink extends ActiveRecord
                 $url = $this->link_android;
                 break;
             default:
-                $url = null;
+                $url = $this->link_web;
         }
 
         $this->createMovement($platform);
@@ -170,7 +173,7 @@ class Smartlink extends ActiveRecord
         $model->platform = $platform;
         $model->browser = \Yii::getAlias('@device');
         $model->port = $_SERVER['SERVER_PORT'];
-        $model->host = $_SERVER['HTTP_HOST'];
+        $model->host = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
         $model->url = $_SERVER['REQUEST_URI'];
         $model->smartlink_id = $this->id;
         if(!$model->save())

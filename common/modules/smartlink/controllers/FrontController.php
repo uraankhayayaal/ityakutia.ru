@@ -15,11 +15,19 @@ class FrontController extends Controller
 {
     public function actionIndex(String $id)
     {
+        $this->layout = 'empty';
         $model = $this->findModel($id);
+
+        if(\Yii::$app->devicedetect->isAndroidOS())
+            return $this->render('index', [
+                'model' => $model,
+            ]);
+
         if($model->getPlatformLink() !== null){
             return $this->redirect($model->getPlatformLink());
         }else{
             return $this->render('index', [
+                'model' => $model,
                 'error' => 'Platform detected no mobile device'
             ]);
         }
