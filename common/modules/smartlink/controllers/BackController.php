@@ -2,6 +2,8 @@
 
 namespace common\modules\smartlink\controllers;
 
+use common\modules\smartlink\models\Movement;
+use common\modules\smartlink\models\MovementSearch;
 use common\modules\smartlink\models\Smartlink;
 use common\modules\smartlink\models\SmartlinkSearch;
 use Yii;
@@ -42,6 +44,20 @@ class BackController extends Controller
         Url::remember();
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]); 
+    }
+
+    public function actionView($id)
+    {
+        $searchModel = new MovementSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $id);
+
+        Url::remember();
+
+        return $this->render('view', [
+            'model' => $this->findModel($id),
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]); 

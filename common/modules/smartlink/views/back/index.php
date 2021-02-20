@@ -2,7 +2,6 @@
 
 use common\modules\smartlink\models\Smartlink;
 use uraankhayayaal\materializecomponents\grid\MaterialActionColumn;
-use uraankhayayaal\sortable\grid\Column;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\grid\SerialColumn;
@@ -44,7 +43,13 @@ $this->title = 'Умные ссылки';
                         }
                     ],
                     'company',
-                    'app_name',
+                    [
+                        'attribute' => 'app_name',
+                        'format' => 'raw',
+                        'value' => function($model){
+                            return Html::a($model->app_name, ['view', 'id' => $model->id]);
+                        }
+                    ],
                     [
                         'attribute' => 'status',
                         'format' => 'raw',
