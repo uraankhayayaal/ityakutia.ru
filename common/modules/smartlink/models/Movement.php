@@ -46,7 +46,7 @@ class Movement extends ActiveRecord
         return [
             'id' => 'ID',
             'ip' => 'IP', // $_SERVER['HTTP_CLIENT_IP'] ? $_SERVER['HTTP_CLIENT_IP'] : ($_SERVER['HTTP_X_FORWARDED_FOR'] ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
-            'userAgent' => 'iOS link', // $_SERVER['HTTP_USER_AGENT']
+            'userAgent' => 'User Agent', // $_SERVER['HTTP_USER_AGENT']
             'platform' => 'Platform',
             'browser' => 'Browser', // $browser = get_browser(null, true);
             'port' => 'Posrt', // $_SERVER['SERVER_PORT']
