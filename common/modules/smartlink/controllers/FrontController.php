@@ -23,9 +23,16 @@ class FrontController extends Controller
         if(\Yii::getAlias('@device') == 'desktop')
             return $this->render('index', [
                 'model' => $model,
+                'platformLink' => $platformLink,
             ]);
 
         if($platformLink !== null){
+            if($model->is_js_redirect_for_mobile)
+                return $this->render('index', [
+                    'model' => $model,
+                    'platformLink' => $platformLink,
+                ]);
+                
             return $this->redirect($platformLink);
         }else{
             return $this->render('index', [

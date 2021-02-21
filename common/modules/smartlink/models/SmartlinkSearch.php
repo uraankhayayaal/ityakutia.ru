@@ -10,7 +10,7 @@ class SmartlinkSearch extends Smartlink
     public function rules()
     {
         return [
-            [['user_id',  'start_at', 'end_at', 'status', 'created_at', 'updated_at'], 'integer'],
+            [['user_id',  'start_at', 'end_at', 'status', 'created_at', 'updated_at', 'is_js_redirect_for_mobile'], 'integer'],
             [['link_ios', 'link_android', 'link_hash', 'link_web', 'company', 'app_name', 'region', 'title', 'photo', 'description'], 'safe']
         ];
     }
@@ -43,6 +43,7 @@ class SmartlinkSearch extends Smartlink
             'status' => $this->status,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'is_js_redirect_for_mobile' => $this->is_js_redirect_for_mobile,
         ]);
 
         $query->andFilterWhere(['like', 'company', $this->company])

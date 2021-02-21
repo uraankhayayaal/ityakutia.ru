@@ -29,7 +29,7 @@
     ]);
     $this->registerMetaTag([
         'property' => 'og:url',
-        'content' => $model->link_web,
+        'content' => $model->platformLink,
     ]);
 
 ?>
@@ -42,6 +42,6 @@
 
 <script>
     window.setTimeout(() => {
-        location.href = "<?= $model->link_web; ?>";
+        location.href = "<?= $platformLink; ?>";
     }, 200);
 </script>

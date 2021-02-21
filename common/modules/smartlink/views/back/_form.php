@@ -18,10 +18,13 @@ use yii\helpers\ArrayHelper;
 
 
     <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12 m4 l4">
             <?= $form->field($model,'status')->dropdownlist(Smartlink::STATUSES); ?>
         </div>
-        <div class="col s12 m6 l6">
+        <div class="col s12 m4 l4">
+            <?= WCheckbox::widget(['model' => $model, 'attribute' => 'is_js_redirect_for_mobile']); ?>
+        </div>
+        <div class="col s12 m4 l4">
             <?= Html::label($model->getAttributeLabel('link_hash'), '', ['class' => 'label']) ?>
             <?= Html::input('text', '', $model->link_hash, ['disabled' => 'disabled']); ?>
         </div>

@@ -69,6 +69,7 @@ class Smartlink extends ActiveRecord
             [['company', 'app_name', 'region', 'title', 'photo', 'description'], 'string', 'max' => 255],
             ['link_hash', 'string', 'max' => 16],
             [['link_ios', 'link_android', 'link_web'], 'url'],
+            ['is_js_redirect_for_mobile', 'boolean'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
@@ -93,6 +94,7 @@ class Smartlink extends ActiveRecord
             'status' => 'Status',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
+            'is_js_redirect_for_mobile' => 'Is JS redirect for mobile',
         ];
     }
 

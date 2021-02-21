@@ -66,6 +66,14 @@ $this->title = 'Умные ссылки';
                         'filter' => Smartlink::STATUSES,
                     ],
                     [
+                        'attribute' => 'is_js_redirect_for_mobile',
+                        'format' => 'raw',
+                        'value' => function($model){
+                            return $model->is_js_redirect_for_mobile ? '<i class="material-icons green-text">done</i>' : '<i class="material-icons red-text">clear</i>';
+                        },
+                        'filter' =>[0 => 'Нет', 1 => 'Да'],
+                    ],
+                    [
                         'attribute' => 'start_at',
                         'format' => 'datetime',
                     ],
