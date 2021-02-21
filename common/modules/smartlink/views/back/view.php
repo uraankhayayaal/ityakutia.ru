@@ -20,7 +20,14 @@ $this->title = $model->company . '/' . $model->app_name;
                 'filterModel' => $searchModel,
                 'columns' => [
                     ['class' => SerialColumn::class],
-                    'ip',
+                    [
+                        'attribute' => 'ip',
+                        'format' => 'raw',
+                        'value' => function($model){
+                            return Html::a($model->ip, ['/smartlink/back-ip/view', 'id' => $model->id]);
+                        },
+                        'filter' =>[0 => 'Нет', 1 => 'Да'],
+                    ],
                     // 'userAgent',
                     'platform',
                     'country',
