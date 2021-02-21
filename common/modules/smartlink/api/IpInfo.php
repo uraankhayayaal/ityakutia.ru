@@ -54,8 +54,7 @@ class IpInfo
                 if($ipinfo->save()) {
                     $this->model = $ipinfo;
                 } else {
-                    // Yii::warning(['message' => 'Error to query ot API or save in DB', 'ipInfoModel' => $ipinfo->errors, 'isLoad' => $ipinfo->load($this->query())]);
-                    false; // Error to query ot API or save in DB
+                    Yii::warning(['message' => 'Error to query ot API or save in DB', 'ipInfoModel' => $ipinfo->errors, 'isLoad' => $ipinfo->load($this->query())]);
                 }
             }
         }
@@ -93,7 +92,7 @@ class IpInfo
 
         $ipwhois_result = json_decode($json, true);
 
-        // Yii::warning(['message' => 'We got data from API', 'APP <- API' => $ipwhois_result]);
+        Yii::warning(['message' => 'We got data from API', 'APP <- API' => $ipwhois_result]);
         return $ipwhois_result;
     }
 }

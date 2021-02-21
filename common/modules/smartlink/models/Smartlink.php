@@ -187,8 +187,9 @@ class Smartlink extends ActiveRecord
         $model->coordinate = $ipInfo->getcoordinate();
         
         $model->smartlink_id = $this->id;
-        Yii::error(['message' => 'Сохранение', 'model' => $model]);
-        if(!$model->save())
+        if(!$model->save()){
+            Yii::error(['message' => 'Movement save error', 'model' => $model->errors]);
             throw new ErrorException(serialize($model->errors));
+        }
     }
 }
