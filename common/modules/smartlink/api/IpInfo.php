@@ -71,7 +71,7 @@ class IpInfo
     protected function isSuccess(): bool
     {
         if ($this->model !== null)
-            return $this->model->success === true;
+            return $this->model->success == true; // don't use `===`
         else
             return false;
     }
