@@ -2,8 +2,8 @@
 
 namespace common\modules\smartlink\controllers;
 
+use common\modules\smartlink\models\Ipinfo;
 use common\modules\smartlink\models\IpinfoSearch;
-use common\modules\smartlink\models\IpinfoSearchSearch;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -66,7 +66,7 @@ class BackIpController extends Controller
 
     protected function findModel($id)
     {
-        $model = IpinfoSearch::findOne($id);
+        $model = Ipinfo::findOne($id);
         if(null === $model) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }

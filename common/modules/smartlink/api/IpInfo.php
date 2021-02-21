@@ -49,9 +49,10 @@ class IpInfo
                 $this->model = $ipinfo;
             else {
                 $ipinfo = new ModelsIpinfo();
-                // 3. Get form API and Save to DB
+                // 3. Get form API
                 $apiResult = $this->query();
                 $ipinfo->attributes = $apiResult;
+                // 4. Save to DB
                 if($ipinfo->save()) {
                     $this->model = $ipinfo;
                 } else {
