@@ -3,6 +3,7 @@
 namespace common\modules\smartlink\models;
 
 use common\models\User;
+use common\modules\smartlink\api\IpInfo;
 use Imagine\Filter\Basic\Strip;
 use Yii;
 use yii\base\ErrorException;
@@ -166,6 +167,7 @@ class Smartlink extends ActiveRecord
 
     protected function createMovement($platform): void
     {
+        Yii::error(['message' => 'createMovement', 'platform' => $platform]);
         $model = new Movement();
         $model->platform = $platform;
         $model->ip = (isset($_SERVER['HTTP_CLIENT_IP']) && $_SERVER['HTTP_CLIENT_IP']) ? $_SERVER['HTTP_CLIENT_IP'] : ((isset($_SERVER['HTTP_X_FORWARDED_FOR']) && $_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : $_SERVER['REMOTE_ADDR']);
@@ -175,7 +177,15 @@ class Smartlink extends ActiveRecord
         $model->port = $_SERVER['SERVER_PORT'];
         $model->host = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
         $model->url = $_SERVER['REQUEST_URI'];
+
+        $ipInfo = new IpInfo($model->ip);
+        $model->country = $ipInfo->getcountry();
+        $model->region = $ipInfo->getregion();
+        $model->city = $ipInfo->getcity();
+        $model->coordinate = $ipInfo->getcoordinate();
+        
         $model->smartlink_id = $this->id;
+        Yii::error(['message' => 'Сохранение', 'model' => $model]);
         if(!$model->save())
             throw new ErrorException(serialize($model->errors));
     }

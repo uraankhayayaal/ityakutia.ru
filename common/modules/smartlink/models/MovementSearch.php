@@ -11,7 +11,7 @@ class MovementSearch extends Movement
     {
         return [
             [['port', 'smartlink_id', 'created_at'], 'integer'],
-            [['ip', 'userAgent', 'platform', 'browser', 'host', 'url'], 'safe']
+            [['ip', 'userAgent', 'platform', 'browser', 'host', 'url', 'country', 'region', 'city', 'coordinate'], 'safe']
         ];
     }
 
@@ -47,6 +47,10 @@ class MovementSearch extends Movement
             ->andFilterWhere(['like', 'platform', $this->platform])
             ->andFilterWhere(['like', 'browser', $this->browser])
             ->andFilterWhere(['like', 'host', $this->host])
+            ->andFilterWhere(['like', 'country', $this->country])
+            ->andFilterWhere(['like', 'region', $this->region])
+            ->andFilterWhere(['like', 'city', $this->city])
+            ->andFilterWhere(['like', 'coordinate', $this->coordinate])
             ->andFilterWhere(['like', 'url', $this->url]);
 
         return $dataProvider;

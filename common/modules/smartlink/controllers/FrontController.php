@@ -18,13 +18,15 @@ class FrontController extends Controller
         $this->layout = '@frontend/themes/basic/views/layouts/empty';
         $model = $this->findModel($id);
 
+        $platformLink = $model->getPlatformLink();
+        
         if(\Yii::getAlias('@device') == 'desktop')
             return $this->render('index', [
                 'model' => $model,
             ]);
 
-        if($model->getPlatformLink() !== null){
-            return $this->redirect($model->getPlatformLink());
+        if($platformLink !== null){
+            return $this->redirect($platformLink);
         }else{
             return $this->render('index', [
                 'model' => $model,
