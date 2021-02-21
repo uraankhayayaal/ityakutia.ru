@@ -42,19 +42,21 @@ class IpInfo
     protected function getAttributeValue(String $attribute): ?String
     {
         if($this->model === null){
-            $model = ModelsIpinfo::find()->where(['ip' => $this->ip])->one();
+            $ipinfo = ModelsIpinfo::find()->where(['ip' => $this->ip])->one();
             // 1. Check in DB
-            if($model !== null)
+            if($ipinfo !== null)
                 // 2. Get from DB
-                $this->model = $model;
+                $this->model = $ipinfo;
             else {
                 $ipinfo = new ModelsIpinfo();
                 // 3. Get form API and Save to DB
-                $ipinfo->attributes = $this->query();
+                $apiResult = $this->query();
+                $ipinfo->attributes = $apiResult;
                 if($ipinfo->save()) {
                     $this->model = $ipinfo;
                 } else {
-                    Yii::warning(['message' => 'Error to query ot API or save in DB', 'ipInfoModel' => $ipinfo->errors, 'isLoad' => $ipinfo->load($this->query())]);
+                    Yii::warning(['message' => 'Error to query ot API or save in DB', 'ipInfoModel' => $ipinfo->errors, 'isLoad' => $ipinfo->load($apiResult)]);
+                    $this->model = (object)$apiResult;
                 }
             }
         }
