@@ -54,6 +54,13 @@ class BackIpController extends Controller
         ]); 
     }
 
+    public function actionViewIp($ip)
+    {
+        return $this->render('view', [
+            'model' => $this->findModelByIp($ip),
+        ]); 
+    }
+
     public function actionDelete($id)
     {
         $modelDelete = $this->findModel($id)->delete();
@@ -67,6 +74,16 @@ class BackIpController extends Controller
     protected function findModel($id)
     {
         $model = Ipinfo::findOne($id);
+        if(null === $model) {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+
+        return $model;
+    }
+
+    protected function findModelByIp($ip)
+    {
+        $model = Ipinfo::find()->where(['ip' => $ip])->one();
         if(null === $model) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }

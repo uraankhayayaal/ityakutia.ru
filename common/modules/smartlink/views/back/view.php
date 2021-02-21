@@ -24,7 +24,7 @@ $this->title = $model->company . '/' . $model->app_name;
                         'attribute' => 'ip',
                         'format' => 'raw',
                         'value' => function($model){
-                            return Html::a($model->ip, ['/smartlink/back-ip/view', 'id' => $model->id]);
+                            return Html::a($model->ip, ['/smartlink/back-ip/view-ip', 'ip' => $model->ip]);
                         },
                         'filter' =>[0 => 'Нет', 1 => 'Да'],
                     ],
