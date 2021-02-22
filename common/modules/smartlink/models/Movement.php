@@ -17,8 +17,8 @@ class Movement extends ActiveRecord
     const TYPE_BIO = 2;
 
     const TYPES = [
-        self::TYPE_SMART => 'Smart link',
-        self::TYPE_BIO => 'Bio link',
+        self::TYPE_SMART => 'Smart',
+        self::TYPE_BIO => 'Bio',
     ];
 
     public function behaviors()
