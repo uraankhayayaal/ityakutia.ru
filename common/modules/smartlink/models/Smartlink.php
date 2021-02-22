@@ -76,7 +76,7 @@ class Smartlink extends ActiveRecord
             [['company', 'app_name', 'link_ios', 'link_android'], 'required'],
             [['user_id', 'start_at', 'end_at', 'status', 'created_at', 'updated_at'], 'integer'],
             [['company', 'app_name', 'region', 'title', 'photo', 'description'], 'string', 'max' => 255],
-            ['link_hash', 'string', 'max' => 16],
+            [['link_hash', 'link_bio'], 'string', 'max' => 16],
             [['link_ios', 'link_android', 'link_web', 'link_instagram', 'link_vk', 'link_youtube', 'link_facebook', 'link_twitter'], 'url'],
             ['link_email', 'email'],
             [['link_phone', 'link_whatsapp'], 'string', 'max' => 16],
