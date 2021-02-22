@@ -13,6 +13,14 @@ class Movement extends ActiveRecord
     const PLATFORM_ANDROID = 2;
     const PLATFORM_WEB = 3;
 
+    const TYPE_SMART = 1;
+    const TYPE_BIO = 2;
+
+    const TYPES = [
+        self::TYPE_SMART => 'Smart link',
+        self::TYPE_BIO => 'Bio link',
+    ];
+
     public function behaviors()
     {
         return [

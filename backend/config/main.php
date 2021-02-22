@@ -67,6 +67,7 @@ return [
                 '<slug>' => 'page/front/view',
 
                 'sl/<id>' => 'smartlink/front/index',
+                'bl/<id>' => 'smartlink/front/bio',
 
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',

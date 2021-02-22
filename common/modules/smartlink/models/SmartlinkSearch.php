@@ -11,7 +11,7 @@ class SmartlinkSearch extends Smartlink
     {
         return [
             [['user_id',  'start_at', 'end_at', 'status', 'created_at', 'updated_at', 'is_js_redirect_for_mobile'], 'integer'],
-            [['link_ios', 'link_android', 'link_hash', 'link_web', 'company', 'app_name', 'region', 'title', 'photo', 'description'], 'safe']
+            [['link_ios', 'link_android', 'link_hash', 'link_web', 'company', 'app_name', 'region', 'title', 'photo', 'description', 'link_bio'], 'safe']
         ];
     }
 
@@ -55,6 +55,7 @@ class SmartlinkSearch extends Smartlink
             ->andFilterWhere(['like', 'link_android', $this->link_android])
             ->andFilterWhere(['like', 'link_hash', $this->link_hash])
             ->andFilterWhere(['like', 'link_web', $this->link_web])
+            ->andFilterWhere(['like', 'link_bio', $this->link_bio])
             ->andFilterWhere(['like', 'region', $this->region]);
 
         return $dataProvider;

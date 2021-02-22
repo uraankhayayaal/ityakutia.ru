@@ -2,6 +2,7 @@
 
 namespace common\modules\smartlink\controllers;
 
+use common\modules\smartlink\models\Movement;
 use common\modules\smartlink\models\Smartlink;
 use Yii;
 use uraankhayayaal\page\models\Page;
@@ -18,7 +19,7 @@ class FrontController extends Controller
         $this->layout = '@frontend/themes/basic/views/layouts/empty';
         $model = $this->findModel($id);
 
-        $platformLink = $model->getPlatformLink();
+        $platformLink = $model->getPlatformLink(Movement::TYPE_SMART);
         
         if(\Yii::getAlias('@device') == 'desktop')
             return $this->render('index', [
@@ -42,9 +43,29 @@ class FrontController extends Controller
         }
     }
 
+    public function actionBio(String $id)
+    {
+        $this->layout = '@frontend/themes/basic/views/layouts/bio';
+        $model = $this->findBioLink($id);
+
+        $model->getPlatformLink(Movement::TYPE_BIO); // вычисление кто откуда и запись
+        
+        return $this->render('bio', [
+            'model' => $model
+        ]);
+    }
+
     protected function findModel($link_hash): Smartlink
     {
         if (($model = Smartlink::findOneByHash($link_hash)) !== null) {
+            return $model;
+        }
+        throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    protected function findBioLink($link_bio): Smartlink
+    {
+        if (($model = Smartlink::findOneByBioHash($link_bio)) !== null) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');

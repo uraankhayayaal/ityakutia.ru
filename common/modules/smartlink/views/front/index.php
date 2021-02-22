@@ -29,7 +29,7 @@
     ]);
     $this->registerMetaTag([
         'property' => 'og:url',
-        'content' => $model->platformLink,
+        'content' => $platformLink,
     ]);
 
 ?>

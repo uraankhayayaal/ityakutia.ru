@@ -49,6 +49,13 @@ $this->title = 'Умные ссылки';
                             return Html::a($model->smartlink, $model->smartlink, ['target' => '_blank']);
                         }
                     ],
+                    [
+                        'attribute' => 'link_bio',
+                        'format' => 'raw',
+                        'value' => function($model){
+                            return Html::a($model->biolink, $model->biolink, ['target' => '_blank']);
+                        }
+                    ],
                     'company',
                     [
                         'attribute' => 'app_name',

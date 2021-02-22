@@ -53,6 +53,15 @@ class Smartlink extends ActiveRecord
                     return $this->generateSmartlinkHash();
                 },
             ],
+            [
+                'class' => AttributeBehavior::className(),
+                'attributes' => [
+                    \yii\db\ActiveRecord::EVENT_BEFORE_INSERT => 'link_bio',
+                ],
+                'value' => function ($event) {
+                    return $this->generateSmartlinkHash();
+                },
+            ],
         ];
     }
     
@@ -68,7 +77,9 @@ class Smartlink extends ActiveRecord
             [['user_id', 'start_at', 'end_at', 'status', 'created_at', 'updated_at'], 'integer'],
             [['company', 'app_name', 'region', 'title', 'photo', 'description'], 'string', 'max' => 255],
             ['link_hash', 'string', 'max' => 16],
-            [['link_ios', 'link_android', 'link_web'], 'url'],
+            [['link_ios', 'link_android', 'link_web', 'link_instagram', 'link_vk', 'link_youtube', 'link_facebook', 'link_twitter'], 'url'],
+            ['link_email', 'email'],
+            [['link_phone', 'link_whatsapp'], 'string', 'max' => 16],
             ['is_js_redirect_for_mobile', 'boolean'],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
@@ -95,6 +106,15 @@ class Smartlink extends ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'is_js_redirect_for_mobile' => 'Is JS redirect for mobile',
+            'link_instagram' => 'Instagram link',
+            'link_vk' => 'Vk link',
+            'link_youtube' => 'Youtube link',
+            'link_facebook' => 'Facebook link',
+            'link_whatsapp' => 'Whatsapp link',
+            'link_twitter' => 'Twitter link',
+            'link_phone' => 'Phone link',
+            'link_email' => 'Email link',
+            'link_bio' => 'Bio link Hash',
         ];
     }
 
@@ -127,12 +147,22 @@ class Smartlink extends ActiveRecord
         return Yii::$app->urlManagerFrontend->createUrl(['/smartlink/front/index', 'id' => $this->link_hash], 'https');
     }
 
+    public function getBiolink(): String
+    {
+        return Yii::$app->urlManagerFrontend->createUrl(['/smartlink/front/bio', 'id' => $this->link_bio], 'https');
+    }
+
     public static function findOneByHash($link_hash): Smartlink
     {
         return self::find()->where(['link_hash' => $link_hash])->one();
     }
 
-    public function getPlatformLink(): ?String
+    public static function findOneByBioHash($link_bio): Smartlink
+    {
+        return self::find()->where(['link_bio' => $link_bio])->one();
+    }
+
+    public function getPlatformLink(int $type): ?String
     {
         $platform = $this->getPlatform();
         $url = null;
@@ -147,7 +177,7 @@ class Smartlink extends ActiveRecord
                 $url = $this->link_web;
         }
 
-        $this->createMovement($platform);
+        $this->createMovement($platform, $type);
 
         if($url !== null){
             return $url;
@@ -167,7 +197,7 @@ class Smartlink extends ActiveRecord
         return 'Web';
     }
 
-    protected function createMovement($platform): void
+    protected function createMovement(String $platform, int $type): void
     {
         Yii::error(['message' => 'createMovement', 'platform' => $platform]);
         $model = new Movement();
@@ -187,6 +217,7 @@ class Smartlink extends ActiveRecord
         $model->coordinate = $ipInfo->getcoordinate();
         
         $model->smartlink_id = $this->id;
+        $model->type = $type;
         if(!$model->save()){
             Yii::error(['message' => 'Movement save error', 'model' => $model->errors]);
             throw new ErrorException(serialize($model->errors));

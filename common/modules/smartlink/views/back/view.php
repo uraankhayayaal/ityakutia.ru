@@ -1,5 +1,6 @@
 <?php
 
+use common\modules\smartlink\models\Movement;
 use common\modules\smartlink\models\Smartlink;
 use uraankhayayaal\materializecomponents\grid\MaterialActionColumn;
 use yii\helpers\Html;
@@ -29,6 +30,14 @@ $this->title = $model->company . '/' . $model->app_name;
                         'filter' =>[0 => 'Нет', 1 => 'Да'],
                     ],
                     // 'userAgent',
+                    [
+                        'attribute' => 'type',
+                        'format' => 'raw',
+                        'value' => function($model){
+                            return '<div class="chip">'.Movement::TYPES[$model->type].'</div>';
+                        },
+                        'filter' => Movement::TYPES,
+                    ],
                     'platform',
                     'country',
                     'region',
