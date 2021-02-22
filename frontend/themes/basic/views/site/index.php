@@ -275,9 +275,14 @@ $this->title = null;
         </div>
         <!-- Watch Choice  End-->
         <!--? Shop Method Start-->
-        <!-- <div class="shop-method-area">
+        <div class="shop-method-area">
             <div class="container">
                 <div class="method-wrapper">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="text-center mt-4 text-white">Отзывы о нас</h2>
+                        </div>
+                    </div>
                     <div class="row d-flex justify-content-between">
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <div class="single-method mb-40">
@@ -304,10 +309,7 @@ $this->title = null;
                                 </p>
                                 <p>ГБУ РС (Я) "ПОБЕДА"</p>
                                 <h6>Лебедева Галина</h6>
-                                <p>Ресурсный центр социальной защиты «Победа» выражает благодарность ООО «Информационные технологии Якутии» за качественную и своевременную разработку сайта нашей организации.</p>
-                                <p>Разработанный Вами веб-сайт «http://rcmtykt.ru/» имеет социальную направленность, целевой аудиторией которого являются организации социальной защиты и социального обслуживания Республики Саха (Якутия), а также граждане, нуждающиеся в социальной поддержке.</p>
-                                <p>Считаем, что сайт четко структурирован, понятен для использования в работе, имеет современный дизайн и возможности проведения опросов для населения. Работа, выполненная разработчиками, сделана с учетом всех наших требований, пожеланий и в установленные сроки.</p>
-                                <p>Желаем Вам успехов в продвижении новых масштабных проектов и выражаем готовность к дальнейшему сотрудничеству.</p>
+                                <p><a href="/pobeda.pdf" download="Отзыв о сайте Ресурсного центра Победа.pdf">Отзыв о сайте Ресурсного центра Победа.pdf</a></p>
                             </div>
                         </div> 
                         <div class="col-xl-4 col-lg-4 col-md-6">
@@ -319,14 +321,15 @@ $this->title = null;
                                     <i class="ti-star d-inline"></i>
                                     <i class="ti-star d-inline"></i>
                                 </p>
-                                <h6>Secure Payment System</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                                <p>Ассоциация "Ветеран" РС(Я)</p>
+                                <h6>Андреева Дария</h6>
+                                <p><a href="/veteran.pdf" download="Отзыв о сайте Ассоц Ветеран.pdf">Отзыв о сайте Ассоц Ветеран.pdf</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- Shop Method End-->
 
 

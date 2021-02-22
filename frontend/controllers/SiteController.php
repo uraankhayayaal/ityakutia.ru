@@ -169,6 +169,21 @@ class SiteController extends Controller
         return $this->render('sale');
     }
 
+    public function actionProduct()
+    {
+        return $this->render('product');
+    }
+
+    public function actionBiolink()
+    {
+        return $this->render('biolink');
+    }
+
+    public function actionSmartlink()
+    {
+        return $this->render('smartlink');
+    }
+
     /**
      * Signs user up.
      *
