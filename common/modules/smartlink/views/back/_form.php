@@ -93,8 +93,7 @@ use yii\helpers\ArrayHelper;
 
             <div class="row">
                 <div class="col s12 m4 l4">
-                    <?= Html::label($model->getAttributeLabel('link_bio'), '', ['class' => 'label']) ?>
-                    <?= Html::input('text', '', $model->link_bio, ['disabled' => 'disabled']); ?>
+                    <?= $form->field($model, 'link_bio')->textInput(['maxlength' => true]) ?>
                 </div>
             </div>
             <div class="row">
