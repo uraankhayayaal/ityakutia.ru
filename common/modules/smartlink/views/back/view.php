@@ -14,47 +14,58 @@ $this->title = $model->company . '/' . $model->app_name;
 <div class="banner-view">
     <div class="row">
         <div class="col s12">
-            <p></p>
-            <div id="map" style="width: 100%; height: 550px;"></div>
+            <!-- <p></p>
+            <div id="map" style="width: 100%; height: 550px;"></div> -->
             <?php
-                $points = Movement::find()->select(['coordinate'])->where(['smartlink_id' => $model->id])->all();
-                $array = [];
-                foreach ($points as $key => $point) {
-                    if (!is_null(json_decode($point->coordinate, true)["lat"]) && !is_null(json_decode($point->coordinate, true)["lng"])){
-                        $array[] = [json_decode($point->coordinate, true)["lat"], json_decode($point->coordinate, true)["lng"]];
-                    }
-                }
-                $coords = json_encode($array);
-                $this->registerJs("
-                    ymaps.ready(function () {  
+                // $points = Movement::find()->select(['coordinate'])->where(['smartlink_id' => $model->id])->all();
+                // $array = [];
+                // foreach ($points as $key => $point) {
+                //     if (!is_null(json_decode($point->coordinate, true)["lat"]) && !is_null(json_decode($point->coordinate, true)["lng"])){
+                //         $array[] = [json_decode($point->coordinate, true)["lat"], json_decode($point->coordinate, true)["lng"]];
+                //     }
+                // }
+                // $coords = json_encode($array);
+                // $this->registerJs("
+                //     ymaps.ready(function () {  
                         
-                        var myMap = new ymaps.Map('map', {
-                            center: [62.0397, 129.7422],
-                            zoom: 4
-                        });
+                //         var myMap = new ymaps.Map('map', {
+                //             center: [62.0397, 129.7422],
+                //             zoom: 4
+                //         });
 
-                        var coords = $coords;
+                //         var coords = $coords;
 
-                        // var myCollection = new ymaps.GeoObjectCollection();
-                        var myGeoObjects = [];
-                        for (var i = 0; i<coords.length; i++) {
-                            // myCollection.add(new ymaps.Placemark(coords[i]));
-                            myGeoObjects[i] = new ymaps.GeoObject({
-                                geometry: {
-                                type: 'Point',
-                                coordinates: coords[i]
-                                }
-                            });
-                        }
+                //         // var myCollection = new ymaps.GeoObjectCollection();
+                //         var myGeoObjects = [];
+                //         for (var i = 0; i<coords.length; i++) {
+                //             // myCollection.add(new ymaps.Placemark(coords[i]));
+                //             myGeoObjects[i] = new ymaps.GeoObject({
+                //                 geometry: {
+                //                 type: 'Point',
+                //                 coordinates: coords[i],
+                //                 // iconLayout: 'default#pieChart',
+                //                 // data: [
+                //                 //     // Вес красного сектора.
+                //                 //     { weight: 52, color: 'red' },
+                //                 //     // Вес зеленого сектора.
+                //                 //     { weight: 42, color: '#880011' },
+                //                 //     // Вес желтого сектора.
+                //                 //     { weight: 23, color: '#035201' },
+                //                 //     // Вес синего сектора.
+                //                 //     { weight: 12, color: '#002f55' }
+                //                 // ]
+                //                 }
+                //             });
+                //         }
 
-                        var myClusterer = new ymaps.Clusterer();
-                        myClusterer.add(myGeoObjects);
+                //         var myClusterer = new ymaps.Clusterer();
+                //         myClusterer.add(myGeoObjects);
 
-                        myMap.geoObjects.add(myClusterer);
+                //         myMap.geoObjects.add(myClusterer);
 
-                    });
+                //     });
                 
-                ",$this::POS_READY);
+                // ",$this::POS_READY);
             ?>
             <script>
                 
