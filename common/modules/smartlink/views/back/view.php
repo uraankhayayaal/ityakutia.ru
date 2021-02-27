@@ -20,7 +20,7 @@ $this->title = $model->company . '/' . $model->app_name;
                 $points = Movement::find()->select(['coordinate'])->where(['smartlink_id' => $model->id])->all();
                 $array = [];
                 foreach ($points as $key => $point) {
-                    if (is_double(json_decode($point->coordinate, true)["lat"]) && json_decode($point->coordinate, true)["lng"]){
+                    if (!is_null(json_decode($point->coordinate, true)["lat"]) && !is_null(json_decode($point->coordinate, true)["lng"])){
                         $array[] = [json_decode($point->coordinate, true)["lat"], json_decode($point->coordinate, true)["lng"]];
                     }
                 }
