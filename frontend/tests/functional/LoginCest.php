@@ -40,8 +40,8 @@ class LoginCest
     public function checkEmpty(FunctionalTester $I)
     {
         $I->submitForm('#login-form', $this->formParams('', ''));
-        $I->seeValidationError('Username cannot be blank.');
-        $I->seeValidationError('Password cannot be blank.');
+        $I->seeValidationError('Необходимо заполнить «Username».');
+        $I->seeValidationError('Необходимо заполнить «Password».');
     }
 
     public function checkWrongPassword(FunctionalTester $I)
@@ -53,8 +53,8 @@ class LoginCest
     public function checkValidLogin(FunctionalTester $I)
     {
         $I->submitForm('#login-form', $this->formParams('erau', 'password_0'));
-        $I->see('Logout (erau)', 'form button[type=submit]');
-        $I->dontSeeLink('Login');
-        $I->dontSeeLink('Signup');
+        $I->see('Выйти (erau)');
+        $I->dontSeeLink('Войти');
+        $I->dontSeeLink('Регистрация');
     }
 }
