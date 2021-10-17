@@ -1,22 +1,10 @@
 <?php
 
+use frontend\components\ViewHelper;
 use ityakutia\navigation\models\Navigation;
 use frontend\themes\basic\widgets\bootstrap\Nav;
 use yii\helpers\Url;
 
-function getChildren($item){
-    $subnav = [];
-    foreach ($item->children(1)->all() as $key => $subitem) {
-        $subnav[] = [
-            'label' => $subitem->name,
-            'url' => $subitem->link,
-            'items' => getChildren($subitem),
-            'active' => Url::current() == $subitem->link,
-            'options' => ['class' => ($item->color_switcher ? 'hot' : '')],
-        ];
-    }
-    return $subnav;
-}
 $navigation = [];
 $roots = Navigation::find()->where(['is_publish' => 1])->roots()->orderBy(['sort' => SORT_ASC])->all();
 $leaves = Navigation::find()->leaves()->all();
@@ -25,7 +13,7 @@ foreach ($roots as $key => $item) {
     $navigation[] = [
         'label' => $item->name,
         'url' => $item->link,
-        'items' => getChildren($item),
+        'items' => ViewHelper::getMenuChildren($item),
         'active' => Url::current() == $item->link,
         'options' => ['class' => ($item->color_switcher ? 'hot' : '')],
         'dropdownOptions' => ['class' => 'submenu'],
