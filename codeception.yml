@@ -3,6 +3,7 @@ include:
     - common
     - frontend
     - backend
+    - common/modules/payment
 paths:
     log: console/runtime/logs
 settings:
