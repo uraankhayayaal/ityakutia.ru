@@ -17,7 +17,7 @@ class m161021_232200_create_purchase_table extends Migration
             'status' => $this->string(1)->notNull(),
             'created_at' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),
             'pay_time' => $this->timestamp()->null(),
-            'method' => $this->string(7)->notNull(),
+            'method' => $this->string(15)->notNull(),
             'orderId' => $this->string()->null(),
             'remote_id' => $this->integer()->null(),
             'data' => 'JSON NULL DEFAULT NULL',
