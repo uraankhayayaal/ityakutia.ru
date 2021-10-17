@@ -3,6 +3,7 @@
 namespace common\modules\payment\controllers;
 
 use common\modules\payment\models\Purchase;
+use common\modules\payment\services\Sberbank;
 use ErrorException;
 use Yii;
 use yii\web\Controller;
@@ -10,16 +11,6 @@ use yii\web\NotFoundHttpException;
 
 class PurchaseController extends Controller
 {
-    public function ReturnUrlAction($paymentservice)
-    {
-        return $paymentservice;
-    }
-
-    public function FailAction($paymentservice)
-    {
-        return $paymentservice;
-    }
-
     /* @var Module */
     public $module;
 
@@ -46,22 +37,24 @@ class PurchaseController extends Controller
         if (is_null($model)) {
             throw new NotFoundHttpException();
         }
-        $result = $this->module->sberbank->complete(Yii::$app->request->get('orderId'));
+        // $result = $this->module->sberbank->complete(Yii::$app->request->get('orderId'));
+        $payment = new Sberbank();
+        $result = $payment->complete(Yii::$app->request->get('orderId'));
         //Проверяем статус оплаты если всё хорошо обновим инвойс и редерекним
-        if (isset($result['OrderStatus']) && ($result['OrderStatus'] == $this->module->sberbank->classRegister->successStatus())) {
-            $model->attributes = $this->module->sberbank->classRegister->getDataForUpdate();
+        if (isset($result['orderStatus']) && ($result['orderStatus'] == $payment->successStatus())) {
+            $model->attributes = $payment->getDataForUpdate();
             $model->update();
-            if ($this->module->successCallback) {
-                $callback = $this->module->successCallback;
+            if ($payment->successCallback) {
+                $callback = $payment->successCallback;
                 $callback($model);
             }
-            $this->redirect($this->module->successUrl);
+            $this->redirect($payment->successUrl);
         } else {
-            if ($this->module->failCallback) {
-                $callback = $this->module->failCallback;
+            if ($payment->failCallback) {
+                $callback = $payment->failCallback;
                 $callback($model);
             }
-            $this->redirect($this->module->failUrl);
+            $this->redirect($payment->failUrl);
         }
     }
 
@@ -77,7 +70,8 @@ class PurchaseController extends Controller
     public function actionCreate($id)
     {
         $model = Purchase::findOne($id);
-        $result = $this->module->sberbank->create($model);
+        // $result = $this->module->sberbank->create($model); // WTF?
+        $result = (new Sberbank())->create($model);
         if (array_key_exists('errorCode', $result)) {
             throw new ErrorException($result['errorMessage']);
         }

@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\Html;
 use yii\helpers\Url;
 
 $this->title = 'SMARTLINK - умная ссылка для продвижения мобильных приложений';
@@ -51,3 +52,28 @@ $this->title = 'SMARTLINK - умная ссылка для продвижени�
             </div>
         </div>
         <!-- About Details End -->
+
+        <div class="about-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col offset-xl-1">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-50">
+                                    <h4>Разовый абонимент на месяц</h4>
+                                    <p>Оплачивайте каждый месяц как вам удобно.</p>
+                                    <p><?= Html::a("Купить за 790 руб.", ['/payment/order/create', 'product' => 1], ['class' => 'btn']); ?></p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-50">
+                                    <h4>Годовой абонимент</h4>
+                                    <p>Оплатите один раз в год, экономия 480 руб.</p>
+                                    <p><?= Html::a("Купить за 9000 руб.", ['/payment/order/create', 'product' => 2], ['class' => 'btn']); ?></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

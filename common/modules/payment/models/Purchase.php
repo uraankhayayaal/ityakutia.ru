@@ -48,10 +48,6 @@ class Purchase extends ActiveRecord
             $this->id = Yii::$app->db->createCommand($sql)->queryScalar() + 1;
         }
         $id = $this->id . '-' . time();
-        $module = Yii::$app->getModule('sberbank');
-        if ($module && is_callable($module->idGenerator)) {
-            $id = call_user_func($module->idGenerator, $this, $id);
-        }
         return $id;
     }
 
@@ -84,7 +80,7 @@ class Purchase extends ActiveRecord
      */
     public static function tableName()
     {
-        return 'invoice';
+        return 'purchase';
     }
 
     /**

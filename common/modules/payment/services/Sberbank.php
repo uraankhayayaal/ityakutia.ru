@@ -2,19 +2,27 @@
 
 namespace common\modules\payment\services;
 
+use common\modules\payment\models\Purchase;
+use yii\db\Expression;
 use yii\helpers\Json;
+use yii\helpers\Url;
 
 class Sberbank extends AbstractPaymentService
 {
-    private $headers = ['Content-Type' => 'application/x-www-form-urlencoded'];
+    private $headers = ['Content-Type: application/x-www-form-urlencoded'];
     private $username = 'kinder_admin14-api';
-    private $pasword = 'kinder_admin14';
+    private $password = 'kinder_admin14';
     private $testMode = true;
     private $stages = 1; // 1: Одностадийна оплата / 2: Двухстадийная оплата
-    private $returnUrl = '/payment/purchase/return-url?paymentservice=sberbank';
-    private $failUrl = '/payment/purchase/fail-url?paymentservice=sberbank';
+    private $returnUrl = '/payment/purchase/complete?paymentservice=sberbank';
     private $apiUrlTest = 'https://3dsec.sberbank.ru/payment/rest/';
     private $apiUrl = 'https://3dsec.sberbank.ru/payment/rest/';
+    public $sessionTimeoutSecs = 1200;
+
+    public $successUrl = '/payment/order/success';
+    public $failUrl = '/payment/order/fail';
+    public $successCallback = null;
+    public $failCallback = null;
 
     private $urls = [
         'Регистрация заказа' => 'register.do',
@@ -48,23 +56,28 @@ class Sberbank extends AbstractPaymentService
         $this->testMode = $testMode;
     }
 
-    /*
-     * Test method that to be deleted.
-     */
-    public function paymentCardStrategy()
+    public function create(Purchase $model, array $post = [])
     {
-        return $this->registerDo(); //
+        $post['orderNumber'] = $model->data['uniqid'];
+        $post['amount'] = $model->sum * 100;
+        $post['returnUrl'] = Url::to($this->returnUrl, true);
+        $post['sessionTimeoutSecs'] = $this->sessionTimeoutSecs;
+        if (array_key_exists('comment', $model->data)) {
+            $post['description'] = $model->data['comment'];
+        }
+        $result = $this->query($this->urls['Регистрация заказа'], $post);
+        if (array_key_exists('formUrl', $result)) {
+            $model->url = $result['formUrl'];
+            $model->save();
+        }
+        return $result;
     }
 
-    public function registerDo()
+    public function complete($orderId)
     {
-        $data = [
-            'returnUrl' => $this->returnUrl,
-            'failUrl' => $this->failUrl
-        ];
-        $url = $this->urls['Регистрация заказа'];
-        list($orderId, $formUrl) = $this->query($url, $data);
-        return ['orderId' => '34324234234', 'formUrl' => 'https://sometestpaymentservice.test/asd?asd=asdasdsad'];
+        $post = [];
+        $post['orderId'] = $orderId;
+        return $this->query($this->urls['Получение статуса заказа'], $post);
     }
 
     public function query($action, $data)
@@ -74,6 +87,7 @@ class Sberbank extends AbstractPaymentService
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $this->headers);
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
         $out = curl_exec($curl);
@@ -83,8 +97,21 @@ class Sberbank extends AbstractPaymentService
 
     protected function insertAuthData(array $data)
     {
-        $data['userName'] = $this->login;
+        $data['userName'] = $this->username;
         $data['password'] = $this->password;
         return $data;
+    }
+
+    public function successStatus()
+    {
+        return 2;
+    }
+
+    public function getDataForUpdate()
+    {
+        return [
+            'status' => 'S',
+            'pay_time' => new Expression("NOW()"),
+        ];
     }
 }

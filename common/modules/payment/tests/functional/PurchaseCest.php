@@ -19,12 +19,12 @@ class PurchaseCest
 
     public function _before(FunctionalTester $I)
     {
-        $I->amOnRoute('site/index');
+        $I->amOnRoute('/site/smartlink');
     }
 
     public function tryToTest(FunctionalTester $I)
     {
-        $I->amOnPage('site/index');
-        $I->see('Последние работы', 'h2');
+        $I->amOnPage('/site/smartlink');
+        $I->click('Купить за 790 руб.');
     }
 }

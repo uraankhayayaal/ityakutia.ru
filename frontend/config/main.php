@@ -168,6 +168,9 @@ return [
         'smartlink' => [
             'class' => 'common\modules\smartlink\Module',
         ],
+        'payment' => [
+            'class' => 'common\modules\payment\Module',
+        ],
     ],
     'params' => $params,
 ];
