@@ -20,6 +20,25 @@ foreach ($roots as $key => $item) {
     ];
 }
 
+if(Yii::$app->user->isGuest){
+    $navigation[] = [
+        'label' => "Войти",
+        'url' => "/site/login",
+        'active' => Url::current() == "/site/login",
+    ];
+
+    $navigation[] = [
+        'label' => "Регистрация",
+        'url' => "/site/signup",
+        'active' => Url::current() == "/site/signup",
+    ];
+}else{
+    $navigation[] = [
+        'label' => "Выйти (".Yii::$app->user->identity->username.")",
+        'url' => "/site/logout",
+        'linkOptions' => ['data-method' => 'post']
+    ];
+}
 ?>
     <header>
         <!-- Header Start -->
