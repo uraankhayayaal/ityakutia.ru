@@ -171,6 +171,9 @@ return [
         'payment' => [
             'class' => 'common\modules\payment\Module',
         ],
+        'api' => [
+            'class' => 'common\modules\api\Module',
+        ],
     ],
     'params' => $params,
 ];

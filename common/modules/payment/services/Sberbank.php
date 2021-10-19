@@ -7,7 +7,7 @@ use yii\db\Expression;
 use yii\helpers\Json;
 use yii\helpers\Url;
 
-class Sberbank extends AbstractPaymentService
+class Sberbank
 {
     private $headers = ['Content-Type: application/x-www-form-urlencoded'];
     private $username = 'kinder_admin14-api';
