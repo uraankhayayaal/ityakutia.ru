@@ -50,6 +50,7 @@ class FrontCabinetController extends Controller
         ]); 
     }
 
+    // TODO: Доделать
     public function actionCreate()
     {
         $model = new Smartlink();
@@ -64,6 +65,7 @@ class FrontCabinetController extends Controller
         ]);
     }
 
+    // TODO: Доделать
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
