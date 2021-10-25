@@ -22,19 +22,19 @@ foreach ($roots as $key => $item) {
     ];
 }
 
-if(Yii::$app->user->isGuest){
-    $navigation[] = [
-        'label' => "Войти",
-        'url' => ["/site/login", 'city_id' => $city->id],
-        'active' => Url::current() == "/site/login",
-    ];
-}else{
-    $navigation[] = [
-        'label' => "Выйти (".Yii::$app->user->identity->username.")",
-        'url' => ["/site/logout", 'city_id' => $city->id],
-        'linkOptions' => ['data-method' => 'post']
-    ];
-}
+// if(Yii::$app->user->isGuest){
+//     $navigation[] = [
+//         'label' => "Войти",
+//         'url' => ["/site/login", 'city_id' => $city->id],
+//         'active' => Url::current() == "/site/login",
+//     ];
+// }else{
+//     $navigation[] = [
+//         'label' => "Выйти (".Yii::$app->user->identity->username.")",
+//         'url' => ["/site/logout", 'city_id' => $city->id],
+//         'linkOptions' => ['data-method' => 'post']
+//     ];
+// }
 
 $navigation[] = [
     'label' => $city->name,
