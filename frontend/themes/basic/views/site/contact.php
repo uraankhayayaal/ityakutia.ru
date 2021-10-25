@@ -1,5 +1,6 @@
 <?php
 
+use common\modules\multicity\models\City;
 use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -64,8 +65,26 @@ $this->title = 'Контакты';
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
-                                <h3>Республика Саха (Якутия), Россия.</h3>
-                                <p>Якутск, 677008</p>
+                                <?php switch (City::getCurrent()->url) {
+                                    case 'kazan':
+                                        echo '
+                                            <h3>Республика Татарстан, Россия.</h3>
+                                            <p>Казань, 420000</p>
+                                        ';
+                                        break;
+                                    case 'yakutsk':
+                                        echo '
+                                            <h3>Республика Саха (Якутия), Россия.</h3>
+                                            <p>Якутск, 677008</p>
+                                        ';
+                                        break;
+                                    default:
+                                        echo '
+                                            <h3>Республика Саха (Якутия), Россия.</h3>
+                                            <p>Якутск, 677008</p>
+                                        ';
+                                        break;
+                                } ?>
                             </div>
                         </div>
                         <div class="media contact-info">

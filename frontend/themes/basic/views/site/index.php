@@ -26,7 +26,7 @@ $this->title = null;
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.svg" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.svg" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ $this->title = null;
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта</h1>
+                                    <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта в городе <?= City::getCurrent()->name; ?></h1>
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в продвижении вашего бизнеса в интернете и в социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
@@ -48,7 +48,7 @@ $this->title = null;
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch2.png" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch2.png" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
                                 </div>
                             </div>
                         </div>
