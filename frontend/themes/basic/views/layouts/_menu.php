@@ -1,10 +1,12 @@
 <?php
 
+use common\modules\multicity\models\City;
 use frontend\components\ViewHelper;
 use ityakutia\navigation\models\Navigation;
 use frontend\themes\basic\widgets\bootstrap\Nav;
 use yii\helpers\Url;
 
+$city = City::getCurrent();
 $navigation = [];
 $roots = Navigation::find()->where(['is_publish' => 1])->roots()->orderBy(['sort' => SORT_ASC])->all();
 $leaves = Navigation::find()->leaves()->all();
@@ -12,8 +14,8 @@ $leaves = Navigation::find()->leaves()->all();
 foreach ($roots as $key => $item) {
     $navigation[] = [
         'label' => $item->name,
-        'url' => $item->link,
-        'items' => ViewHelper::getMenuChildren($item),
+        'url' => [$item->link, 'city_id' => $city->id],
+        'items' => ViewHelper::getMenuChildren($item, $city),
         'active' => Url::current() == $item->link,
         'options' => ['class' => ($item->color_switcher ? 'hot' : '')],
         'dropdownOptions' => ['class' => 'submenu'],
@@ -23,22 +25,24 @@ foreach ($roots as $key => $item) {
 if(Yii::$app->user->isGuest){
     $navigation[] = [
         'label' => "Войти",
-        'url' => "/site/login",
+        'url' => ["/site/login", 'city_id' => $city->id],
         'active' => Url::current() == "/site/login",
-    ];
-
-    $navigation[] = [
-        'label' => "Регистрация",
-        'url' => "/site/signup",
-        'active' => Url::current() == "/site/signup",
     ];
 }else{
     $navigation[] = [
         'label' => "Выйти (".Yii::$app->user->identity->username.")",
-        'url' => "/site/logout",
+        'url' => ["/site/logout", 'city_id' => $city->id],
         'linkOptions' => ['data-method' => 'post']
     ];
 }
+
+$navigation[] = [
+    'label' => $city->name,
+    'url' => false,
+    'items' => ViewHelper::getOtherCity($city),
+    'dropdownOptions' => ['class' => 'submenu'],
+];
+
 ?>
     <header>
         <!-- Header Start -->
@@ -48,7 +52,7 @@ if(Yii::$app->user->isGuest){
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="<?= Url::home(); ?>"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo.svg" alt="<?= Yii::$app->name ?>"></a>
+                            <a href="<?= Url::to(['/']); ?>"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo.svg" alt="<?= Yii::$app->name ?>"></a>
                         </div>
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">

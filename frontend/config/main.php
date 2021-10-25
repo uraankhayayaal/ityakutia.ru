@@ -48,6 +48,7 @@ return [
             'errorAction' => 'site/error',
         ],
         'urlManager' => [
+            'class' => \common\modules\multicity\components\CityUrlManager::class,
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [

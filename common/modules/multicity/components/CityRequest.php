@@ -21,11 +21,11 @@ class CityRequest extends Request
 
 	    	City::setCurrent($city_url);
 
-                if( $city_url !== null && $city_url === City::getCurrent()->url && 
-				strpos($this->_city_url, City::getCurrent()->url) === 1 )
-                {
-                     $this->_city_url = substr($this->_city_url, strlen(City::getCurrent()->url)+1);
-                }
+            if( $city_url !== null && $city_url === City::getCurrent()->url && 
+                strpos($this->_city_url, City::getCurrent()->url) === 1 )
+            {
+                    $this->_city_url = substr($this->_city_url, strlen(City::getCurrent()->url)+1);
+            }
         }
 
         return $this->_city_url;

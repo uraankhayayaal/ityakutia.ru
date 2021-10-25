@@ -55,11 +55,11 @@ class City extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'url' => 'Url',
-            'local' => 'Local',
-            'name' => 'Name',
-            'default' => 'Default',
-            'updated_at' => 'Updated At',
-            'created_at' => 'Created At',
+            'local' => 'Язык',
+            'name' => 'Название',
+            'default' => 'Город по умолчанию',
+            'updated_at' => 'Создан',
+            'created_at' => 'Изменен',
         ];
     }
 

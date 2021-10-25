@@ -1,5 +1,6 @@
 <?php
 
+use common\modules\multicity\models\City;
 use yii\helpers\Url;
 
 $this->title = null;
@@ -14,7 +15,7 @@ $this->title = null;
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
-                                    <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях</h2>
+                                    <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях в городе <?= City::getCurrent()->name; ?></h2>
                                     <img src="<?= $this->theme->baseUrl; ?>/img/hero/mobile.svg" class="d-md-none mw-100 pr-3 pb-3 heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в комплексном продвижении вашего бизнеса в разных социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->

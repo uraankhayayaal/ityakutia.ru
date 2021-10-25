@@ -4,14 +4,14 @@ use yii\helpers\Html;
 
 ?>
 
-<div id="lang">
-    <span id="current-lang">
+<div id="city">
+    <span id="current-city">
         <?= $current->name; ?>
     </span>
-    <ul id="langs">
-        <?php foreach ($langs as $lang):?>
-            <li class="item-lang">
-                <?= Html::a($lang->name, '/'.$lang->url.Yii::$app->getRequest()->getLangUrl()) ?>
+    <ul id="cities">
+        <?php foreach ($cities as $city):?>
+            <li class="item-city">
+                <?= Html::a($city->name, '/'.$city->url.Yii::$app->getRequest()->getCityUrl()) ?>
             </li>
         <?php endforeach;?>
     </ul>

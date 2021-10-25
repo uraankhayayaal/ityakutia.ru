@@ -1,8 +1,8 @@
 <?php
 
-namespace ayaalkaplin\multicity\widgets\city;
+namespace common\modules\multicity\widgets\city;
 
-use ayaalkaplin\multicity\models\City;
+use common\modules\multicity\models\City;
 
 /**
  * This is just an example.
@@ -14,7 +14,7 @@ class Change extends \yii\base\Widget
     public function run() {
         return $this->render('index', [
             'current' => City::getCurrent(),
-            'citys' => City::find()->where('id != :current_id', [':current_id' => City::getCurrent()->id])->all(),
+            'cities' => City::find()->where('id != :current_id', [':current_id' => City::getCurrent()->id])->all(),
         ]);
     }
 }
