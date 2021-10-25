@@ -18,6 +18,7 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [
+            'class' => \common\modules\multicity\components\CityRequest::class,
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
         ],

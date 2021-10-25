@@ -70,6 +70,10 @@ use yii\helpers\Url;
     <?php if(Yii::$app->user->can("collective")) { ?>
     <li class="<?= (Yii::$app->controller->module->id=='collective' && Yii::$app->controller->id=='back')?'active':''; ?>"><a class="waves-effect waves-teal" href="<?= Url::toRoute('/collective/back/index') ?>"><i class="material-icons">people</i> <?= Yii::t('app', 'Коллектив') ?></a></li>
     <?php } ?>
+
+    <?php if(Yii::$app->user->can("admin")) { ?>
+        <li class="<?= (Yii::$app->controller->module->id=='multicity' && Yii::$app->controller->id=='back')?'active':''; ?>"><a href="<?= Url::toRoute(['/multicity/back-city/index']); ?>"><i class="material-icons">city</i> <?= Yii::t('app', 'Города') ?></a></li>
+    <?php } ?>
     
     <?php if(Yii::$app->user->can("rbac_permissions") || Yii::$app->user->can("rbac_roles") || Yii::$app->user->can("rbac_users") || Yii::$app->user->can("settings")) { ?>
         <li><a class="subheader grey-text"><i class="material-icons grey-text tiny">public</i> <?= Yii::t('app', 'Основное') ?></a></li>

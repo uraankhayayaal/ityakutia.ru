@@ -16,6 +16,9 @@ return [
         'smartlink' => [
             'class' => 'common\modules\smartlink\Module',
         ],
+        'multicity' => [
+            'class' => 'common\modules\multicity\Module',
+        ],
     ],
     'components' => [
         'request' => [
@@ -48,6 +51,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 '' => 'site/index',
+                'multicity' => 'multicity/back-city/index',
                 '<controller:\w+>/<action:\w+>/' => '<controller>/<action>',
                 '<module:\w+>/<controller:\w+>/<action:\w+>/' => '<module>/<controller>/<action>',
             ],
