@@ -72,6 +72,17 @@
                                 font-weight: 500;
                             }
                         }
+
+                        &.city{
+                            & > a{
+                                color: #ff003c;
+                            }
+                            &:hover{
+                                & > a{
+                                    color:#141517;
+                                }
+                            }
+                        }
                         // how Sub Menu
                         &:hover > ul.submenu {
                             visibility: visible;

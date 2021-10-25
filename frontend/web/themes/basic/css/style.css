@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Theme Description
 -------------------------------------------------
 
@@ -2848,6 +2847,12 @@ input:focus {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
+}
+.header-area .main-header .menu-wrapper .main-menu ul li.city > a {
+  color: #ff003c;
+}
+.header-area .main-header .menu-wrapper .main-menu ul li.city:hover > a {
+  color: #141517;
 }
 .header-area .main-header .menu-wrapper .main-menu ul li:hover > ul.submenu {
   visibility: visible;
@@ -5701,7 +5706,7 @@ input:focus {
   color: #919191;
 }
 .popup_box .nice-select::after {
-  content: "";
+  content: "\f0d7";
   display: block;
   height: 5px;
   margin-top: -5px;
@@ -7466,7 +7471,7 @@ input:focus {
   content: "";
   right: -8px;
   bottom: -10px;
-  content: "";
+  content: "\f100";
   font-family: "Flaticon";
   height: 50px;
   width: 50px;
@@ -8128,7 +8133,7 @@ input:focus {
   color: #555555;
 }
 .product_top_bar .left_dorp .sorting:after {
-  content: "";
+  content: "\f0d7";
   font: normal normal normal 14px/1 FontAwesome;
   transform: rotate(0);
   border: none;
@@ -8162,7 +8167,7 @@ input:focus {
   color: #555555;
 }
 .product_top_bar .left_dorp .show:after {
-  content: "";
+  content: "\f0d7";
   font: normal normal normal 14px/1 FontAwesome;
   transform: rotate(0);
   border: none;

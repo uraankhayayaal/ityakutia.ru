@@ -40,6 +40,7 @@ $navigation[] = [
     'label' => $city->name,
     'url' => false,
     'items' => ViewHelper::getOtherCity($city),
+    'options' => ['class' => 'city'],
     'dropdownOptions' => ['class' => 'submenu'],
 ];
 
