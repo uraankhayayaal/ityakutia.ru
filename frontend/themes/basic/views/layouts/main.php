@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use common\modules\multicity\models\City;
 use yii\helpers\Html;
 use frontend\themes\basic\assets\AppAsset;
 use yii\helpers\Url;
@@ -17,7 +18,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
-    <title><?= ($this->title != null ? (Html::encode($this->title).' | ') : '') ?><?= Yii::$app->name ?></title>
+    <title><?= ($this->title != null ? (Html::encode($this->title).' | ') : '') ?><?= Yii::$app->name ?> в городе <?= City::getCurrent()->name ?></title>
     <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?>/img/favicon.svg">
 
     <meta name="google-site-verification" content="S31x0lJg0CebKhPoOpLixsaUtap1PgQu7HoT4lIYF-A" />
@@ -34,16 +35,16 @@ AppAsset::register($this);
 
         $this->registerMetaTag([
             'name' => 'keywords',
-            'content' => Yii::$app->params['meta_keywords']['content'],
+            'content' => Yii::$app->params['meta_keywords']['content'] . ', ' . City::getCurrent()->name,
         ]);
         $this->registerMetaTag([
             'name' => 'description',
-            'content' => Yii::$app->params['meta_description']['content'],
+            'content' => Yii::$app->params['meta_description']['content'] .  ' в городе ' . City::getCurrent()->name,
         ]);
 
         $this->registerMetaTag([
             'property' => 'og:title',
-            'content' => ($this->title != null ? (Html::encode($this->title).' | ') : '').\Yii::$app->name,
+            'content' => ($this->title != null ? (Html::encode($this->title).' | ') : '').\Yii::$app->name . ' в городе ' . City::getCurrent()->name,
         ]);
         $this->registerMetaTag([
             'property' => 'og:type',
@@ -51,7 +52,7 @@ AppAsset::register($this);
         ]);
         $this->registerMetaTag([
             'property' => 'og:description',
-            'content' => Yii::$app->params['meta_description']['content'],
+            'content' => Yii::$app->params['meta_description']['content'] .  ' в городе ' . City::getCurrent()->name,
         ]);
         $this->registerMetaTag([
             'property' => 'og:image',
@@ -71,7 +72,7 @@ AppAsset::register($this);
         ]);
         $this->registerMetaTag([
             'property' => 'og:image:alt',
-            'content' => Yii::$app->params['meta_description']['content'],
+            'content' => Yii::$app->params['meta_description']['content'] .  ' в городе ' . City::getCurrent()->name,
         ]);
         $this->registerMetaTag([
             'property' => 'og:url',
