@@ -144,11 +144,15 @@ class Smartlink extends ActiveRecord
 
     public function getSmartlink(): String
     {
+        if(Yii::$app->id == 'app-frontend')
+            return Yii::$app->urlManager->createUrl(['/smartlink/front/index', 'id' => $this->link_hash], 'https');
         return Yii::$app->urlManagerFrontend->createUrl(['/smartlink/front/index', 'id' => $this->link_hash], 'https');
     }
 
     public function getBiolink(): String
     {
+        if(Yii::$app->id == 'app-frontend')
+            return Yii::$app->urlManager->createUrl(['/smartlink/front/bio', 'id' => $this->link_bio], 'https');
         return Yii::$app->urlManagerFrontend->createUrl(['/smartlink/front/bio', 'id' => $this->link_bio], 'https');
     }
 

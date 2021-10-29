@@ -80,17 +80,9 @@ class FrontCabinetController extends Controller
         ]);
     }
 
-    protected function findModel($link_hash): Smartlink
+    protected function findModel($id): Smartlink
     {
-        if (($model = Smartlink::findOneByHash($link_hash)) !== null) {
-            return $model;
-        }
-        throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    protected function findBioLink($link_bio): Smartlink
-    {
-        if (($model = Smartlink::findOneByBioHash($link_bio)) !== null) {
+        if (($model = Smartlink::findOne($id)) !== null) {
             return $model;
         }
         throw new NotFoundHttpException('The requested page does not exist.');
