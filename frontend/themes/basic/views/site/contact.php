@@ -27,10 +27,63 @@ $this->title = 'Контакты';
         <section class="contact-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <h2 class="contact-title">Напишите нам, что вы хотите заказать?</h2>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <?php switch (City::getCurrent()->url) {
+                                    case 'kazan':
+                                        echo '
+                                            <h3>Республика Татарстан, Россия.</h3>
+                                            <p>Казань, 420000</p>
+                                        ';
+                                        break;
+                                    case 'yakutsk':
+                                        echo '
+                                            <h3>Республика Саха (Якутия), Россия.</h3>
+                                            <p>677008, Якутск, Лермонтова 87</p>
+                                        ';
+                                        break;
+                                    default:
+                                        echo '
+                                            <h3>Республика Саха (Якутия), Россия.</h3>
+                                            <p>677008, Якутск, Лермонтова 87</p>
+                                        ';
+                                        break;
+                                } ?>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="fab fa-telegram" aria-hidden="true"></i></span>
+                            <div class="media-body">
+                                <h3><a class="typography h6" target="_blank" href="https://t.me/Yktadmin">@Yktadmin</a></h3>
+                                <p>В telegram в любое время</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+                            <div class="media-body">
+                                <h3><a class="typography h6" target="_blank" href="https://wa.me/79142736836">+7 914 273 6836</a></h3>
+                                <p>В whatsapp в любое время</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3><a class="typography h6" target="_blank" href="tel:+79142736836">+7 914 273 6836</a></h3>
+                                <p>с 14:00 до 18:00 в будни</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3><a class="typography h6" target="_blank" href="mailto:manager@admin14.ru">manager@admin14.ru</a></h3>
+                                <p>На почту в любое время</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-8">
+                        <h2 class="contact-title">Напишите нам, что вы хотите заказать?</h2>
                         <?php $form = ActiveForm::begin(['id' => 'contactForm', 'options' => ['class' => "form-contact contact_form"]]); ?>
                             <div class="row">
                                 <div class="col-12">
@@ -60,47 +113,6 @@ $this->title = 'Контакты';
                                 <?= Html::submitButton('Отправить', ['class' => 'button button-contactForm boxed-btn', 'name' => 'contact-button']) ?>
                             </div>
                         <?php ActiveForm::end(); ?>
-                    </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-home"></i></span>
-                            <div class="media-body">
-                                <?php switch (City::getCurrent()->url) {
-                                    case 'kazan':
-                                        echo '
-                                            <h3>Республика Татарстан, Россия.</h3>
-                                            <p>Казань, 420000</p>
-                                        ';
-                                        break;
-                                    case 'yakutsk':
-                                        echo '
-                                            <h3>Республика Саха (Якутия), Россия.</h3>
-                                            <p>Якутск, 677008</p>
-                                        ';
-                                        break;
-                                    default:
-                                        echo '
-                                            <h3>Республика Саха (Якутия), Россия.</h3>
-                                            <p>Якутск, 677008</p>
-                                        ';
-                                        break;
-                                } ?>
-                            </div>
-                        </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                            <div class="media-body">
-                                <h3>+7 914 273 6836</h3>
-                                <p>с 14:00 до 18:00 в будни</p>
-                            </div>
-                        </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-email"></i></span>
-                            <div class="media-body">
-                                <h3>manager@admin14.ru</h3>
-                                <p>На почту в любое время</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
