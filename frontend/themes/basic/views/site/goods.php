@@ -117,7 +117,7 @@ $this->title = "Услуги";
                         </div>
                         <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a>
 
-                        <h3 class="mb-30 mt-60">СММ (введение социальных сетей)</h3>
+                        <!-- <h3 class="mb-30 mt-60">СММ (введение социальных сетей)</h3>
                         <div class="progress-table-wrap">
                             <div class="progress-table">
                                 <div class="table-head">
@@ -216,7 +216,7 @@ $this->title = "Услуги";
                                 </div>
                             </div>
                         </div>
-                        <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a>
+                        <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn mt-3">Заказать</a> -->
 
                         <h3 class="mb-30 mt-60">Разработка</h3>
                         <div class="progress-table-wrap">

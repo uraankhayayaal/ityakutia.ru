@@ -10,7 +10,7 @@ $this->title = null;
         <div class="slider-area ">
             <div class="slider-active">
                 <!-- Single Slider -->
-                <div class="single-slider slider-height d-flex align-items-center slide-bg">
+                <?php /* <div class="single-slider slider-height d-flex align-items-center slide-bg">
                     <div class="container">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
@@ -31,7 +31,7 @@ $this->title = null;
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */ ?>
                 <!-- Single Slider -->
                 <div class="single-slider slider-height d-flex align-items-center slide-bg">
                     <div class="container">
