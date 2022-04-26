@@ -241,7 +241,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">02</div>
                                     <div class="country">Корпоративный сайт для бизнеса</div>
-                                    <div class="visit">от 36,000 ₽</div>
+                                    <div class="visit">от 42,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-1" role="progressbar" style="width: 50%"

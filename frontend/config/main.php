@@ -12,7 +12,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
-    'name' => 'IT Yakutia - Разработка cайтов, мобильных приложений и введение социальных сетей',
+    'name' => 'IT Yakutia - Разработка cайтов и мобильных приложений',
     'language' => 'ru',
     'bootstrap' => ['log', 'assetsAutoCompress', 'devicedetect'],
     'controllerNamespace' => 'frontend\controllers',
