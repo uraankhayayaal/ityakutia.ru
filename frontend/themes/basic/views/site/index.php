@@ -75,8 +75,8 @@ $this->title = null;
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product6.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ассоциация Ветеран РС(Я)</a></h3>
-                                <span>veteransakha.ru</span>
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Управление образования Усть-Майского улуса</a></h3>
+                                <span>ustmuo.ru</span>
                             </div>
                         </div>
                     </div>
