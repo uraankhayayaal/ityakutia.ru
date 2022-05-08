@@ -72,7 +72,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product6.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Управление образования Усть-Майского улуса</a></h3>
