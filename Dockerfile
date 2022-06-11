@@ -58,7 +58,7 @@ RUN apk --update --virtual build-deps add \
         bcmath \
         exif \
         gd \
-        iconv \
+        # iconv \
         intl \
         mbstring \
         opcache \
