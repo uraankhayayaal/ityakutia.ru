@@ -38,7 +38,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">01</div>
                                     <div class="country">Разработка дизайна мобильного приложения</div>
-                                    <div class="visit">от 12,000 ₽</div>
+                                    <div class="visit">от 17,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-1" role="progressbar" style="width: 100%"
@@ -49,7 +49,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">02</div>
                                     <div class="country">Разработка web-дизайна</div>
-                                    <div class="visit">от 7,000 ₽</div>
+                                    <div class="visit">от 12,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-1" role="progressbar" style="width: 90%"
@@ -60,7 +60,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">03</div>
                                     <div class="country">Разработка видеоролика</div>
-                                    <div class="visit">от 5,000 ₽</div>
+                                    <div class="visit">от 25,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-3" role="progressbar" style="width: 80%"
@@ -71,7 +71,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">04</div>
                                     <div class="country">Разработка инфорграфики</div>
-                                    <div class="visit">от 5,000 ₽</div>
+                                    <div class="visit">от 15,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-3" role="progressbar" style="width: 80%"
@@ -83,7 +83,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">05</div>
                                     <div class="country">Разработка презентации</div>
-                                    <div class="visit">от 3,000 ₽</div>
+                                    <div class="visit">от 6,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-3" role="progressbar" style="width: 60%"
@@ -94,7 +94,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">06</div>
                                     <div class="country">Разработка логотипа</div>
-                                    <div class="visit">от 3,000 ₽</div>
+                                    <div class="visit">от 5,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-4" role="progressbar" style="width: 15%"
@@ -105,7 +105,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">07</div>
                                     <div class="country">Изготовление баннера</div>
-                                    <div class="visit">от 1,000 ₽</div>
+                                    <div class="visit">от 3,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-4" role="progressbar" style="width: 10%"
@@ -230,7 +230,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">01</div>
                                     <div class="country">Landing page (одностраничный)</div>
-                                    <div class="visit">от 12,000 ₽</div>
+                                    <div class="visit">от 19,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-1" role="progressbar" style="width: 15%"
@@ -241,7 +241,7 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">02</div>
                                     <div class="country">Корпоративный сайт для бизнеса</div>
-                                    <div class="visit">от 42,000 ₽</div>
+                                    <div class="visit">от 52,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-1" role="progressbar" style="width: 50%"
@@ -273,8 +273,8 @@ $this->title = "Услуги";
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">05</div>
-                                    <div class="country">Мобильное приложение (одна платформа)</div>
-                                    <div class="visit">от 150,000 ₽</div>
+                                    <div class="country">Мобильное приложение</div>
+                                    <div class="visit">от 350,000 ₽</div>
                                     <div class="percentage">
                                         <div class="progress">
                                             <div class="progress-bar color-2" role="progressbar" style="width: 100%"
@@ -322,17 +322,17 @@ $this->title = "Услуги";
                                 <div class="table-row">
                                     <div class="serial">06</div>
                                     <div class="country">Создание карты сайта</div>
-                                    <div class="visit">3,000 ₽</div>
+                                    <div class="visit">5,000 ₽</div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">07</div>
                                     <div class="country">Наполнение контентом</div>
-                                    <div class="visit">от 5,000 ₽</div>
+                                    <div class="visit">от 10,000 ₽</div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial">08</div>
                                     <div class="country">Хостинг</div>
-                                    <div class="visit">5,000 ₽/год</div>
+                                    <div class="visit">8,200 ₽/год</div>
                                 </div>
                             </div>
                         </div>
