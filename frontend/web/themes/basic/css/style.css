@@ -4429,7 +4429,8 @@ input:focus {
 }
 
 .blog_area a {
-  color: "Josefin Sans", sans-serif !important;
+  font-family: "Josefin Sans", sans-serif !important;
+  color: #777;
   text-decoration: none;
   transition: 0.4s;
 }
