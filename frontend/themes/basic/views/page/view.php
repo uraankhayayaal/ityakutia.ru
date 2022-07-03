@@ -25,6 +25,9 @@ $this->title = $model->title;
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-8 mb-5 page-view-content">
+                        <div class="imperavi-content my-3">
+                            <?= $model->content; ?>
+                        </div>
                         <?php foreach ($model->getBlocks() as $key => $block) { ?>
                             <?= $block ?>
                         <?php } ?>
