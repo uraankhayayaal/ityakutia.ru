@@ -44,6 +44,7 @@ return [
                 '@common/modules/smartlink/migrations',
                 '@common/modules/payment/migrations',
                 '@common/modules/multicity/migrations',
+                '@common/modules/barcode/migrations',
             ],
         ],
         'sitemap' => [

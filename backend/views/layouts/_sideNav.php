@@ -72,6 +72,7 @@ use yii\helpers\Url;
     <?php } ?>
 
     <?php if(Yii::$app->user->can("admin")) { ?>
+        <li class="<?= (Yii::$app->controller->module->id=='barcode' && Yii::$app->controller->id=='back')?'active':''; ?>"><a class="waves-effect waves-teal" href="<?= Url::toRoute(['/barcode/back/index']); ?>"><i class="material-icons">barcode</i> <?= Yii::t('app', 'Штрихкоды') ?></a></li>
         <li class="<?= (Yii::$app->controller->module->id=='multicity' && Yii::$app->controller->id=='back')?'active':''; ?>"><a href="<?= Url::toRoute(['/multicity/back-city/index']); ?>"><i class="material-icons">city</i> <?= Yii::t('app', 'Города') ?></a></li>
     <?php } ?>
     

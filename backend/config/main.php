@@ -19,6 +19,9 @@ return [
         'multicity' => [
             'class' => 'common\modules\multicity\Module',
         ],
+        'barcode' => [
+            'class' => 'common\modules\barcode\Module',
+        ],
     ],
     'components' => [
         'request' => [

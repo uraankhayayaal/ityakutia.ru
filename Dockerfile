@@ -15,7 +15,6 @@ RUN apk --update --virtual build-deps add \
         freetype-dev \
         imagemagick-dev \
         pcre-dev \
-        postgresql-dev \
         # imap-dev \
         openssl-dev \
         libjpeg-turbo-dev \
@@ -41,8 +40,12 @@ RUN apk --update --virtual build-deps add \
         unzip \
         mysql-client \
         openssh \
-        git \
-        postgresql && \
+        git \ 
+        libgomp && \
+    pecl install \
+        imagick && \
+    docker-php-ext-enable \
+        imagick && \
     docker-php-ext-configure gd \
         --with-gd \
         --with-freetype-dir=/usr/include/ \
@@ -63,14 +66,11 @@ RUN apk --update --virtual build-deps add \
         mbstring \
         opcache \
         # imap \
-        pdo_mysql \
-        pdo_pgsql && \
-    pecl install \
-        imagick && \
+        pdo_mysql && \
     apk del \
         build-deps
 
-RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini
+# RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini
 # RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini && \
 #     echo "extension=imap.so" > /usr/local/etc/php/conf.d/imap.ini
 
