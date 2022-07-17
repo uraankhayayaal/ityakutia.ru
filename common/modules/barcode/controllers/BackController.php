@@ -4,6 +4,8 @@ namespace common\modules\barcode\controllers;
 
 use common\modules\barcode\models\Barcode;
 use common\modules\barcode\models\BarcodeSearch;
+use common\modules\barcode\models\BarcodeForm;
+use common\modules\barcode\components\wb\WbApi;
 use uraankhayayaal\materializecomponents\imgcropper\actions\UploadAction;
 use Yii;
 use yii\filters\AccessControl;
@@ -60,12 +62,37 @@ class BackController extends Controller
         ]); 
     }
 
+    public function actionImport()
+    {
+        $api = new WbApi();
+        $api->getProducts();
+
+        return $this->redirect('index');
+    }
+
     public function actionView($id)
     {
         $model = $this->findModel($id);
+        $form = new BarcodeForm();
         return $this->render('view', [
             'model' => $model,
+            'form' => $form,
         ]); 
+    }
+
+    public function actionPdfTicket($id)
+    {
+        $model = $this->findModel($id);
+        $form = new BarcodeForm();
+
+        if($form->load(Yii::$app->request->post()) && $form->validate()) {
+            Yii::$app->session->setFlash('success', 'Штрихкоды успешно сгенерированы!');
+            return $form->getPdf();
+        } else {
+            Yii::$app->session->setFlash('error', 'Не получилось сгенерировать штрихкоды!');
+        }
+
+        return $this->redirect(['view', 'id' => $model->id]);
     }
 
     public function actionCreate()
@@ -74,7 +101,6 @@ class BackController extends Controller
 
         if($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', 'Запись успешно создана!');
-            $model->generateImg();
             return $this->redirect(Url::previous());
         }
 

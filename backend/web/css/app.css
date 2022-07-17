@@ -203,3 +203,7 @@ html body .row.flexboxes .col .card {
 html body .row.flexboxes .col .card .card-content {
   flex: 1 0 auto;
 }
+html body pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}

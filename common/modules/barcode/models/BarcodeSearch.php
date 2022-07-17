@@ -11,7 +11,7 @@ class BarcodeSearch extends Barcode
     {
         return [
             [['code', 'type', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['code'], 'safe'],
+            [['code', 'category', 'productArticule', 'size'], 'safe'],
         ];
     }
 
@@ -40,6 +40,10 @@ class BarcodeSearch extends Barcode
             'code' => $this->code,
             'type' => $this->type,
         ]);
+
+        $query->andFilterWhere(['like', 'size', $this->size])
+            ->andFilterWhere(['like', 'category', $this->category])
+            ->orFilterWhere(['like', 'productArticule', $this->category]);
 
         return $dataProvider;
     }
