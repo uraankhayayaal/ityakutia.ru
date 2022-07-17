@@ -96,6 +96,7 @@ $this->title = 'Штрихкод /' . $model->code;
                         <?= WCheckbox::widget(['model' => $form, 'attribute' => 'is_name']); ?>
                         <?= WCheckbox::widget(['model' => $form, 'attribute' => 'is_company']); ?>
                         <?= WCheckbox::widget(['model' => $form, 'attribute' => 'is_border']); ?>
+                        <?= WCheckbox::widget(['model' => $form, 'attribute' => 'eac']); ?>
                     </div>
                 </div>
                 <?= Html::submitButton('Сгенерировать наклейку', ['class' => 'btn submit']) ?>

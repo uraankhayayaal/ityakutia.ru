@@ -160,7 +160,7 @@ class BarcodeForm extends \yii\base\Model
     protected function renderItem($i)
     {
         return '
-            '.(($this->format !== self::FORMAT_A4 && $i > 0) ? '<div style="page-break-before: always;"></div>' : '').'
+            '.(($this->format != self::FORMAT_A4 && $i > 0) ? '<div style="page-break-before: always;"></div>' : '').'
             <div style="width:'.self::BC_SIZES[$this->barcodeSize]['x'].'cm;height:'.self::BC_SIZES[$this->barcodeSize]['y'].'cm;'.(($this->format == self::FORMAT_A4 && $this->is_border)?'border:1px solid #000;':'').'font-size:'.$this->fontSize.'px;display:inline-block;margin:0;padding:0;position:relative;">
                 '.$this->renderContent().'
             </div>
