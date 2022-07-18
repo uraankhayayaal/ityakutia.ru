@@ -1,6 +1,5 @@
 <?php
 
-use common\modules\barcode\models\Barcode;
 use uraankhayayaal\materializecomponents\grid\MaterialActionColumn;
 use yii\helpers\Html;
 use yii\grid\GridView;
@@ -45,14 +44,16 @@ $this->title = 'Штрихкоды';
                         'attribute' => 'category',
                         'format' => 'raw',
                         'value' => function($model){
-                            return Html::a('<p>'.$model->category.'</p><p>'.$model->productArticule.'</p>', ['view', 'id' => $model->id]);
+                            return Html::a('<p>Категория: '.$model->category.'</p><p>Наименование: '.$model->name.'</p><p>Артикул: '.$model->productArticule.'</p>', ['view', 'id' => $model->id]);
                         },
                     ],
+                    'imtID',
+                    'uid',
                     [
                         'attribute' => 'code',
                         'format' => 'raw',
                         'value' => function($model){
-                            return Html::a($model->code, ['view', 'id' => $model->id]) . "<br />" . Html::img($model->url, ['alt' => $model->code]);
+                            return Html::a($model->code, ['view', 'id' => $model->id]) . "<br />";
                         },
                     ],
                     ['class' => MaterialActionColumn::class, 'template' => '{delete}'],

@@ -5,7 +5,7 @@ namespace common\modules\barcode\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
-class BarcodeSearch extends Barcode 
+class ProductSearch extends Product 
 {
     public function rules()
     {
@@ -22,7 +22,7 @@ class BarcodeSearch extends Barcode
 
     public function search($params)
     {
-        $query = Barcode::find();
+        $query = Product::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -43,7 +43,8 @@ class BarcodeSearch extends Barcode
 
         $query->andFilterWhere(['like', 'size', $this->size])
             ->andFilterWhere(['like', 'category', $this->category])
-            ->orFilterWhere(['like', 'productArticule', $this->category]);
+            ->orFilterWhere(['like', 'productArticule', $this->category])
+            ->orFilterWhere(['like', 'name', $this->category]);
 
         return $dataProvider;
     }

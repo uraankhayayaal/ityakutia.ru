@@ -5,7 +5,7 @@ namespace common\modules\barcode\models;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 
-class Barcode extends ActiveRecord
+class Product extends ActiveRecord
 {
     public function behaviors()
     {
@@ -23,7 +23,7 @@ class Barcode extends ActiveRecord
     {
         return [
             [['code', 'type'], 'required'],
-            [['type'], 'integer'],
+            [['type', 'imtID'], 'integer'],
             [['code', 'category', 'productArticule', 'size', 'countryProduction', 'vendorCode', 'photo', 'data', 'color', 'name', 'brend', 'gender', 'description', 'tnved', 'compound', 'equipment', 'decor',], 'string'],
         ];
     }
@@ -32,6 +32,7 @@ class Barcode extends ActiveRecord
     {
         return [
             'id' => 'ID',
+            'imtID' => 'Imt ID',
             'code' => 'Код',
             'type' => 'Тип',
             'uid' => 'Уникальный идентификатор вариации товара',

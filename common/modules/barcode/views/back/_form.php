@@ -1,6 +1,6 @@
 <?php
 
-use common\modules\barcode\models\Barcode;
+use common\modules\barcode\models\Product;
 use uraankhayayaal\materializecomponents\checkbox\WCheckbox;
 use uraankhayayaal\materializecomponents\imgcropper\Cropper;
 use yii\helpers\Url;
@@ -19,7 +19,7 @@ use yii\helpers\ArrayHelper;
     <div class="row">
         <div class="col s12">
 
-            <?= $form->field($model,'type')->dropdownlist(Barcode::TYPES); ?>
+            <?= $form->field($model,'type')->dropdownlist(Product::TYPES); ?>
 
             <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
 

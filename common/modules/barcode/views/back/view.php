@@ -1,6 +1,5 @@
 <?php
 
-use common\modules\barcode\models\Barcode;
 use common\modules\barcode\models\BarcodeForm;
 use uraankhayayaal\materializecomponents\grid\MaterialActionColumn;
 use uraankhayayaal\materializecomponents\checkbox\WCheckbox;
@@ -22,13 +21,26 @@ $this->title = 'Штрихкод /' . $model->code;
             <p><img style="width:100%;" src="<?= $model->photo; ?>" alt="<?= $model->code; ?>"></p>
         </div>
         <div class="col s8 m9 l10">
-            
+            <?= Html::beginForm(['update-product', 'id' => $model->id], 'post') ?>
+                <div class="row">
+                    <div class="col s12 m6 l4">
+                        <?= Html::activeLabel($newNameForm, 'productName', ['class' => 'label']) ?>
+                        <?= Html::activeInput('text', $newNameForm, 'productName', ['class' => '', 'value' => $model->name]) ?>
+                        <?= Html::error($newNameForm, 'productName', ['class' => 'error']) ?>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <?= Html::activeLabel($newNameForm, 'countryProduction', ['class' => 'label']) ?>
+                        <?= Html::activeInput('text', $newNameForm, 'countryProduction', ['class' => '', 'value' => $model->countryProduction]) ?>
+                        <?= Html::error($newNameForm, 'countryProduction', ['class' => 'error']) ?>
+                    </div>
+                </div>
+                <?= Html::submitButton('Изменить название', ['class' => 'btn submit']) ?>
+            <?= Html::endForm() ?>
             <p><span class="grey-text">Штрихкод:</span> <?= $model->code; ?></p>
             <p><span class="grey-text">Артикул:</span> <?= $model->vendorCode; ?></p>
             <p><span class="grey-text">Размер товара:</span> <?= $model->size; ?></p>
             <p><span class="grey-text">Цвет:</span> <?= $model->color; ?></p>
             <p><span class="grey-text">Производитель:</span> <?= $model->brend; ?></p>
-            <p><span class="grey-text">Наименование:</span> <?= $model->name; ?></p>
         </div>
 
         <div class="col s12">

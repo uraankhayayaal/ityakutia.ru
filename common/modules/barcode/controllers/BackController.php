@@ -2,9 +2,10 @@
 
 namespace common\modules\barcode\controllers;
 
-use common\modules\barcode\models\Barcode;
-use common\modules\barcode\models\BarcodeSearch;
+use common\modules\barcode\models\Product;
+use common\modules\barcode\models\ProductSearch;
 use common\modules\barcode\models\BarcodeForm;
+use common\modules\barcode\models\ProductUpdateFrom;
 use common\modules\barcode\components\wb\WbApi;
 use uraankhayayaal\materializecomponents\imgcropper\actions\UploadAction;
 use Yii;
@@ -51,7 +52,7 @@ class BackController extends Controller
 
     public function actionIndex()
     {
-        $searchModel = new BarcodeSearch();
+        $searchModel = new ProductSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         Url::remember();
@@ -74,9 +75,11 @@ class BackController extends Controller
     {
         $model = $this->findModel($id);
         $form = new BarcodeForm();
+        $newNameForm = new ProductUpdateFrom();
         return $this->render('view', [
             'model' => $model,
             'form' => $form,
+            'newNameForm' => $newNameForm,
         ]); 
     }
 
@@ -86,10 +89,10 @@ class BackController extends Controller
         $form = new BarcodeForm();
 
         if($form->load(Yii::$app->request->post()) && $form->validate()) {
-            Yii::$app->session->setFlash('success', 'Штрихкоды успешно сгенерированы!');
+            // Yii::$app->session->setFlash('success', 'Штрихкоды успешно сгенерированы!');
             return $form->getPdf();
         } else {
-            Yii::$app->session->setFlash('error', 'Не получилось сгенерировать штрихкоды!');
+            // Yii::$app->session->setFlash('error', 'Не получилось сгенерировать штрихкоды!');
         }
 
         return $this->redirect(['view', 'id' => $model->id]);
@@ -97,7 +100,7 @@ class BackController extends Controller
 
     public function actionCreate()
     {
-        $model = new Barcode();
+        $model = new Product();
 
         if($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', 'Запись успешно создана!');
@@ -123,6 +126,27 @@ class BackController extends Controller
         ]);
     }
 
+    public function actionUpdateProduct($id)
+    {
+        $model = $this->findModel($id);
+        $newNameForm = new ProductUpdateFrom();
+
+        if($newNameForm->load(Yii::$app->request->post()) && $newNameForm->validate()) {
+            $api = new WbApi();
+            if ($api->changeProduct($model, $newNameForm)) {
+                $api->getProduct($model->imtID);
+                Yii::$app->session->setFlash('success', 'Запись успешно изменена!');
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                Yii::$app->session->setFlash('error', 'Ошибка на сервере!');
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+
+        Yii::$app->session->setFlash('error', 'Не правильно введен наименование продукта!');
+        return $this->redirect(['view', 'id' => $model->id]);
+    }
+
     public function actionDelete($id)
     {
         $modelDelete = $this->findModel($id)->delete();
@@ -135,7 +159,7 @@ class BackController extends Controller
 
     protected function findModel($id)
     {
-        $model = Barcode::findOne($id);
+        $model = Product::findOne($id);
         if(null === $model) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
