@@ -57,61 +57,7 @@ $this->title = null;
             </div>
         </div>
         <!-- slider Area End-->
-        <!-- ? New Product Start -->
-        <section class="new-product-area section-padding30">
-            <div class="container">
-                <!-- Section tittle -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="section-tittle mb-70">
-                            <h2>Последние работы</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Управление образования Усть-Майского улуса</a></h3>
-                                <span>ustmuo.ru</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Корея лайф центр</a></h3>
-                                <span>daegulife.ru</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-new-pro mb-30 text-center">
-                            <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
-                            </div>
-                            <div class="product-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ресторан Тыгын Дархан</a></h3>
-                                <span>tygyndarhanrest.ru</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Button -->
-                <div class="row justify-content-center">
-                    <div class="room-btn pt-70">
-                        <a href="<?= Url::toRoute(['/site/portfolio'])?>" class="btn view-btn1">Посмотреть еще</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--  New Product End -->
+        
         <!--? Gallery Area Start -->
         <!-- <div class="gallery-area">
             <div class="container-fluid p-0 fix">
@@ -173,7 +119,7 @@ $this->title = null;
                                 <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Разработка и поддержка сайтов</a></h3>
                                 <!-- <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Корпоративный сайт для бизнеса</a></h3> -->
                                 <!-- <span>от 36,000 ₽</span> -->
-                                <span>от 12,000 ₽</span>
+                                <!-- <span>от 12,000 ₽</span> -->
                             </div>
                         </div>
                     </div>
@@ -189,8 +135,8 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Введение социальных сетей</a></h3>
-                                <span>от 10,000 ₽</span>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Разработка мобильных приложений</a></h3>
+                                <!-- <span>от 10,000 ₽</span> -->
                             </div>
                         </div>
                     </div>
@@ -206,8 +152,8 @@ $this->title = null;
                                 </div>
                             </div>
                             <div class="popular-caption">
-                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Изготовление видеороликов</a></h3>
-                                <span>от 5,000 ₽</span>
+                                <h3><a href="<?= Url::toRoute(['/site/goods']) ?>">Разработка логотипов и баннеров</a></h3>
+                                <!-- <span>от 5,000 ₽</span> -->
                             </div>
                         </div>
                     </div>
@@ -221,8 +167,63 @@ $this->title = null;
             </div>
         </div>
         <!-- Popular Items End -->
+        <!-- ? New Product Start -->
+        <section class="new-product-area section-padding30">
+            <div class="container">
+                <!-- Section tittle -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section-tittle mb-70">
+                            <h2>Последние работы</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Управление образования Усть-Майского улуса</a></h3>
+                                <span>ustmuo.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Корея лайф центр</a></h3>
+                                <span>daegulife.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ресторан Тыгын Дархан</a></h3>
+                                <span>tygyndarhanrest.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="row justify-content-center">
+                    <div class="room-btn pt-70">
+                        <a href="<?= Url::toRoute(['/site/portfolio'])?>" class="btn view-btn1">Посмотреть еще</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  New Product End -->
         <!--? Video Area Start -->
-        <div class="video-area">
+        <!-- <div class="video-area">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
@@ -231,7 +232,7 @@ $this->title = null;
                     </div>
                     </div>
                 </div>
-                <!-- Arrow -->
+                
                 <div class="thumb-content-box">
                     <div class="thumb-content">
                         <h3>Галерея</h3>
@@ -239,7 +240,7 @@ $this->title = null;
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Video Area End -->
         <!--? Watch Choice  Start-->
         <div class="watch-area section-padding30">
@@ -278,15 +279,15 @@ $this->title = null;
         <!--? Shop Method Start-->
         <div class="shop-method-area">
             <div class="container">
-                <div class="method-wrapper">
+                <div class="">
                     <div class="row">
                         <div class="col">
-                            <h2 class="text-center mt-4 text-white">Отзывы о нас</h2>
+                            <h2 class="text-center mt-4 mb-5">Отзывы о нас</h2>
                         </div>
                     </div>
                     <div class="row d-flex justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
+                        <div class="col-12 col-md-6">
+                            <div class="mb-40">
                                 <p>
                                     <i class="ti-star d-inline"></i>
                                     <i class="ti-star d-inline"></i>
@@ -299,8 +300,8 @@ $this->title = null;
                                 <p>Заказывали сайт в 2018 году для нашей деятельности по медтуризму в Южную Корею. Сайт был готов за месяц, обошлось недорого, в любом случае лучше чем сайты визитки, можно после запуска уже самому все редактировать и обновлять. Всем довольны, спасибо</p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">   
+                        <div class="col-12 col-md-6">
+                            <div class="mb-40">   
                                 <p>
                                     <i class="ti-star d-inline"></i>
                                     <i class="ti-star d-inline"></i>
@@ -310,11 +311,12 @@ $this->title = null;
                                 </p>
                                 <p>ГБУ РС (Я) "ПОБЕДА"</p>
                                 <h6>Лебедева Галина</h6>
-                                <p><a href="/pobeda.pdf" download="Отзыв о сайте Ресурсного центра Победа.pdf">Отзыв о сайте Ресурсного центра Победа.pdf</a></p>
+                                <p>Ресурсный центр социальной защиты «Победа» выражает благодарность ООО «Информационные технологии Якутии» за качественную и своевременную разработку сайта нашей организации.<br>Разработанный Вами веб-сайт «http://rcmtykt.ru/» имеет социальную направленность, целевой аудиторией которого являются организации социальной защиты и социального обслуживания Республики Саха (Якутия), а также граждане, нуждающиеся в социальной поддержке.<br>Считаем, что сайт четко структурирован, понятен для использования в работе, имеет современный дизайн и возможности проведения опросов для населения. Работа, выполненная разработчиками, сделана с учетом всех наших требований, пожеланий и в установленные сроки.<br>Желаем Вам успехов в продвижении новых масштабных проектов и выражаем готовность к дальнейшему сотрудничеству.</p>
+                                <p><a style="color: red;" href="/pobeda.pdf" download="Отзыв о сайте Ресурсного центра Победа.pdf">Отзыв о сайте Ресурсного центра Победа.pdf</a></p>
                             </div>
-                        </div> 
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="mb-40">
                                 <p>
                                     <i class="ti-star d-inline"></i>
                                     <i class="ti-star d-inline"></i>
@@ -324,7 +326,23 @@ $this->title = null;
                                 </p>
                                 <p>Ассоциация "Ветеран" РС(Я)</p>
                                 <h6>Андреева Дария</h6>
-                                <p><a href="/veteran.pdf" download="Отзыв о сайте Ассоц Ветеран.pdf">Отзыв о сайте Ассоц Ветеран.pdf</a></p>
+                                <p>Ассоциация в содействии защиты прав ветеранов войны и труда "Ветеран" PC (Я) выражает благодарность ООО «Информационные технологии Якутии» за качественную и своевременную разработку сайта нашего учреждения. <br>Сайт https://veteransakha.ru будет освещать работу учреждения и работу общественных организаций Республики Саха (Якутия) ведущих патриотическую работу. <br>Работа выполнена быстро в течении 3-х недель с учетом наших пожеланий. <br>Выражаем готовность к дальнейшему сотрудничеству.</p>
+                                <p><a style="color: red;" href="/veteran.pdf" download="Отзыв о сайте Ассоц Ветеран.pdf">Отзыв о сайте Ассоц Ветеран.pdf</a></p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="mb-40">
+                                <p>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                    <i class="ti-star d-inline"></i>
+                                </p>
+                                <p>Сеть ортопедических салонов NotaBene</p>
+                                <h6>ИП Никифорова Т.Н.</h6>
+                                <p>Сеть ортопедических салонов "NotaBene" (ИП Никифорова Т.Н.) выражает благодарность компании ООО "Информационные технологии Якутии" (IT Yakutia) за отличную работу по разработке сайта нашей компании за весьма приемлемуюцену. Ваш разработчик помог нам с уточнением технического задания, всегда был на связи, отвечал на вопросы практически мгновенно, предлагал грамотные решения всех наших пожеланий, сделал все в назначенный срок. Радует длительный гарантийный срок поддержки. Мы рады, что выбрали Вашу компанию и в результате получили продукт, который даже превзошел наши ожидания. Готовы на дальнейшее взыимовыгодное сотрудничество.</p>
+                                <p><a style="color: red;" href="/notabene.pdf" download="Письмо благодарность ИП Никифорова ТН.pdf">Письмо благодарность ИП Никифорова ТН.pdf</a></p>
                             </div>
                         </div>
                     </div>

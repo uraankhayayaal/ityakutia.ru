@@ -34,6 +34,62 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/rcmtykt.ru.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a target="_blank" href="http://rcmtykt.ru/">Модернизация сайта ГБУ РС (Я) "Ресурсный Центр Победа"</a></h3>
+                                <span>rcmtykt.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/farhutdinova.ru.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a target="_blank" href="http://farhutdinova.ru/">Сервис по работе с API Wildberries</a></h3>
+                                <span>farhutdinova.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/NotaBene.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a target="_blank" href="http://nb-ykt.ru/">NOTA BENE - сеть ортопедических салонов</a></h3>
+                                <span>Мобильное приложение</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/olbu.ru.jpg" alt="Видеохостинг сервис OLBU.RU">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a target="_blank" href="http://ustmuo.ru/">Видеохостинг сервис OLBU.RU</a></h3>
+                                <span>olbu.ru</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/olbu.app.jpg" alt="Видеохостинг сервис OLBU.RU">
+                            </div>
+                            <div class="product-caption">
+                                <h3><a target="_blank" href="http://olbu.ru/">Видеохостинг сервис OLBU.RU</a></h3>
+                                <span>Мобильное приложение</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-new-pro mb-30 text-center">
+                            <div class="product-img">
                                 <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
