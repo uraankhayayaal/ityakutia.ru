@@ -1,97 +1,23 @@
-# PHP Docker image for Yii 2.0 Framework runtime
-# ==============================================
+FROM yiisoftware/yii2-php:8.1-fpm-min
 
-FROM php:7.3-fpm-alpine
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    zip \
+    unzip
 
-# Install system packages & PHP extensions required for Yii 2.0 Framework
-RUN apk --update --virtual build-deps add \
-        autoconf \
-        make \
-        gcc \
-        g++ \
-        libtool \
-        icu-dev \
-        curl-dev \
-        freetype-dev \
-        imagemagick-dev \
-        pcre-dev \
-        # imap-dev \
-        openssl-dev \
-        libjpeg-turbo-dev \
-        c-client \
-        libpng-dev \
-        libxml2-dev \
-        libzip-dev && \
-    apk add \
-        git \
-        curl \
-        bash \
-        bash-completion \
-        icu \
-        imagemagick \
-        pcre \
-        freetype \
-        libintl \
-        libjpeg-turbo \
-        libpng \
-        libltdl \
-        libxml2 \
-        libzip \
-        unzip \
-        mysql-client \
-        openssh \
-        git \ 
-        libgomp && \
-    pecl install \
-        imagick && \
-    docker-php-ext-enable \
-        imagick && \
-    docker-php-ext-configure gd \
-        --with-gd \
-        --with-freetype-dir=/usr/include/ \
-        --with-png-dir=/usr/include/ \
-        --with-jpeg-dir=/usr/include/ && \
-    docker-php-ext-configure bcmath && \
-    # docker-php-ext-configure imap \
-    #     --with-imap \
-    #     --with-imap-ssl && \
-    docker-php-ext-install \
-        soap \
-        curl \
-        bcmath \
-        exif \
-        gd \
-        # iconv \
-        intl \
-        mbstring \
-        opcache \
-        # imap \
-        pdo_mysql && \
-    apk del \
-        build-deps
+RUN docker-php-ext-configure pcntl --enable-pcntl \
+    && docker-php-ext-install \
+    pdo \
+    pdo_mysql \
+    pcntl
 
-# RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini
-# RUN echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini && \
-#     echo "extension=imap.so" > /usr/local/etc/php/conf.d/imap.ini
+RUN pecl install mongodb && docker-php-ext-enable mongodb
+RUN echo "extension=mongodb.so" >> /usr/local/etc/php/php.ini
 
-# Configure version constraints
-ENV PHP_ENABLE_XDEBUG=0 \
-    PATH=/app:/app/vendor/bin:/root/.composer/vendor/bin:$PATH \
-    TERM=linux \
-    VERSION_PRESTISSIMO_PLUGIN=^0.3.7
-
-# Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- \
-        --filename=composer \
-        --install-dir=/usr/local/bin && \
-        echo "alias composer='composer'" >> /root/.bashrc && \
-        composer
-
-# Install github personal token
-RUN git config --global url."https://{GITHUB_API_TOKEN}:@github.com/".insteadOf "https://github.com/"
-
-# Add configuration files
-COPY ./docker/php/dockerconf/ /
+    --filename=composer \
+    --install-dir=/usr/local/bin
 
 WORKDIR /app
 
