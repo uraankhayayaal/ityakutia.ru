@@ -3,6 +3,7 @@
 use ityakutia\blog\models\Article;
 use ityakutia\blog\models\ArticleCategory;
 use yii\helpers\Url;
+use yii\widgets\Pjax;
 
 $this->title = 'Калькулятор финансовых целей';
 
@@ -11,19 +12,15 @@ Yii::$app->params['meta_description']['content'] = 'Расчитать приб�
 
 ?>
 
-   <div class="slider-area ">
-      <div class="single-slider slider-height2 gallery-hero d-flex align-items-center">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-12">
-                        <div class="hero-cap text-center">
-                           <h1 style="color:white;"><?= $this->title ?></h1>
-                        </div>
-                  </div>
-               </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hero-cap text-center">
+                    <h1><?= $this->title ?></h1>
+                </div>
             </div>
-      </div>
-   </div>
+        </div>
+    </div>
    
     <!-- <section class="blog_area single-post-area section-padding"> -->
     <section class="blog_area">
@@ -31,39 +28,45 @@ Yii::$app->params['meta_description']['content'] = 'Расчитать приб�
             <div class="row">
                 <div class="col-12 posts-list">
 
-
-                    <div class="comment-form">
-                        <?= $this->render('_form', [
-                            'model' => $model,
-                        ])?>
-                    </div>
-
-
-                    <div class="single-post">
-                        <div class="blog_details">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Месяцы</th>
-                                        <th>Сумма на начало месяца</th>
-                                        <th>Прибыль от вклада</th>
-                                        <th>Сумма на конец месяца</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($model->calendar as $index => $month) { ?>
-                                        </tr>
-                                            <td><?= ++$index ?></td>
-                                            <td><?= Yii::$app->formatter->asCurrency($month['startSum']) ?></td>
-                                            <td><?= Yii::$app->formatter->asCurrency($month['profitSum']) ?></td>
-                                            <td><?= Yii::$app->formatter->asCurrency($month['totalSum']) ?></td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                    <?php Pjax::begin([
+                        'id' => 'calcResult',
+                    ]); ?>
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <div class="comment-form">
+                                <?= $this->render('_form', [
+                                    'model' => $model,
+                                ])?>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <div class="single-post">
+                                <div class="blog_details">
+                                    <table class="table" style="font-size: 0.8rem;">
+                                        <thead>
+                                            <tr>
+                                                <th>Месяцы</th>
+                                                <th>Сумма на начало месяца</th>
+                                                <th>Прибыль от вклада</th>
+                                                <th>Сумма на конец месяца</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($model->calendar as $index => $month) { ?>
+                                                </tr>
+                                                    <td><?= ++$index ?></td>
+                                                    <td><?= Yii::$app->formatter->asCurrency($month['startSum']) ?></td>
+                                                    <td><?= Yii::$app->formatter->asCurrency($month['profitSum']) ?></td>
+                                                    <td><?= Yii::$app->formatter->asCurrency($month['totalSum']) ?></td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                    <?php Pjax::end(); ?>
 
                     <!-- <div class="single-post">
                         <div class="blog_details">

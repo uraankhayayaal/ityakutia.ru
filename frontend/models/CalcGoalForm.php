@@ -11,8 +11,8 @@ class CalcGoalForm extends Model
 {
     public $percent = 7.5;
     public $periodOfMonths = 9;
-    public $startSum = 12000;
-    public $monthChargeSum = 2000;
+    public $startSum = 120000;
+    public $monthChargeSum = 0;
     
     public $calendar = [];
 
@@ -31,7 +31,7 @@ class CalcGoalForm extends Model
     {
         return [
             'percent' => 'Процентная ставка вклада',
-            'periodOfMonths' => 'Период вклада',
+            'periodOfMonths' => 'Период вклада в месяцях',
             'startSum' => 'Начальная сумма',
             'monthChargeSum' => 'Ежемесячное пополнение',
             'totalSum' => 'Накопленная сумма',

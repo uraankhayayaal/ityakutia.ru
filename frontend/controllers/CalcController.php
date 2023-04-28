@@ -18,14 +18,14 @@ class CalcController extends Controller
     public function actionGoal()
     {
         $model = new CalcGoalForm();
-        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->calc()) {
-            return $this->render('goal', [
-                'model' => $model,
-            ]);
-        } else {
-            return $this->render('goal', [
-                'model' => $model,
-            ]);
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
         }
+        
+        $model->calc();
+
+        return $this->render('goal', [
+            'model' => $model,
+        ]);
     }
 }
