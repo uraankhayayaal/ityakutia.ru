@@ -13,6 +13,16 @@ Yii::$app->params['meta_description']['content'] = 'Расчитать приб�
 ?>
 
     <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                <li class="breadcrumb-item"><a href="/calc/index">Финансовые калькуляторы</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Цели, вклады</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="hero-cap text-center">

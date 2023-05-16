@@ -24,15 +24,27 @@ Yii::$app->params['meta_description']['content'] = 'Воспользуйтесь
       </div>
    </div>
    
-    <section class="blog_area single-post-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <?= Html::a('Калькулятор финансовых целей', ['/calc/goal'])?>
-               </div>
-                <div class="col-lg-12">
-                    <?= Html::a('Калькулятор по ипотеке и кредиту', ['/calc/credit'])?>
-               </div>
+   <section class="blog_area single-post-area section-padding">
+      <div class="container">
+         <div class="row">
+            <div class="col-6">
+               <a href="<?= Url::toRoute(['/calc/goal'])?>">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Калькулятор финансовых целей</h5>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="col-6">
+               <a href="<?= Url::toRoute(['/calc/credit'])?>">
+                  <div class="card">
+                     <div class="card-body">
+                        <h5 class="card-title">Калькулятор по ипотеке</h5>
+                     </div>
+                  </div>
+               </a>
             </div>
          </div>
-    </section>
+      </div>
+   </section>
