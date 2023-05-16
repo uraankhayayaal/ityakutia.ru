@@ -30,6 +30,9 @@ Yii::$app->params['meta_description']['content'] = 'Воспользуйтесь
                 <div class="col-lg-12">
                     <?= Html::a('Калькулятор финансовых целей', ['/calc/goal'])?>
                </div>
+                <div class="col-lg-12">
+                    <?= Html::a('Калькулятор по ипотеке и кредиту', ['/calc/credit'])?>
+               </div>
             </div>
          </div>
     </section>

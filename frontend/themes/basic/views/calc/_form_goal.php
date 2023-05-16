@@ -99,7 +99,7 @@ use yii\helpers\Html;
         <div class="mt-2"></div>
 
         <div class="form-group text-right">
-            <?= Html::submitButton('Рассчитать', ['class' => 'button button-contactForm btn_1 boxed-btn']) ?>
+            <?= Html::submitButton('Рассчитать', ['class' => 'btn']) ?>
         </div>
         
     <?php ActiveForm::end(); ?>

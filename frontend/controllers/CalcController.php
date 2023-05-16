@@ -1,13 +1,12 @@
 <?php
+
 namespace frontend\controllers;
 
 use Yii;
 use yii\web\Controller;
 use frontend\models\CalcGoalForm;
+use frontend\models\CalcCreditForm;
 
-/**
- * Calc controller
- */
 class CalcController extends Controller
 {
     public function actionIndex()
@@ -25,6 +24,20 @@ class CalcController extends Controller
         $model->calc();
 
         return $this->render('goal', [
+            'model' => $model,
+        ]);
+    }
+
+    public function actionCredit()
+    {
+        $model = new CalcCreditForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+        }
+        
+        $model->calc();
+
+        return $this->render('credit', [
             'model' => $model,
         ]);
     }

@@ -2,10 +2,7 @@
 
 namespace frontend\models;
 
-use common\models\Auth;
-use common\models\User;
 use yii\base\Model;
-use Yii;
 
 class CalcGoalForm extends Model
 {
@@ -16,8 +13,8 @@ class CalcGoalForm extends Model
     
     public $calendar = [];
 
-    public $totalSum;
-    public $profitSum;
+    public $totalSum = 0;
+    public $profitSum = 0;
 
     public function rules() {
         return [
@@ -50,7 +47,9 @@ class CalcGoalForm extends Model
             $this->calendar[$monthIndex] = [];
             $this->calendar[$monthIndex]['startSum'] = $monthIndex == 0 ? $this->startSum : $this->calendar[$monthIndex - 1]['totalSum'];
             $this->calendar[$monthIndex]['profitSum'] = round($this->calendar[$monthIndex]['startSum'] * $this->percent / 100 / 12, 2);
+            $this->profitSum += $this->calendar[$monthIndex]['profitSum'];
             $this->calendar[$monthIndex]['totalSum'] = round($this->calendar[$monthIndex]['startSum'] + $this->calendar[$monthIndex]['profitSum'] + $this->monthChargeSum, 2);
+            $this->totalSum = $this->calendar[$monthIndex]['totalSum'];
         }
     }
 }

@@ -7,7 +7,7 @@ use yii\widgets\Pjax;
 
 $this->title = 'Калькулятор финансовых целей';
 
-Yii::$app->params['meta_keywords']['content'] = 'Калькулятор, финансовый, вклад, цель, накопления, кредит, ипотека, расчитать, прибыль';
+Yii::$app->params['meta_keywords']['content'] = 'Калькулятор, финансовый, вклад, цель, накопления, расчитать, прибыль';
 Yii::$app->params['meta_description']['content'] = 'Расчитать прибыль от накоплений, введите начальный капитал, ставку, период и ежемесячное поплнение';
 
 ?>
@@ -34,7 +34,7 @@ Yii::$app->params['meta_description']['content'] = 'Расчитать приб�
                     <div class="row">
                         <div class="col-12 col-md-3">
                             <div class="comment-form">
-                                <?= $this->render('_form', [
+                                <?= $this->render('_form_goal', [
                                     'model' => $model,
                                 ])?>
                             </div>
@@ -60,6 +60,12 @@ Yii::$app->params['meta_description']['content'] = 'Расчитать приб�
                                                     <td><?= Yii::$app->formatter->asCurrency($month['totalSum']) ?></td>
                                                 </tr>
                                             <?php } ?>
+                                            <tr>
+                                                <td></td>
+                                                <th>Итого</th>
+                                                <th><?= Yii::$app->formatter->asCurrency($model->profitSum) ?></th>
+                                                <th><?= Yii::$app->formatter->asCurrency($model->totalSum) ?></th>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
