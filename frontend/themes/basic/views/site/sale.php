@@ -74,5 +74,31 @@ $this->title = "Акции";
 						</div>
 					</div>
 				</div>
+                <div id="guarantee" class="section-top-border">
+					<h3 class="mb-30 text-center">Гарантия 1 год</h3>
+					<div class="row">
+						<div class="col-md-4">
+							<div id="domain" class="single-defination">
+                                <p class="text-center mt-5 mb-3"><img class="mw-100" src="<?= $this->theme->baseUrl; ?>/img/sale/gift.svg" alt="При покупке домена первый год обслуживания домена в подарок"></p>
+								<h4 class="mb-20">Домен</h4>
+								<p>При покупке домена первый год обслуживания домена в подарок</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div id="ssl" class="single-defination">
+                                <p class="text-center mt-5 mb-3"><img class="mw-100" src="<?= $this->theme->baseUrl; ?>/img/sale/expeditedssl.svg" alt="При покупке домена получаете ssl сертификат на 1 год в подаро"></p>
+								<h4 class="mb-20">SSL сертификат</h4>
+								<p>При покупке домена получаете ssl сертификат на 1 год в подарок</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div id="start" class="single-defination">
+                                <p class="text-center mt-5 mb-3"><img class="mw-100" src="<?= $this->theme->baseUrl; ?>/img/sale/rocket.svg" alt="Закажите услугу хостинга у нас и вы получите в подарок установку на хостинг и запуск сайта"></p>
+								<h4 class="mb-20">Запуск</h4>
+								<p>Закажите услугу хостинга у нас и вы получите в подарок установку на хостинг и запуск сайта</p>
+							</div>
+						</div>
+					</div>
+				</div>
             </div>
         </div>

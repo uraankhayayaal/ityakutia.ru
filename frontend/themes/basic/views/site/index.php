@@ -17,7 +17,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                                 <div class="hero__caption">
                                     <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях в городе <?= City::getCurrent()->name; ?></h2>
                                     <img src="<?= $this->theme->baseUrl; ?>/img/hero/mobile.svg" class="d-md-none mw-100 pr-3 pb-3 heartbeat" alt="Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в комплексном продвижении вашего бизнеса в разных социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ваши идеи — наше приложение: мы создаем сайты и мобильные решения, которые работают на вас!</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="<?= Url::toRoute(['/site/contact'])?>" class="btn hero-btn">Заказать</a>
@@ -39,7 +39,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Разработка и поддержка сайта в городе <?= City::getCurrent()->name; ?></h1>
-                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в продвижении вашего бизнеса в интернете и в социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ваши идеи — наше приложение: мы создаем сайты и мобильные решения, которые работают на вас!</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
                                         <a href="<?= Url::toRoute(['/site/contact'])?>" class="btn hero-btn">Заказать</a>
@@ -99,7 +99,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
                             <h2>Наши услуги</h2>
-                            <p>Компания <?= City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps' ?> предоставляет широкий спектр услуг, от разработки и поддержки сайтов до введение социальных сетей в г. Якутск и в других регионах России</p>
+                            <p>Компания <?= City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps' ?> предоставляет широкий спектр услуг, от создания логотипа до годовой гаранитии на разработку сайтов и приложений по всей территории России</p>
                         </div>
                     </div>
                 </div>
@@ -159,11 +159,11 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                     </div>
                 </div>
                 <!-- Button -->
-                <div class="row justify-content-center">
+                <!-- <div class="row justify-content-center">
                     <div class="room-btn pt-70">
                         <a href="<?= Url::toRoute(['/site/goods'])?>" class="btn view-btn1">Посмотреть еще</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Popular Items End -->
@@ -312,7 +312,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                                 <p>ГБУ РС (Я) "ПОБЕДА"</p>
                                 <h6>Лебедева Галина</h6>
                                 <p>Ресурсный центр социальной защиты «Победа» выражает благодарность ООО «Информационные технологии Якутии» за качественную и своевременную разработку сайта нашей организации.<br>Разработанный Вами веб-сайт «http://rcmtykt.ru/» имеет социальную направленность, целевой аудиторией которого являются организации социальной защиты и социального обслуживания Республики Саха (Якутия), а также граждане, нуждающиеся в социальной поддержке.<br>Считаем, что сайт четко структурирован, понятен для использования в работе, имеет современный дизайн и возможности проведения опросов для населения. Работа, выполненная разработчиками, сделана с учетом всех наших требований, пожеланий и в установленные сроки.<br>Желаем Вам успехов в продвижении новых масштабных проектов и выражаем готовность к дальнейшему сотрудничеству.</p>
-                                <p><a style="color: red;" href="/pobeda.pdf" download="Отзыв о сайте Ресурсного центра Победа.pdf">Отзыв о сайте Ресурсного центра Победа.pdf</a></p>
+                                <p><a style="color: #FF8100;" href="/pobeda.pdf" download="Отзыв о сайте Ресурсного центра Победа.pdf">Отзыв о сайте Ресурсного центра Победа.pdf</a></p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
@@ -327,7 +327,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                                 <p>Ассоциация "Ветеран" РС(Я)</p>
                                 <h6>Андреева Дария</h6>
                                 <p>Ассоциация в содействии защиты прав ветеранов войны и труда "Ветеран" PC (Я) выражает благодарность ООО «Информационные технологии Якутии» за качественную и своевременную разработку сайта нашего учреждения. <br>Сайт https://veteransakha.ru будет освещать работу учреждения и работу общественных организаций Республики Саха (Якутия) ведущих патриотическую работу. <br>Работа выполнена быстро в течении 3-х недель с учетом наших пожеланий. <br>Выражаем готовность к дальнейшему сотрудничеству.</p>
-                                <p><a style="color: red;" href="/veteran.pdf" download="Отзыв о сайте Ассоц Ветеран.pdf">Отзыв о сайте Ассоц Ветеран.pdf</a></p>
+                                <p><a style="color: #FF8100;" href="/veteran.pdf" download="Отзыв о сайте Ассоц Ветеран.pdf">Отзыв о сайте Ассоц Ветеран.pdf</a></p>
                             </div>
                         </div>
                         <div class="col-12 col-md-6">
@@ -342,7 +342,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                                 <p>Сеть ортопедических салонов NotaBene</p>
                                 <h6>ИП Никифорова Т.Н.</h6>
                                 <p>Сеть ортопедических салонов "NotaBene" (ИП Никифорова Т.Н.) выражает благодарность компании ООО "Информационные технологии Якутии" за отличную работу по разработке сайта нашей компании за весьма приемлемую цену. Ваш разработчик помог нам с уточнением технического задания, всегда был на связи, отвечал на вопросы практически мгновенно, предлагал грамотные решения всех наших пожеланий, сделал все в назначенный срок. Радует длительный гарантийный срок поддержки. Мы рады, что выбрали Вашу компанию и в результате получили продукт, который даже превзошел наши ожидания. Готовы на дальнейшее взаимовыгодное сотрудничество.</p>
-                                <p><a style="color: red;" href="/notabene.pdf" download="Письмо благодарность ИП Никифорова ТН.pdf">Письмо благодарность ИП Никифорова ТН.pdf</a></p>
+                                <p><a style="color: #FF8100;" href="/notabene.pdf" download="Письмо благодарность ИП Никифорова ТН.pdf">Письмо благодарность ИП Никифорова ТН.pdf</a></p>
                             </div>
                         </div>
                     </div>
@@ -372,15 +372,36 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                     <div class="row">
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                             <div class="media contact-info">
+                                <span class="contact-info__icon"><i class="fab fa-telegram" aria-hidden="true"></i></span>
+                                <div class="media-body">
+                                    <h3 class="typography h6">В telegram</h3>
+                                    <p><a style="color: #FF8100;" target="_blank" href="https://t.me/beeapps_official">@beeapps_official</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <div class="media contact-info">
+                                <span class="contact-info__icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+                                <div class="media-body">
+                                    <h3 class="typography h6">В whatsapp</h3>
+                                    <p><a style="color: #FF8100;" target="_blank" href="https://wa.me/79998271911">Написать</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <div class="media contact-info">
+                                <span class="contact-info__icon"><i class="ti-email"></i></span>
+                                <div class="media-body">
+                                    <h3 class="typography h6">На электронную почту</h3>
+                                    <p><a style="color: #FF8100;" target="_blank" href="mailto:manager@admin14.ru">manager@admin14.ru</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="media contact-info">
                                 <span class="contact-info__icon"><i class="ti-home"></i></span>
                                 <div class="media-body">
                                     <?php switch (City::getCurrent()->url) {
-                                        case 'kazan':
-                                            echo '
-                                                <h3>Республика Татарстан, Россия.</h3>
-                                                <p>Казань, 420000</p>
-                                            ';
-                                            break;
                                         case 'yakutsk':
                                             echo '
                                                 <h3>Республика Саха (Якутия), Россия.</h3>
@@ -389,47 +410,11 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                                             break;
                                         default:
                                             echo '
-                                                <h3>Республика Саха (Якутия), Россия.</h3>
-                                                <p>677008, Якутск, Лермонтова 87</p>
+                                                <h3>Строгино, Москва</h3>
+                                                <p>123181, Улица Маршала Катукова 25</p>
                                             ';
                                             break;
                                     } ?>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                            <div class="media contact-info">
-                                <span class="contact-info__icon"><i class="fab fa-telegram" aria-hidden="true"></i></span>
-                                <div class="media-body">
-                                    <h3><a class="typography h6" target="_blank" href="https://t.me/Yktadmin">@Yktadmin</a></h3>
-                                    <p>В telegram в любое время</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                            <div class="media contact-info">
-                                <span class="contact-info__icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
-                                <div class="media-body">
-                                    <h3><a class="typography h6" target="_blank" href="https://wa.me/79142736836">+7 914 273 6836</a></h3>
-                                    <p>В whatsapp в любое время</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                            <div class="media contact-info">
-                                <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                                <div class="media-body">
-                                    <h3><a class="typography h6" target="_blank" href="tel:+79142736836">+7 914 273 6836</a></h3>
-                                    <p>с 14:00 до 18:00 в будни</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                            <div class="media contact-info">
-                                <span class="contact-info__icon"><i class="ti-email"></i></span>
-                                <div class="media-body">
-                                    <h3><a class="typography h6" target="_blank" href="mailto:manager@admin14.ru">manager@admin14.ru</a></h3>
-                                    <p>На почту в любое время</p>
                                 </div>
                             </div>
                         </div>

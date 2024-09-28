@@ -20,7 +20,7 @@ use yii\helpers\Url;
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Разработка и поддержка сайтов. Создание web-дизайна и видеороликов. Продвижение в социальных сетях.</p>
+                                        <p>Разработка и поддержка сайтов и приложений. Создание web-дизайна и баннеров.</p>
                                 </div>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@ use yii\helpers\Url;
                                 <h4>Ссылки</h4>
                                 <ul>
                                     <li><a href="<?= Url::toRoute(['/site/about']); ?>">О нас</a></li>
-                                    <li><a href="<?= Url::toRoute(['/site/goods']); ?>">Услуги</a></li>
+                                    <!-- <li><a href="<?= Url::toRoute(['/site/goods']); ?>">Услуги</a></li> -->
                                     <li><a href="<?= Url::toRoute(['/site/portfolio']); ?>">Портфолио</a></li>
                                     <li><a href="<?= Url::toRoute(['/site/contact']); ?>">Контакты</a></li>
                                 </ul>
@@ -44,9 +44,8 @@ use yii\helpers\Url;
                             <div class="footer-tittle">
                                 <h4>Акции</h4>
                                 <ul>
-                                    <li><a href="<?= Url::toRoute(['/site/sale#banner']); ?>">Баннер в подарок</a></li>
-                                    <li><a href="<?= Url::toRoute(['/site/sale#turbo']); ?>">Производительность в подарок</a></li>
-                                    <li><a href="<?= Url::toRoute(['/site/sale#domain']); ?>">Домен на 1 год</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/sale#guarantee']); ?>">1 год гарантии</a></li>
+                                    <li><a href="<?= Url::toRoute(['/site/sale#turbo']); ?>">Админка для сайта</a></li>
                                     <li><a href="<?= Url::toRoute(['/site/sale#ssl']); ?>">SSL сертификат на 1 год</a></li>
                                 </ul>
                             </div>
@@ -57,7 +56,7 @@ use yii\helpers\Url;
                             <div class="footer-tittle">
                                 <h4>Поддержка</h4>
                                 <ul>
-                                    <li><a href="<?= Url::toRoute(['/faq']); ?>">Вопросы и ответы</a></li>
+                                    <!-- <li><a href="<?= Url::toRoute(['/faq']); ?>">Вопросы и ответы</a></li> -->
                                     <li><a href="<?= Url::toRoute(['/terms-of-service']); ?>">Условия пользования</a></li>
                                     <li><a href="<?= Url::toRoute(['/privacy-policy']); ?>">Политика конфиденциальности</a></li>
                                     <li><a href="<?= Url::toRoute(['/cookies']); ?>">Политика обработки cookies</a></li>

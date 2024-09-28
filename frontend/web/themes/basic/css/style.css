@@ -6099,17 +6099,19 @@ del {
   min-width: 800px;
 }
 .progress-table .serial {
-  width: 11.83%;
+  min-width: 11.83%;
   padding-left: 30px;
 }
 .progress-table .country {
-  width: 28.07%;
+  min-width: 28.07%;
+  padding-left: 30px;
+  flex-grow: 1;
 }
 .progress-table .visit {
-  width: 19.74%;
+  min-width: 19.74%;
 }
 .progress-table .percentage {
-  width: 40.36%;
+  min-width: 40.36%;
   padding-right: 50px;
 }
 .progress-table .table-head {
