@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => SerialColumn::class],
                     ['class' => MaterialActionColumn::class, 'template' => '{update}'],
 
+                    'domain',
                     'url',
                     'local',
                     'name',

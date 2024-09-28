@@ -30,9 +30,9 @@ done
 
 # Check FILE for PHP_PLUGINS_DEV
 if [ -f PHP_PLUGIN_DEV.env ]; then
-    COMPOSER=composer-dev.json composer update --prefer-dist
+    COMPOSER=composer-dev.json composer install --prefer-dist
 else
-    composer update --prefer-dist
+    composer install --prefer-dist
 fi
 
 php init --env=Development --overwrite=All

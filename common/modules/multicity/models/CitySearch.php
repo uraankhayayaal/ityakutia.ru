@@ -18,7 +18,7 @@ class CitySearch extends City
     {
         return [
             [['id', 'default', 'updated_at', 'created_at'], 'integer'],
-            [['url', 'local', 'name'], 'safe'],
+            [['url', 'local', 'name', 'domain'], 'safe'],
         ];
     }
 
@@ -66,6 +66,7 @@ class CitySearch extends City
 
         $query->andFilterWhere(['like', 'url', $this->url])
             ->andFilterWhere(['like', 'local', $this->local])
+            ->andFilterWhere(['like', 'domain', $this->domain])
             ->andFilterWhere(['like', 'name', $this->name]);
 
         return $dataProvider;

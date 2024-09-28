@@ -29,7 +29,7 @@ $this->title = 'Наши продукты';
                         <a href="<?= Url::toRoute(['/site/smartlink']) ?>">
                             <div class="single-popular-items mb-50 text-center">
                                 <div class="popular-img">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular2.jpg" alt="Портфолио, разработка сайта">
                                     <div class="img-cap">
                                         <span>Заказать</span>
                                     </div>
@@ -48,7 +48,7 @@ $this->title = 'Наши продукты';
                         <a href="<?= Url::toRoute(['/site/biolink']) ?>">
                             <div class="single-popular-items mb-50 text-center">
                                 <div class="popular-img">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular5.jpg" alt="Портфолио, разработка сайта">
                                     <div class="img-cap">
                                         <span>Заказать</span>
                                     </div>

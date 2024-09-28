@@ -1,5 +1,6 @@
 <?php
 
+use common\modules\multicity\models\City;
 use ityakutia\setting\models\Setting;
 use yii\helpers\Url;
 
@@ -15,7 +16,7 @@ use yii\helpers\Url;
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="<?= Url::to(['/'])?>"><img src="<?= $this->theme->baseUrl; ?>/img/logo/logo2_footer.svg" alt="<?= Yii::$app->name ?>"></a>
+                                    <a href="<?= Url::to(['/'])?>"><img src="<?= $this->theme->baseUrl; ?><?= City::getCurrent()->url === 'yakutsk' ? '/img/logo/itYakutiaFooterLogo.svg' : '/img/logo/beeAppsLogo.svg'; ?>" alt="<?= Yii::$app->name ?>"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

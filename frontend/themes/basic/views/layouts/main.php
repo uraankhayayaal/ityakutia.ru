@@ -19,7 +19,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
     <title><?= ($this->title != null ? (Html::encode($this->title).' | ') : '') ?><?= Yii::$app->name ?> в городе <?= City::getCurrent()->name ?></title>
-    <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?>/img/favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?><?= City::getCurrent()->url === 'yakutsk' ? '/img/itYakutiaFavicon.svg' : '/img/beeAppsFavicon.svg' ?>">
 
     <meta name="google-site-verification" content="S31x0lJg0CebKhPoOpLixsaUtap1PgQu7HoT4lIYF-A" />
     <!--Let browser know website is optimized for mobile-->
@@ -48,7 +48,7 @@ AppAsset::register($this);
         ]);
         $this->registerMetaTag([
             'property' => 'og:type',
-            'content' => Yii::$app->params['meta_type']['content'],
+            'content' => 'website',
         ]);
         $this->registerMetaTag([
             'property' => 'og:description',
@@ -56,7 +56,7 @@ AppAsset::register($this);
         ]);
         $this->registerMetaTag([
             'property' => 'og:image',
-            'content' => Yii::$app->params['meta_image']['content'],
+            'content' => City::getCurrent()->url === 'yakutsk' ? '/themes/basic/img/logo/itYakutiaOgImage.jpg' : '/themes/basic/img/logo/beeAppsOgImage.jpg',
         ]);
         $this->registerMetaTag([
             'property' => 'og:image:type',
@@ -76,7 +76,7 @@ AppAsset::register($this);
         ]);
         $this->registerMetaTag([
             'property' => 'og:url',
-            'content' => empty(Yii::$app->params['meta_url']['content']) ? Url::current([], true) : Yii::$app->params['meta_url']['content'],
+            'content' => Url::current([], true),
         ]);
 
     ?>
@@ -91,7 +91,7 @@ AppAsset::register($this);
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="<?= $this->theme->baseUrl; ?>/img/logo/logo.svg" alt="<?= Yii::$app->name ?>">
+                    <img src="<?= $this->theme->baseUrl; ?><?= City::getCurrent()->url === 'yakutsk' ? '/img/logo/itYakutiaLogo.svg' : '/img/logo/beeAppsLogo.svg'; ?>" alt="<?= Yii::$app->name ?>">
                 </div>
             </div>
         </div>

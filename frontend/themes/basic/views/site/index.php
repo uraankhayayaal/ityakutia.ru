@@ -3,7 +3,7 @@
 use common\modules\multicity\models\City;
 use yii\helpers\Url;
 
-$this->title = null;
+$this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
 
 ?>
         <!--? slider Area Start -->
@@ -16,7 +16,7 @@ $this->title = null;
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                                 <div class="hero__caption">
                                     <h2 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Продвижение в соцсетях в городе <?= City::getCurrent()->name; ?></h2>
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/mobile.svg" class="d-md-none mw-100 pr-3 pb-3 heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/mobile.svg" class="d-md-none mw-100 pr-3 pb-3 heartbeat" alt="Разработка и поддержка сайтов. SMM продвижениие в социальных сетях">
                                     <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Мы, профессиональная команда, поможем в комплексном продвижении вашего бизнеса в разных социальных сетях, увеличим узнаваемость вашего продукта и повысим продажи</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
@@ -26,7 +26,7 @@ $this->title = null;
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.svg" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch.svg" class="heartbeat" alt="Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@ $this->title = null;
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch2.png" class="heartbeat" alt="IT Yakutia, Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch2.png" class="heartbeat" alt="Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ $this->title = null;
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
                             <h2>Наши услуги</h2>
-                            <p>Компания IT Yakutia предоставляет широкий спектр услуг, от разработки и поддержки сайтов до введение социальных сетей в г. Якутск и в других регионах России</p>
+                            <p>Компания <?= City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps' ?> предоставляет широкий спектр услуг, от разработки и поддержки сайтов до введение социальных сетей в г. Якутск и в других регионах России</p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular2.jpg" alt="Портфолио, разработка сайта">
                                 <div class="img-cap">
                                     <span>Заказать</span>
                                 </div>
@@ -126,7 +126,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular5.jpg" alt="Портфолио, разработка сайта">
                                 <div class="img-cap">
                                     <span>Заказать</span>
                                 </div>
@@ -143,7 +143,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-popular-items mb-50 text-center">
                             <div class="popular-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular6.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/popular6.jpg" alt="Портфолио, разработка сайта">
                                 <div class="img-cap">
                                     <span>Заказать</span>
                                 </div>
@@ -182,7 +182,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Управление образования Усть-Майского улуса</a></h3>
@@ -193,7 +193,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Корея лайф центр</a></h3>
@@ -204,7 +204,7 @@ $this->title = null;
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a href="<?= Url::toRoute(['/site/portfolio']) ?>">Ресторан Тыгын Дархан</a></h3>
@@ -341,7 +341,7 @@ $this->title = null;
                                 </p>
                                 <p>Сеть ортопедических салонов NotaBene</p>
                                 <h6>ИП Никифорова Т.Н.</h6>
-                                <p>Сеть ортопедических салонов "NotaBene" (ИП Никифорова Т.Н.) выражает благодарность компании ООО "Информационные технологии Якутии" (IT Yakutia) за отличную работу по разработке сайта нашей компании за весьма приемлемую цену. Ваш разработчик помог нам с уточнением технического задания, всегда был на связи, отвечал на вопросы практически мгновенно, предлагал грамотные решения всех наших пожеланий, сделал все в назначенный срок. Радует длительный гарантийный срок поддержки. Мы рады, что выбрали Вашу компанию и в результате получили продукт, который даже превзошел наши ожидания. Готовы на дальнейшее взаимовыгодное сотрудничество.</p>
+                                <p>Сеть ортопедических салонов "NotaBene" (ИП Никифорова Т.Н.) выражает благодарность компании ООО "Информационные технологии Якутии" за отличную работу по разработке сайта нашей компании за весьма приемлемую цену. Ваш разработчик помог нам с уточнением технического задания, всегда был на связи, отвечал на вопросы практически мгновенно, предлагал грамотные решения всех наших пожеланий, сделал все в назначенный срок. Радует длительный гарантийный срок поддержки. Мы рады, что выбрали Вашу компанию и в результате получили продукт, который даже превзошел наши ожидания. Готовы на дальнейшее взаимовыгодное сотрудничество.</p>
                                 <p><a style="color: red;" href="/notabene.pdf" download="Письмо благодарность ИП Никифорова ТН.pdf">Письмо благодарность ИП Никифорова ТН.pdf</a></p>
                             </div>
                         </div>

@@ -9,6 +9,7 @@ use yii\base\InvalidConfigException;
 class CityRequest extends Request
 {
     private $_city_url;
+    private $_urlWithoutCity;
 
     public function getCityUrl()
     {
@@ -19,12 +20,17 @@ class CityRequest extends Request
 
 	    	$city_url = isset($url_list[1]) ? $url_list[1] : null;
 
-	    	City::setCurrent($city_url);
+	    	City::setCurrentByDomain($this->getHostName(), $city_url);
 
-            if( $city_url !== null && $city_url === City::getCurrent()->url && 
-                strpos($this->_city_url, City::getCurrent()->url) === 1 )
+            $city = City::getCurrent();
+
+            if( 
+                $city_url !== null
+                && $city
+                && $city_url === $city->url
+                && strpos($this->_city_url, $city->url) === 1 )
             {
-                    $this->_city_url = substr($this->_city_url, strlen(City::getCurrent()->url)+1);
+                $this->_city_url = substr($this->_city_url, strlen($city->url) + 1);
             }
         }
 

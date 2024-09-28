@@ -34,7 +34,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/rcmtykt.ru.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/rcmtykt.ru.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="http://rcmtykt.ru/">Модернизация сайта ГБУ РС (Я) "Ресурсный Центр Победа"</a></h3>
@@ -45,7 +45,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/farhutdinova.ru.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/farhutdinova.ru.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="http://farhutdinova.ru/">Сервис по работе с API Wildberries</a></h3>
@@ -56,7 +56,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/NotaBene.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/NotaBene.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="http://nb-ykt.ru/">NOTA BENE - сеть ортопедических салонов</a></h3>
@@ -90,7 +90,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product8.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="http://ustmuo.ru/">Управление образования Усть-Майского улуса</a></h3>
@@ -101,7 +101,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product7.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product7.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="http://sakhadolgoletie.ru/">Активное долголетие в Якутии</a></h3>
@@ -112,7 +112,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product6.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product6.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="https://veteransakha.ru">Ассоциация Ветеран РС(Я)</a></h3>
@@ -123,7 +123,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product2.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product2.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="https://riacmut.ru">ГБУ РС(Я) РИАЦМУТ</a></h3>
@@ -134,7 +134,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product4.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product4.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="https://rcmtykt.ru">Ресурсный центр Победа</a></h3>
@@ -145,7 +145,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product1.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="http://daegulife.ru">Корея лайф центр</a></h3>
@@ -156,7 +156,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product3.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product3.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="https://2children.ru">Родительский портал Якутии</a></h3>
@@ -167,7 +167,7 @@ $this->title = "Портфолио";
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
-                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Admin14, IT Yakutia, портфолио, разработка сайта">
+                                <img src="<?= $this->theme->baseUrl; ?>/img/gallery/new_product5.jpg" alt="Портфолио, разработка сайта">
                             </div>
                             <div class="product-caption">
                                 <h3><a target="_blank" href="https://tygyndarhanrest.ru">Ресторан Тыгын Дархан</a></h3>

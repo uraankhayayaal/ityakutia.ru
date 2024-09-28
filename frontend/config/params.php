@@ -1,4 +1,5 @@
 <?php
+
 return [
     //'adminEmail' => 'admin@example.com',
     'custom_view_for_modules' => [
@@ -23,13 +24,10 @@ return [
     // Meta Tags for default
     'meta_keywords' => [
 		'name' => 'keywords',
-		'content' => 'IT Yakutia, Admin14, Разработка, продвижение, сайтов, Создание, сайта, Сайтостроение, Якутск, СММ, социальные сети, соцсеть, видеоролики, реклама',
+		'content' => 'Разработка, продвижение, сайтов, Создание, сайта, Сайтостроение, СММ, социальные сети, соцсеть, видеоролики, реклама',
 	],
     'meta_description' => [
 	    'name' => 'description',
 	    'content' => 'Мы занимаемся продвижением вашего бизнеса в интернете, оказываем услуги по маркетингу, введем соцсети, оказываем услуги дизайна и разработку сайта',
 	],
-    'meta_image' => ['name' => 'image', 'content' => '/themes/basic/img/logo/og_image.jpg'],
-    'meta_type' => ['name' => 'type', 'content' => 'website'],
-    'meta_url' => ['name' => 'url', 'content' => null],
 ];

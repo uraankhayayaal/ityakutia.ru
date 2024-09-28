@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use common\modules\multicity\models\City;
 use yii\helpers\Html;
 use frontend\themes\basic\assets\AppAsset;
 use yii\helpers\Url;
@@ -18,7 +19,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?= Html::csrfMetaTags() ?>
     <title><?= $this->title ?></title>
-    <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?>/img/favicon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="<?= $this->theme->baseUrl; ?><?= City::getCurrent()->url === 'yakutsk' ? '/img/itYakutiaFavicon.svg' : '/img/beeAppsFavicon.svg' ?>">
 
     <meta name="google-site-verification" content="S31x0lJg0CebKhPoOpLixsaUtap1PgQu7HoT4lIYF-A" />
     <!--Let browser know website is optimized for mobile-->

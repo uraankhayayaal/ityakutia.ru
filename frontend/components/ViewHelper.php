@@ -3,6 +3,7 @@
 namespace frontend\components;
 
 use common\modules\multicity\models\City;
+use Yii;
 use yii\helpers\Url;
 
 class ViewHelper 
@@ -24,12 +25,16 @@ class ViewHelper
 
     public static function getOtherCity($currentCity)
     {
-        $cities = City::find()->where('id != :current_id', [':current_id' => $currentCity->id])->all();
+        $cities = City::find()
+            ->where(['!=', 'id', $currentCity->id])
+            ->andWhere(['=', 'domain', $currentCity->domain])
+            ->all();
+
         $subnav = [];
         foreach ($cities as $key => $city) {
             $subnav[] = [
                 'label' => $city->name,
-                'url' => '/'.$city->url.\Yii::$app->getRequest()->getCityUrl(),
+                'url' => Url::toRoute((Yii::$app->getRequest()->getCityUrl()), true),
             ];
         }
         return $subnav;

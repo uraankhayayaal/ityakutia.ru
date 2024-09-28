@@ -14,7 +14,10 @@ class Change extends \yii\base\Widget
     public function run() {
         return $this->render('index', [
             'current' => City::getCurrent(),
-            'cities' => City::find()->where('id != :current_id', [':current_id' => City::getCurrent()->id])->all(),
+            'cities' => City::find()
+                ->where(['!=', 'id', City::getCurrent()->id])
+                ->andWhere(['=', 'domain', City::getCurrent()->domain])
+                ->all(),
         ]);
     }
 }
