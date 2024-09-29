@@ -50,29 +50,22 @@ $this->title = 'Контакты';
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="fab fa-telegram" aria-hidden="true"></i></span>
                             <div class="media-body">
-                                <h3><a class="typography h6" target="_blank" href="https://t.me/Yktadmin">@Yktadmin</a></h3>
-                                <p>В telegram в любое время</p>
+                                <h3 class="typography h6">В telegram</h3>
+                                <p><a style="color: #FF8100;" target="_blank" href="https://t.me/beeapps_official">@beeapps_official</a></p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
                             <div class="media-body">
-                                <h3><a class="typography h6" target="_blank" href="https://wa.me/79142736836">+7 914 273 6836</a></h3>
-                                <p>В whatsapp в любое время</p>
-                            </div>
-                        </div>
-                        <div class="media contact-info">
-                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                            <div class="media-body">
-                                <h3><a class="typography h6" target="_blank" href="tel:+79142736836">+7 914 273 6836</a></h3>
-                                <p>с 14:00 до 18:00 в будни</p>
+                                <h3 class="typography h6">В whatsapp</h3>
+                                <p><a style="color: #FF8100;" target="_blank" href="https://wa.me/79998271911">Написать</a></p>
                             </div>
                         </div>
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3><a class="typography h6" target="_blank" href="mailto:manager@admin14.ru">manager@admin14.ru</a></h3>
-                                <p>На почту в любое время</p>
+                                <h3 class="typography h6">На электронную почту</h3>
+                                <p><a style="color: #FF8100;" target="_blank" href="mailto:manager@admin14.ru">manager@admin14.ru</a></p>
                             </div>
                         </div>
                     </div>
