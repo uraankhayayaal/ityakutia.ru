@@ -10,7 +10,7 @@ return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
-            'class' => 'yii\caching\FileCache', // turn on redis
+            'class' => 'yii\caching\FileCache',
         ],
         'formatter' => [
             'class' => 'yii\i18n\Formatter',
@@ -21,12 +21,6 @@ return [
             'thousandSeparator' => ' ',
             //'currencyCode' => 'RUS',
             //'locale' => 'ru-RU',
-       ],
-       'redis' => [
-           'class' => 'yii\redis\Connection',
-           'hostname' => 'redis',
-           'port' => 6379,
-           'database' => 0,
        ],
        'authManager' => [
            'class' => DbManager::class,

@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 yiisoftware/yii2-php:8.3-fpm AS php
+FROM --platform=linux/amd64 yiisoftware/yii2-php:8.3-fpm
 
 RUN apt-get update && apt-get install -y \
     git \
@@ -28,4 +28,4 @@ WORKDIR /app
 
 ENTRYPOINT ["docker-php-entrypoint"]
 
-CMD ["/bin/bash", "./docker/php/startup.sh"]
+CMD ["/bin/bash", "./startup.sh"]

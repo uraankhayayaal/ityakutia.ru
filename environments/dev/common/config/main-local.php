@@ -3,9 +3,9 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=db;dbname=admin14.ru',
-            'username' => 'admin14.ru',
-            'password' => 'admin14.ru',
+            'dsn' => 'mysql:host=db;dbname=beeapps.ru',
+            'username' => 'beeapps.ru',
+            'password' => 'beeapps.ru',
             'charset' => 'utf8',
         ],
         'mailer' => [
