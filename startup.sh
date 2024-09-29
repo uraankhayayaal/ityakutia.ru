@@ -1,4 +1,4 @@
-chmod -R 777 /app/server/frontend/web/images
+chmod -R 777 /app/frontend/web/images
 
 # Start to check private repositories path `backend/runtime/exts`
 declare -a iy_repo_names=("yii2-gallery" "yii2-rbac" "yii2-navigation" "yii2-setting" "yii2-poll" "yii2-blog" "yii2-partner" "yii2-fileuploader" "yii2-materializecomponents" "yii2-redactor" "yii2-sortable" "yii2-page" "yii2-collective" "yii2-banner") # 
