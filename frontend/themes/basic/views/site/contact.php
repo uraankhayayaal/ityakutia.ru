@@ -32,28 +32,16 @@ $this->title = 'Контакты';
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
                                 <?php switch (City::getCurrent()->url) {
-                                    case 'kazan':
-                                        echo '
-                                            <h3>Республика Татарстан, Россия.</h3>
-                                            <p>Казань, 420000</p>
-                                        ';
-                                        break;
                                     case 'yakutsk':
                                         echo '
                                             <h3>Республика Саха (Якутия), Россия.</h3>
                                             <p>677008, Якутск, Лермонтова 87</p>
                                         ';
                                         break;
-                                    case 'moskow':
-                                        echo '
-                                            <h3>Москва, Россия.</h3>
-                                            <p>125167, Москва, Планетная 30</p>
-                                        ';
-                                        break;
                                     default:
                                         echo '
-                                            <h3>Республика Саха (Якутия), Россия.</h3>
-                                            <p>677008, Якутск, Лермонтова 87</p>
+                                            <h3>Строгино, Москва</h3>
+                                            <p>123181, Улица Маршала Катукова 25</p>
                                         ';
                                         break;
                                 } ?>
