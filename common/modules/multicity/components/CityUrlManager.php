@@ -10,8 +10,9 @@ class CityUrlManager extends UrlManager
     {
         if( isset($params['city_id']) ){
             //Если указан идентефикатор языка, то делаем попытку найти язык в БД,
-            //иначе работаем с языком по умолчанию
             $city = City::findOne($params['city_id']);
+
+            //иначе работаем с языком по умолчанию
             if( $city === null ){
                 $city = City::getDefaultCity();
             }
@@ -23,7 +24,16 @@ class CityUrlManager extends UrlManager
         }
         
         $url = parent::createUrl($params);
+
+        $currentCity = City::getCurrent();
+
+        $defaultCityMainPageUrl = $city->url;
+        if ($currentCity->default && $currentCity->id === $city->id) {
+            $defaultCityMainPageUrl = '';
+        }
         
-        return $url == '/' ? '/'.$city->url : '/'.$city->url.$url;
+        return $url == '/'
+            ? ('/' . $defaultCityMainPageUrl)
+            : ('/' . $city->url . $url);
     }
 }
