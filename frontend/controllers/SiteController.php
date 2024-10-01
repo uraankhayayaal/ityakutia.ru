@@ -72,8 +72,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        if (Yii::$app->request->referrer == 'link.2gis.ru') {
-            $this->redirect('https://beeapps.ru', 302);            
+        if (Yii::$app->request->referrer == 'https://link.2gis.ru/' && Yii::$app->request->hostName == 'ityakutia.ru') {
+            $this->redirect('https://beeapps.ru', 302);
         }
 
         $model = new ContactForm();

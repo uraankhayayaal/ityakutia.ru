@@ -38,7 +38,7 @@ return [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                     'categories' => ['application'], //категория логов
-                    'logFile' => '@runtime/logs/pay.log', //куда сохранять
+                    'logFile' => '@runtime/logs/app.log', //куда сохранять
                     'logVars' => [], //не добавлять в лог глобальные переменные ($_SERVER, $_SESSION...)
                     'maxLogFiles' => 10
                 ],
