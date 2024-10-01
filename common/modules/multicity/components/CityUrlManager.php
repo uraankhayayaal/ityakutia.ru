@@ -26,11 +26,9 @@ class CityUrlManager extends UrlManager
         $url = parent::createUrl($params);
 
         $currentCity = City::getCurrent();
-
-        $defaultCityMainPageUrl = $city->url;
-        if ($currentCity->default && $currentCity->id === $city->id) {
-            $defaultCityMainPageUrl = '';
-        }
+        $defaultCityMainPageUrl = ($currentCity->default && $currentCity->id === $city->id)
+            ? ''
+            : $city->url;
         
         return $url == '/'
             ? ('/' . $defaultCityMainPageUrl)

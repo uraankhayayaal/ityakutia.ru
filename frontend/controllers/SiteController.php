@@ -72,6 +72,10 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        if (Yii::$app->request->referrer == 'link.2gis.ru') {
+            $this->redirect('https://beeapps.ru', 302);            
+        }
+
         $model = new ContactForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
