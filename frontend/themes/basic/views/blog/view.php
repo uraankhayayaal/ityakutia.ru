@@ -1,6 +1,5 @@
 <?php
 
-use ityakutia\blog\models\Article;
 use ityakutia\blog\models\ArticleCategory;
 use yii\helpers\Url;
 
@@ -8,6 +7,52 @@ $this->title = 'Новость';
 
 ?>
 
+<style>
+
+/*
+ * Imparavi wrapper
+ */
+.imperavi_wrapper{
+	position: relative;
+  text-align: justify;
+}
+.imperavi_wrapper img{
+  max-width: 100%!important;
+  height: unset!important;
+  width: unset!important;
+}
+.imperavi_wrapper .galleryformatter,
+.imperavi_wrapper .galleryview,
+.imperavi_wrapper .galleryformatter-greenarrows,
+.imperavi_wrapper .gallery-slides,
+.imperavi_wrapper .gallery-frame,
+.imperavi_wrapper .gallery-thumbs,
+.imperavi_wrapper img.pure-img{
+  display: none!important;
+}
+
+.imperavi_wrapper ul,ol {
+   margin: 0;
+   padding: 0;
+   padding-left: 24px;
+   margin-bottom: 1.5rem;
+   margin-top: 1rem;
+}
+.imperavi_wrapper ul {
+   list-style: disc;
+}
+.imperavi_wrapper ol {
+   list-style: decimal;
+}
+.imperavi_wrapper ul,ol > li {
+   font-family: "Roboto", sans-serif;
+   color: #777;
+   font-size: 16px;
+   line-height: 30px;
+   font-weight: normal;
+   font-size: 15px;
+}
+</style>
    <!-- Hero Area Start-->
    <div class="slider-area ">
       <div class="single-slider slider-height2 gallery-hero d-flex align-items-center">
@@ -39,7 +84,9 @@ $this->title = 'Новость';
                               <li><a href="<?= Url::to(['index', 'filter_category_id' => $articleSet->article_category_id]); ?>"><i class="fa fa-hashtag"></i> <?= $articleSet->articleCategory->title ?></a></li>
                            <?php } ?>
                         </ul>
-                        <?= $model->content ?>
+                        <div class="imperavi_wrapper">
+                           <?= $model->content ?>
+                        </div>
                      </div>
                   </div>
                   <!-- <div class="navigation-top">

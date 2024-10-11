@@ -9,7 +9,7 @@ use yii\helpers\Url;
                                 <div class="blog_item_img">
                                     <img class="card-img rounded-0" src="<?= $model->photo ?>" alt="<?= $model->title ?>">
                                     <a href="#" class="blog_item_date">
-                                        <h3><?= Yii::$app->formatter->asDate($model->created_at, 'DD') ?></h3>
+                                        <h3><?= Yii::$app->formatter->asDate($model->created_at, 'php:j') ?></h3>
                                         <p><?= Yii::$app->formatter->asDate($model->created_at, 'php:M') ?></p>
                                     </a>
                                 </div>
