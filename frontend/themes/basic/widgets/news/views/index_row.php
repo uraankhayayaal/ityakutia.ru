@@ -4,12 +4,12 @@ use yii\helpers\Url;
 
 ?>
 
+
 <div class="row">
     <div class="col-12">
         <h4 class="mb-30 mt-60">Наш блог</h4>
     </div>
 </div>
-
 <div class="row">
     <?php foreach ($model as $article) { ?>
         <div class="col-12">
@@ -36,7 +36,6 @@ use yii\helpers\Url;
         </div>
     <?php } ?>
 </div>
-
 <div class="row justify-content-center">
     <div class="room-btn">
         <a href="<?= Url::toRoute(['/blog'])?>" class="btn view-btn1">Посмотреть еще</a>
