@@ -9,7 +9,7 @@ use yii\helpers\Url;
 $city = City::getCurrent();
 $navigation = [];
 $roots = Navigation::find()->where(['is_publish' => 1])->roots()->orderBy(['sort' => SORT_ASC])->all();
-$leaves = Navigation::find()->leaves()->where(['is_publish' => 1])->all();
+$leaves = Navigation::find()->where(['is_publish' => 1])->leaves()->all();
 
 foreach ($roots as $key => $item) {
     $navigation[] = [
