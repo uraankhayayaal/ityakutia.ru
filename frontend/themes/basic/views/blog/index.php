@@ -5,7 +5,7 @@ use ityakutia\blog\models\ArticleCategory;
 use yii\helpers\Url;
 use yii\widgets\ListView;
 
-$this->title = 'Новости';
+$this->title = 'Блог';
 
 ?>
         <!-- Hero Area Start-->
@@ -115,7 +115,7 @@ $this->title = 'Новости';
                             </aside>
 
                             <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title">Свежие новости</h3>
+                                <h3 class="widget_title">Последние статьи</h3>
                                 <?php $articles = Article::find()->where(['is_publish' => 1])->orderBy(['created_at' => SORT_DESC])->limit(4)->all(); ?>
                                 <?php foreach ($articles as $key => $article) { ?>
                                 <div class="media post_item">

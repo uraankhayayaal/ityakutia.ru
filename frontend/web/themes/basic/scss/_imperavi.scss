@@ -1,0 +1,49 @@
+
+/*
+* Imparavi wrapper
+*/
+.imperavi_wrapper {
+  position: relative;
+  text-align: justify;
+
+  img{
+    max-width: 100%!important;
+    height: unset!important;
+    width: unset!important;
+  }
+
+  .galleryformatter,
+  .galleryview,
+  .galleryformatter-greenarrows,
+  .gallery-slides,
+  .gallery-frame,
+  .gallery-thumbs,
+  img.pure-img {
+    display: none!important;
+  }
+  
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    padding-left: 24px;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ul, ol > li {
+    font-family: "Roboto", sans-serif;
+    color: #777;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: normal;
+    font-size: 15px;
+  }
+}
