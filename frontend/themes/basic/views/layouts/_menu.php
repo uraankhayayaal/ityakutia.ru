@@ -45,62 +45,56 @@ $navigation[] = [
 ];
 
 ?>
-    <header>
-        <!-- Header Start -->
-        <div class="header-area">
-            <div class="main-header header-sticky">
-                <div class="container">
-                    <div class="menu-wrapper">
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="<?= Url::to(['/']); ?>"><img src="<?= $this->theme->baseUrl; ?><?= City::getCurrent()->url === 'yakutsk' ? '/img/logo/itYakutiaLogo.svg' : '/img/logo/beeAppsLogo.svg'; ?>" alt="<?= Yii::$app->name ?>"></a>
-                        </div>
-                        <!-- Main-menu -->
+<header>
+    <div class="header-area">
+        <div class="main-header header-sticky">
+            <div class="container">
+                <div class="menu-wrapper">
+                    <div class="logo">
+                        <a href="<?= Url::to(['/']); ?>"><img src="<?= $this->theme->baseUrl; ?><?= City::getCurrent()->url === 'yakutsk' ? '/img/logo/itYakutiaLogo.svg' : '/img/logo/beeAppsLogo.svg'; ?>" alt="<?= Yii::$app->name ?>"></a>
+                    </div>
+                    <div class="main-menu d-none d-lg-block">
+                        <nav>
+                            <?php
+                                if (!empty($navigation)) {
+                                    echo Nav::widget([
+                                        'options' => ['id' => 'navigation'],
+                                        'items' => $navigation,
+                                    ]);
+                                }
+                            ?>
+                        </nav>
+                    </div>
+                    <div class="header-right">
+                        <ul>
+                            <!-- <li>
+                                <div class="nav-search search-switch">
+                                    <span class="flaticon-search"></span>
+                                </div>
+                            </li> -->
+                            <!-- <li> <a href="<?= Url::toRoute(['/site/login']); ?>"><span class="flaticon-user"></span></a></li> -->
+                            <!-- <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li> -->
+                        </ul>
                         <div class="main-menu d-none d-lg-block">
                             <nav>
-                                <?php
-                                    if (!empty($navigation)) {
-                                        echo Nav::widget([
-                                            'options' => ['id' => 'navigation'],
-                                            'items' => $navigation,
-                                        ]);
-                                    }
-                                ?>
+                                <?= Nav::widget([
+                                    'options' => ['id' => ''],
+                                    'items' => [[
+                                        'label' => $city->name,
+                                        'url' => false,
+                                        'items' => ViewHelper::getOtherCity($city),
+                                        'options' => ['class' => 'city'],
+                                        'dropdownOptions' => ['class' => 'submenu'],
+                                    ]],
+                                ]); ?>
                             </nav>
                         </div>
-                        <!-- Header Right -->
-                        <div class="header-right">
-                            <ul>
-                                <!-- <li>
-                                    <div class="nav-search search-switch">
-                                        <span class="flaticon-search"></span>
-                                    </div>
-                                </li> -->
-                                <!-- <li> <a href="<?= Url::toRoute(['/site/login']); ?>"><span class="flaticon-user"></span></a></li> -->
-                                <!-- <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li> -->
-                            </ul>
-                            <div class="main-menu d-none d-lg-block">
-                                <nav>
-                                    <?= Nav::widget([
-                                        'options' => ['id' => ''],
-                                        'items' => [[
-                                            'label' => $city->name,
-                                            'url' => false,
-                                            'items' => ViewHelper::getOtherCity($city),
-                                            'options' => ['class' => 'city'],
-                                            'dropdownOptions' => ['class' => 'submenu'],
-                                        ]],
-                                    ]); ?>
-                                </nav>
-                            </div>
-                        </div>
                     </div>
-                    <!-- Mobile Menu -->
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
             </div>
         </div>
-        <!-- Header End -->
-    </header>
+    </div>
+</header>

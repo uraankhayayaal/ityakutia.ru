@@ -100,7 +100,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                     <div class="col-xl-7 col-lg-8 col-md-10">
                         <div class="section-tittle mb-70 text-center">
                             <h2>Наши услуги</h2>
-                            <p>Компания <?= City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps' ?> предоставляет широкий спектр услуг, от создания логотипа до годовой гаранитии на разработку сайтов и приложений по всей территории России</p>
+                            <p>Мы, компания <?= City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps' ?> , предоставляем широкий спектр услуг — от создания логотипа до годовой гарантии на разработку сайтов и приложений. Работаем удалённо по всей территории России.</p>
                         </div>
                     </div>
                 </div>

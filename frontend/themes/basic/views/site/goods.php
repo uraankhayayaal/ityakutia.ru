@@ -6,7 +6,7 @@ $this->title = "Услуги";
 
 ?>
 
-<!-- Hero Area Start-->
+
 <div class="slider-area ">
     <div class="single-slider slider-height2 services-hero d-flex align-items-center">
         <div class="container">
@@ -20,7 +20,7 @@ $this->title = "Услуги";
         </div>
     </div>
 </div>
-<!-- Hero Area End-->
+
 <section class="section-padding30">
     <div class="container">
         <div class="row">
