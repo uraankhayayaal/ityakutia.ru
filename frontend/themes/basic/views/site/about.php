@@ -1,6 +1,6 @@
 <?php
 
-use yii\helpers\Url;
+use frontend\themes\basic\widgets\news\NewsWidget;
 
 $this->title = 'О нас';
 
@@ -25,13 +25,12 @@ $this->title = 'О нас';
         <div class="about-details section-padding30">
             <div class="container">
                 <div class="row">
-                    <div class="offset-xl-1 col-lg-8">
+                    <div class="col-lg-8">
                         <div class="about-details-cap mb-50">
                             <h4>Наша миссия</h4>
                             <p>Преобразовывать идеи в эффективные цифровые решения, создавая уникальные сайты и приложения, которые помогают бизнесу наших клиентов расти и развиваться. Мы стремимся к инновации, качеству и бескомпромиссной поддержке, чтобы каждый проект стал воплощением успеха в цифровом мире.</p>
                             <p></p>
                         </div>
-
                         <div class="about-details-cap mb-50">
                             <h4>Наши видения</h4>
                             <p>Стать ведущим партнером в разработке цифровых решений в России, известным своим инновационным подходом, высоким качеством услуг и максимально эффективной поддержкой. Мы стремимся создавать не просто сайты и приложения, а экосистемы, которые помогают бизнесам легко адаптироваться к меняющемуся миру технологий, обеспечивая их конкурентоспособность и устойчивый рост в цифровой экономике.</p>
@@ -42,7 +41,7 @@ $this->title = 'О нас';
         </div>
         <!-- About Details End -->
         <!--? Video Area Start -->
-        <div class="video-area mb-100">
+        <?php /* <div class="video-area mb-100">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
@@ -59,7 +58,7 @@ $this->title = 'О нас';
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */ ?>
         <!-- Video Area End -->
         <!--? Shop Method Start-->
         <!-- <div class="shop-method-area">
@@ -92,3 +91,5 @@ $this->title = 'О нас';
             </div>
         </div> -->
         <!-- Shop Method End-->
+
+        <?= NewsWidget::widget(); ?>

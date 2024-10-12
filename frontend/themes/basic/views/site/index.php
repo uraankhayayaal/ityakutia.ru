@@ -1,6 +1,7 @@
 <?php
 
 use common\modules\multicity\models\City;
+use frontend\themes\basic\widgets\news\NewsWidget;
 use yii\helpers\Url;
 
 $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
@@ -48,7 +49,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
                                 <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/watch2.png" class="heartbeat" alt="Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
+                                    <img src="<?= $this->theme->baseUrl; ?>/img/hero/hexagon.png" class="heartbeat" alt="Разработка и поддержка сайтов. SMM продвижениие в социальных сетях в городе <?= City::getCurrent()->name; ?>">
                                 </div>
                             </div>
                         </div>
@@ -64,24 +65,24 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                 <div class="row">
                     <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/gallery1.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/popular1.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-gallery mb-30">
-                            <div class="gallery-img big-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/gallery2.png);"></div>
+                            <div class="gallery-img big-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/popular2.jpg);"></div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-12">
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
                                 <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/gallery3.png);"></div>
+                                    <div class="gallery-img small-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/popular3.jpg);"></div>
                                 </div>
                             </div>
                             <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
                                 <div class="single-gallery mb-30">
-                                    <div class="gallery-img small-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/gallery4.png);"></div>
+                                    <div class="gallery-img small-img" style="background-image: url(<?= $this->theme->baseUrl; ?>/img/gallery/popular4.jpg);"></div>
                                 </div>
                             </div>
                         </div>
@@ -159,11 +160,11 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
                     </div>
                 </div>
                 <!-- Button -->
-                <!-- <div class="row justify-content-center">
+                <div class="row justify-content-center">
                     <div class="room-btn pt-70">
                         <a href="<?= Url::toRoute(['/site/goods'])?>" class="btn view-btn1">Посмотреть еще</a>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <!-- Popular Items End -->
@@ -171,9 +172,9 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
         <section class="new-product-area section-padding30">
             <div class="container">
                 <!-- Section tittle -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="section-tittle mb-70">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-10">
+                        <div class="section-tittle mb-70 text-center">
                             <h2>Последние работы</h2>
                         </div>
                     </div>
@@ -242,40 +243,7 @@ $this->title = City::getCurrent()->url === 'yakutsk' ? 'IT Yakutia' : 'BeeApps';
             </div>
         </div> -->
         <!-- Video Area End -->
-        <!--? Watch Choice  Start-->
-        <div class="watch-area section-padding30">
-            <div class="container">
-                <div class="row align-items-center justify-content-between padding-130 flex-md-row-reverse">
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40 text-left text-md-center">
-                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch1.png" alt="<?= Yii::$app->name ?>">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="watch-details mb-40">
-                            <h2>Гарантия 1 год</h2>
-                            <p>Мы не только уверены в качестве наших работ, но и даем гарантию на все работы на один год</p>
-                            <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn d-none d-md-inline">Заказать сайт</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="choice-watch-img mb-40 text-center">
-                            <img src="<?= $this->theme->baseUrl; ?>/img/gallery/choce_watch2.png" alt="<?= Yii::$app->name ?>">
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-6">
-                        <div class="watch-details mb-40">
-                            <h2>Бесплатный ssl сертификат</h2>
-                            <p>При покупке домена дается бесплатный ssl сертификат, он обеспечивает защиту сайта и поднимается поисковыми сервисами в рейтинге</p>
-                            <a href="<?= Url::toRoute(['/site/contact']) ?>" class="btn">Заказать сайт</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Watch Choice  End-->
+        <?= NewsWidget::widget(); ?>
         <!--? Shop Method Start-->
         <div class="shop-method-area">
             <div class="container">

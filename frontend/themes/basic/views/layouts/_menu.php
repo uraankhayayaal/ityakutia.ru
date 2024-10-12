@@ -40,7 +40,7 @@ $navigation[] = [
     'label' => $city->name,
     'url' => false,
     'items' => ViewHelper::getOtherCity($city),
-    'options' => ['class' => 'city'],
+    'options' => ['class' => 'city d-block d-lg-none'],
     'dropdownOptions' => ['class' => 'submenu'],
 ];
 
@@ -49,7 +49,7 @@ $navigation[] = [
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header header-sticky">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
@@ -79,6 +79,20 @@ $navigation[] = [
                                 <!-- <li> <a href="<?= Url::toRoute(['/site/login']); ?>"><span class="flaticon-user"></span></a></li> -->
                                 <!-- <li><a href="cart.html"><span class="flaticon-shopping-cart"></span></a> </li> -->
                             </ul>
+                            <div class="main-menu d-none d-lg-block">
+                                <nav>
+                                    <?= Nav::widget([
+                                        'options' => ['id' => ''],
+                                        'items' => [[
+                                            'label' => $city->name,
+                                            'url' => false,
+                                            'items' => ViewHelper::getOtherCity($city),
+                                            'options' => ['class' => 'city'],
+                                            'dropdownOptions' => ['class' => 'submenu'],
+                                        ]],
+                                    ]); ?>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                     <!-- Mobile Menu -->

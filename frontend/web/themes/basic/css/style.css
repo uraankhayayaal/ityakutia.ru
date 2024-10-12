@@ -251,7 +251,7 @@ ul {
 }
 
 a {
-  color: #635c5c;
+  color: rgb(99, 92, 92);
 }
 
 a:hover {
@@ -336,11 +336,6 @@ input:focus::-moz-placeholder {
   height: 100%;
   z-index: -1;
   opacity: 0.5;
-}
-
-.section-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 
 .separator {
@@ -2098,6 +2093,11 @@ input:focus::-moz-placeholder {
   }
 }
 /*-- Section Padding -- */
+.section-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .section-padding2 {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -2221,37 +2221,37 @@ input:focus::-moz-placeholder {
 }
 
 .section-padding30 {
-  padding-top: 200px;
-  padding-bottom: 170px;
+  padding-top: 100px;
+  padding-bottom: 70px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .section-padding30 {
-    padding-top: 200px;
-    padding-bottom: 170px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .section-padding30 {
-    padding-top: 150px;
-    padding-bottom: 120px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-padding30 {
     padding-top: 100px;
     padding-bottom: 70px;
   }
 }
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .section-padding30 {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-padding30 {
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .section-padding30 {
-    padding-top: 60px;
-    padding-bottom: 28px;
+    padding-top: 35px;
+    padding-bottom: 20px;
   }
 }
 @media (max-width: 575px) {
   .section-padding30 {
-    padding-top: 60px;
-    padding-bottom: 28px;
+    padding-top: 30px;
+    padding-bottom: 15px;
   }
 }
 
@@ -2703,7 +2703,7 @@ input:focus {
 }
 
 .section_bg {
-  background-color: #f4edf278;
+  background-color: rgba(244, 237, 242, 0.4705882353);
 }
 
 /*----------------when other page include End--------------- */
@@ -3058,35 +3058,10 @@ input:focus {
 }
 
 .slider-height {
-  min-height: 980px;
+  padding: 100px 0;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .slider-height {
-    min-height: 750px;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .slider-height {
-    min-height: 500px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider-height {
-    min-height: 500px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .slider-height {
-    min-height: 400px;
-  }
-}
-@media (max-width: 575px) {
-  .slider-height {
-    min-height: 430px;
-  }
 }
 
 .slider-height2 {
@@ -3094,6 +3069,7 @@ input:focus {
   min-height: 500px;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
 }
 @media (max-width: 575px) {
   .slider-height2 {
@@ -3140,20 +3116,9 @@ input:focus {
     left: -104px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .slider-area .hero__img img {
-    height: 500px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider-area .hero__img img {
-    height: 500px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .slider-area .hero__img img {
-    height: 400px;
-  }
+.slider-area .hero__img img {
+  width: 100%;
+  max-width: 100%;
 }
 .slider-area .hero__caption {
   overflow: hidden;
@@ -3762,7 +3727,7 @@ input:focus {
 }
 .shop-method-area .method-wrapper .single-method i {
   font-size: 40px;
-  color: #ffff;
+  color: white;
   margin-bottom: 25px;
   display: block;
 }
@@ -4429,8 +4394,7 @@ input:focus {
 }
 
 .blog_area a {
-  font-family: "Josefin Sans", sans-serif !important;
-  color: #777;
+  color: "Josefin Sans", sans-serif !important;
   text-decoration: none;
   transition: 0.4s;
 }
@@ -5076,7 +5040,7 @@ input:focus {
 .blog_right_sidebar .br {
   width: 100%;
   height: 1px;
-  background: #eeeeee;
+  background: rgb(238, 238, 238);
   margin: 30px 0px;
 }
 
@@ -5838,9 +5802,9 @@ input:focus {
 }
 
 .overlay::before {
-  background-image: -moz-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
-  background-image: -webkit-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
-  background-image: -ms-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, black 100%);
+  background-image: -moz-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, rgb(0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, rgb(0, 0, 0) 100%);
+  background-image: -ms-linear-gradient(170deg, rgba(34, 34, 34, 0) 0%, rgb(0, 0, 0) 100%);
 }
 
 /**************** extend css start ****************/
@@ -6099,19 +6063,17 @@ del {
   min-width: 800px;
 }
 .progress-table .serial {
-  min-width: 11.83%;
+  width: 11.83%;
   padding-left: 30px;
 }
 .progress-table .country {
-  min-width: 28.07%;
-  padding-left: 30px;
-  flex-grow: 1;
+  width: 28.07%;
 }
 .progress-table .visit {
-  min-width: 19.74%;
+  width: 19.74%;
 }
 .progress-table .percentage {
-  min-width: 40.36%;
+  width: 40.36%;
   padding-right: 50px;
 }
 .progress-table .table-head {
@@ -7062,7 +7024,7 @@ del {
 }
 .blog-area .single-blog .blog-caption .blog-cap-bottom {
   padding-top: 20px;
-  border-top: 1px solid #f9f9f9;
+  border-top: 1px solid rgb(249, 249, 249);
 }
 .blog-area .single-blog .blog-caption .blog-cap-bottom span {
   color: #adadad;
@@ -9612,7 +9574,7 @@ input:focus {
 }
 .s_product_text .like_us {
   border-radius: 50%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 50px;
   height: 50px;
   line-height: 50px;

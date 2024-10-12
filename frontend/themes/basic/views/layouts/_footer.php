@@ -76,10 +76,8 @@ use yii\helpers\Url;
                         <div class="footer-copy-right f-right">
                             <!-- social -->
                             <div class="footer-social">
-                                <?= Setting::valueOf('social_link_ig', '<a target="_blank" href="[[value]]"><i class="fab fa-instagram"></i></a>'); ?>
-                                <?= Setting::valueOf('social_link_fb', '<a target="_blank" href="[[value]]"><i class="fab fa-facebook-f"></i></a>'); ?>
-                                <?= Setting::valueOf('social_link_yt', '<a target="_blank" href="[[value]]"><i class="fab fa-youtube"></i></a>'); ?>
-                                <?= Setting::valueOf('social_link_tt', '<a target="_blank" href="[[value]]"><i class="fab fa-tiktok"></i></a>'); ?>
+                                <?= Setting::valueOf('social_link_tg', '<a target="_blank" href="[[value]]"><i class="fab fa-telegram"></i></a>'); ?>
+                                <?= Setting::valueOf('social_link_vk', '<a target="_blank" href="[[value]]"><i class="fab fa-vk"></i></a>'); ?>
                             </div>
                         </div>
                     </div>

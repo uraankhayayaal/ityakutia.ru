@@ -1,24 +1,24 @@
 
 .slider-height {
-    min-height: 980px;
+    padding: 100px 0;
     background-repeat:no-repeat ;
     background-position: center center;
     background-size: cover;
-    @media #{$laptop}{
-        min-height: 750px;
-    }
-    @media #{$lg}{
-        min-height: 500px;
-    }
-    @media #{$md}{
-        min-height: 500px;
-    }
-    @media #{$sm}{
-        min-height: 400px;
-    }
-    @media #{$xs}{
-        min-height: 430px;
-    }
+    // @media #{$laptop}{
+    //     min-height: 750px;
+    // }
+    // @media #{$lg}{
+    //     min-height: 500px;
+    // }
+    // @media #{$md}{
+    //     min-height: 500px;
+    // }
+    // @media #{$sm}{
+    //     min-height: 400px;
+    // }
+    // @media #{$xs}{
+    //     min-height: 430px;
+    // }
 }
 
 // Another Hero Page
@@ -27,6 +27,7 @@
     min-height: 500px;
     background-repeat:no-repeat ;
     background-position: center center;
+    background-size: cover;
     @media #{$xs}{
         min-height: 260px;
     }
@@ -69,15 +70,17 @@
             left: -104px;
         }
         img{
-            @media #{$lg}{
-                height: 500px;
-            }
-            @media #{$md}{
-                height: 500px;
-            }
-            @media #{$sm}{
-                height: 400px;
-            }
+            width: 100%;
+            max-width: 100%;
+            // @media #{$lg}{
+            //     height: 500px;
+            // }
+            // @media #{$md}{
+            //     height: 500px;
+            // }
+            // @media #{$sm}{
+            //     height: 400px;
+            // }
         }
     }
     .hero__caption{
