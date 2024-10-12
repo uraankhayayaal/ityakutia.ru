@@ -12,6 +12,10 @@ class ViewHelper
     {
         $subnav = [];
         foreach ($item->children(1)->all() as $key => $subitem) {
+            if (!$subitem->is_publish) {
+                continue;
+            }
+
             $subnav[] = [
                 'label' => $subitem->name,
                 'url' => [$subitem->link, 'city_id' => $city->id],
