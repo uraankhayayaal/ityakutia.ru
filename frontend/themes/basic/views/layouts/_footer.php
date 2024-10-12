@@ -65,17 +65,9 @@ use yii\helpers\Url;
                 </div>
             </div>
             <div class="row align-items-center">
-                <div class="col-xl-7 col-lg-8 col-md-7">
+                <div class="col-12">
                     <div class="footer-copy-right">
-                        <p>&copy;2017-<?= date("Y") ?> Все права защищены | ООО Информационные технологии Якутии</a></p>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-4 col-md-5">
-                    <div class="footer-copy-right f-right">
-                        <div class="footer-social">
-                            <?= Setting::valueOf('social_link_tg', '<a target="_blank" href="[[value]]"><i class="fab fa-telegram"></i></a>'); ?>
-                            <?= Setting::valueOf('social_link_vk', '<a target="_blank" href="[[value]]"><i class="fab fa-vk"></i></a>'); ?>
-                        </div>
+                        <p>&copy; 2017 - <?= date("Y") ?> Все права защищены | ООО Информационные технологии Якутии</a></p>
                     </div>
                 </div>
             </div>

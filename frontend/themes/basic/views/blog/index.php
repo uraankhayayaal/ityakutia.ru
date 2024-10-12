@@ -102,7 +102,9 @@ $this->title = 'Блог';
                                     <?php foreach ($categories as $key => $category) { ?>
                                         <li>
                                             <a href="<?= Url::to(['index', 'filter_category_id' => $category->id]); ?>" class="d-flex">
-                                                <p class="<?= Yii::$app->request->get('filter_category_id') == $category->id ? 'font-weight-bold' : ''; ?>"><?= $category->title ?> (<?= $category->getArticleCategorySets()->count(); ?>)</p>
+                                                <p class="<?= Yii::$app->request->get('filter_category_id') == $category->id ? 'font-weight-bold' : ''; ?>">
+                                                    <?= $category->title ?> (<?= $category->getArticleCategorySets()->joinWith(['article'])->where(['article.is_publish' => 1])->count(); ?>)
+                                                </p>
                                             </a>
                                         </li>
                                     <?php } ?>

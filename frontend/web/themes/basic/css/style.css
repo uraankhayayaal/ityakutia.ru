@@ -4279,12 +4279,14 @@ input:focus {
   color: #ff2020;
 }
 
+.footer-social a {
+  font-size: 24px;
+}
 .footer-social a:last-child {
   padding-right: 0;
 }
 .footer-social a i {
   color: #222222;
-  font-size: 14px;
   padding: 5px 10px;
   -webkit-transition: all 0.4s ease-out 0s;
   -moz-transition: all 0.4s ease-out 0s;
