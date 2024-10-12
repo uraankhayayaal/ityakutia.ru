@@ -7,6 +7,10 @@ use yii\bootstrap4\Widget;
 
 class NewsWidget extends Widget
 {
+    public $count = 3;
+
+    public $direction = 'col';
+
     public function run()
     {
         $model = Article::find()
@@ -16,10 +20,10 @@ class NewsWidget extends Widget
             ->orderBy([
                 'created_at' => SORT_DESC,
             ])
-            ->limit(3)
+            ->limit($this->count)
             ->all();
 
-        return $this->render('index', [
+        return $this->render('index_' . $this->direction, [
             'model' => $model,
         ]);
     }
