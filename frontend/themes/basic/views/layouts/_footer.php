@@ -45,7 +45,7 @@ use yii\helpers\Url;
                                 <li><a href="<?= Url::toRoute(['/site/sale#guarantee']); ?>">1 год гарантии</a></li>
                                 <li><a href="<?= Url::toRoute(['/site/sale#turbo']); ?>">Админка для сайта</a></li>
                                 <li><a href="<?= Url::toRoute(['/site/sale#ssl']); ?>">Бесплатный SSL сертификат</a></li>
-                                <li><a href="<?= Url::toRoute(['/site/sale#ssl']); ?>">Всесторонняя поддержка сата</a></li>
+                                <li><a href="<?= Url::toRoute(['/site/sale#ssl']); ?>">Всесторонняя поддержка сайта</a></li>
                             </ul>
                         </div>
                     </div>
